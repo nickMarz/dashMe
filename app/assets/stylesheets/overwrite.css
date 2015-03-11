@@ -1,8 +1,18 @@
+div#dragContainer {
+  width: 98vw;
+  height: 94vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*background-color: rgba(113, 113, 113, 0.70);*/
+}
+
 .signForm {
   margin-left: auto;
   margin-right: auto;
   width: 250px;
-  background-color: rgba(113, 113, 113, 0.63);
+  background-color: rgba(113, 113, 113, 0.70);
   padding: 5px;
   text-align: center;
 }
@@ -14,7 +24,7 @@ body {
 
 .tweetBox {
 	padding: 10px;
-	background-color: rgba(113, 113, 113, 0.63);
+	background-color: rgba(113, 113, 113, 0.70);
 	width: 200px;
 	display: inline-block;
 }
@@ -24,7 +34,7 @@ form {
 }
 
 #todo-container {
-	background-color: rgba(113, 113, 113, 0.63);
+	background-color: rgba(113, 113, 113, 0.70);
 	width: 200px;
   height: 200px;
 }
@@ -36,10 +46,12 @@ form {
 }
 
 .tweetSignIn {
-  background-color: rgba(113, 113, 113, 0.63);
-  width: 200px;
-  height: 90px;
+  background-color: rgba(113, 113, 113, 0.70);
+  width: 310px;
+  /*height: 90px;*/
   text-align: center;
   font-size: 16pt;
   padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
