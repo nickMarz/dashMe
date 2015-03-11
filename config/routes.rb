@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post "/getweather", to: "weather#getweather"
  
   get '/auth/:provider/callback', to: "sessions#create"
   get '/auth/failure', to: redirect('/')
