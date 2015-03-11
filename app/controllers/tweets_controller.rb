@@ -7,6 +7,10 @@ class TweetsController < ApplicationController
     redirect_to root_url, notice: "Tweet sent!"
   end
 
+  def show  #experimental
+    current_user.feed
+  end
+
   def twitter_params
     params.require(:tweet).permit(:message)
   end
