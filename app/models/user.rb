@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     config.access_token        = oauth_token
     config.access_token_secret = oauth_secret
     end
-  client.user_timeline
+  client.home_timeline
   binding.pry
   end
 
