@@ -1,14 +1,16 @@
 $(document).ready(function() {
   
   function draggableApply() {
-    $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag"});
-    $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" } );
-    $('#todo-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag"});
+    $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
+    $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 20, 20 ]});
+    $('#todo-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
+    $('.tweetSignIn').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: '#body', grid: [ 20, 20 ]});
+    $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
   }
   
   // to do list functionality
   function flexibleList() {
-    $( "#todo-container" ).resizable();
+    // $( "#todo-container" ).resizable();
   }
 
   $( "#clock-container" ).on( "click", function() {
@@ -18,6 +20,15 @@ $(document).ready(function() {
   // store settings in localStorage //
     localStorage.clockTop = clockPosTop;
     localStorage.clockLeft = clockPosLeft; 
+  });
+ 
+  $( ".tweetBox" ).on( "click", function() {
+  // grab values onClick //
+    var tweetBoxPosTop = $(".tweetBox").css("top");
+    var tweetBoxPosLeft = $(".tweetBox").css("left");
+  // store settings in localStorage //
+    localStorage.tweetBoxTop = tweetBoxPosTop;
+    localStorage.tweetBoxLeft = tweetBoxPosLeft; 
   });
 
   $( "#todo-container" ).on( "click", function() {
@@ -37,6 +48,8 @@ $(document).ready(function() {
     $( "#clock-container" ).css("left", localStorage.clockLeft);
     $( "#todo-container" ).css("top", localStorage.todoTop);
     $( "#todo-container" ).css("left", localStorage.todoLeft);
+    $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
+    $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
   }
 
 

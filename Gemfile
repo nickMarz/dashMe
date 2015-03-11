@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
+gem 'twitter', '~> 5.3.1'
+gem 'omniauth'
+
+gem 'omniauth-twitter', '~> 1.1.0'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'binding_of_caller'
@@ -33,9 +38,6 @@ group :development do
   gem 'better_errors'
 end
 
-gem 'omniauth-twitter', '~> 1.1.0'
-gem 'omniauth-facebook'
-gem 'twitter', '~> 5.3.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
