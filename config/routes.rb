@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'weather/index'
-
   post "/getweather", to: "weather#getweather"
  
 
