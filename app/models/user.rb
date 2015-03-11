@@ -1,6 +1,17 @@
 class User < ActiveRecord::Base
+  # def self.from_omniauth(auth)
+  #   where(provider: auth.provider, uid: auth.uid).first || create_from_omniauth(auth)
+  # end
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first || create_from_omniauth(auth)
+   where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
+      binding.pry
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
+      user.oauth_token = auth.credentials.token
+      user.oauth_secret = auth.credentials.secret
+      user.save!
+    end
   end
 
   def self.create_from_omniauth (auth)
