@@ -17,14 +17,16 @@
   <% end %>
 <% end %>
 
-<% if current_user %>
-  Signed in as <%= current_user.name %>
-  <%= link_to "Sign out", signout_path, method: "Delete"%>
-<% else %>
-  <%= link_to "Sign in with twitter", "/auth/twitter"%>
-  <br>
-  <%= link_to "Sign in with facebook", "/auth/facebook"%>
-<% end %>
+
+
+<div class="dragContainer" id="dragContainer">
+<%= render 'shared/clock' %>
+<%= render 'shared/twitterconnect' %>
+
+<%= render 'shared/todo' %>
+
+</div>
+
 
 <%= yield %>
 
