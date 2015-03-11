@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'weather/index'
+
   post "/getweather", to: "weather#getweather"
  
   get '/auth/:provider/callback', to: "sessions#create"
