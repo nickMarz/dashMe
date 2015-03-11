@@ -1,0 +1,29 @@
+.signForm {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  background-color: rgba(113, 113, 113, 0.63);
+  padding: 5px;
+  text-align: center;
+}
+
+body {
+  background-image: url(https://farm8.staticflickr.com/7281/16750986185_6a600b70fc_k.jpg);
+  background-size: cover;
+}
+
+.tweetBox {
+	padding: 10px;
+	background-color: rgba(113, 113, 113, 0.63);
+	width: 200px;
+	display: inline-block;
+}
+
+form {
+  text-align: center;
+}
+
+#todo-container {
+	background-color: rgba(113, 113, 113, 0.63);
+	width: 200px;
+}
