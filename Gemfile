@@ -32,6 +32,8 @@ gem 'omniauth'
 gem 'omniauth-twitter', '~> 1.1.0'
 gem 'omniauth-facebook'
 
+gem 'forecast_io'
+
 group :development do
   gem 'binding_of_caller'
   gem 'awesome_print'
