@@ -34,6 +34,7 @@ gem 'omniauth-facebook'
 
 gem 'forecast_io'
 gem 'quoth'
+gem 'wikiquote'
 group :development do
   gem 'binding_of_caller'
   gem 'awesome_print'
