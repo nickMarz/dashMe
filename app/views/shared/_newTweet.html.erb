@@ -1,9 +1,9 @@
 <div class="tweetBox">
-  <%= form_for :tweet, url: tweets_path, method: :post do |f| %>
-    <%= f.text_field :message %>
+<%= form_tag(tweets_path) do %>
+    <%= text_field_tag :message %>
     <br>
     <br>
     
-    <%= f.submit "Tweet Now!" %>
+    <%= submit_tag "Tweet Now!" %>
   <% end %>
 </div>
