@@ -113,6 +113,11 @@ input[type="text"] {
   color: #767676;
 }
 
+
+
+
+
+
 input[type="submit"] {
   color: #767676;
 }
@@ -139,6 +144,7 @@ p.temp {
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
 }
 
+
 .text-center.alert.alert-warning {  
   width: 20%;
   margin-left: auto;
@@ -150,3 +156,4 @@ p.temp {
   left: 40%;
   z-index: 99999;
 }
+
