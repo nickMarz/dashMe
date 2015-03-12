@@ -56,13 +56,20 @@ form {
   margin-left: auto;
 }
 .timeline {
-  background-color: #fff;
+  background-color: rgba(113, 113, 113, 0.40);
   display: inline-block;
   padding: 25px;
   min-width: 200px;
   max-width: 400px;
     max-height: 300px;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+
+.tweet {
+  background-color: rgba(113, 113, 113, 0.30);
+  padding: 7px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 
