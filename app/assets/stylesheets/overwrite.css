@@ -144,6 +144,10 @@ p.temp {
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
 }
 
+p.sum {
+  color: #ffffff;
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+}
 
 .text-center.alert.alert-warning {  
   width: 20%;
@@ -156,4 +160,10 @@ p.temp {
   left: 40%;
   z-index: 99999;
 }
+
+
+
+
+
+
 
