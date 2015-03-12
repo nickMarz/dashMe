@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
 
   def create
     current_user.tweet(params[:message])
-    redirect_to sessions_path, notice: "Tweet sent!"
+    redirect_to root_path, notice: "Tweet sent!"
   end
 
   def show  #experimental
