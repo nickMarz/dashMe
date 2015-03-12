@@ -111,3 +111,7 @@ h2 {
 input[type="text"] {
   color: #767676;
 }
+
+input[type="submit"] {
+  color: #767676;
+}
