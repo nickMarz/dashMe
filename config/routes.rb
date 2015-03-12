@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  post "/getweather", to: "weather#getweather"
+  get "/getweather", to: "weather#getweather"
  
 
   get 'sessions/index'
