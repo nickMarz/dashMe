@@ -111,3 +111,13 @@ h2 {
 input[type="text"] {
   color: #767676;
 }
+
+.weather {
+  padding: 10px;
+  background-color: rgba(200, 200, 200, 0.70);
+  width: 200px;
+  height: 100px;
+  display: inline-block;
+}
+
+

@@ -10,6 +10,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
     console.log(forecast)
       var list = $("p.temp").empty();
       list.text(forecast.currently.temperature)
+
     }
   });
 });
