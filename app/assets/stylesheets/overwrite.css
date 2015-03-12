@@ -5,9 +5,9 @@ body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #222;
+  color: #FFFFFF !important;
   /*need to change with jquery*/
-  background-image: url(https://farm8.staticflickr.com/7281/16750986185_6a600b70fc_k.jpg);
+  background-image: url(https://farm8.staticflickr.com/7584/16765254266_db8360dcc0_c.jpg);
   background-size: cover;
 }
 
@@ -98,7 +98,16 @@ li.todoItem {
 
 .deleteX {
     margin-left: 20px;
-    color: maroon;
+    color: rgba(0, 203, 247, 2.0);
     text-decoration: none;
     font-weight: bold;
+}
+
+h2 {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+input[type="text"] {
+  color: #767676;
 }
