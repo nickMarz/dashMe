@@ -18,6 +18,9 @@ class TweetsController < ApplicationController
   def show  #experimental   
     current_user.feed #how do we get this to show up as JSON when the javascript is run!  
     @user_timeline = current_user.feed     #what we used to show it before
+    respond_to do |format|    
+      format.json {render :json => @user_timeline.each}
+    end
   end
 
 end
