@@ -1,11 +1,12 @@
 $(document).ready(function() {
-$('form').submit(function () {
-    if ($('input').val() !== '') {
-        var input_value = $('input').val();
-        $('ul').append('<li class="todoItem">' + input_value + '<a href=" " class="deleteX" id="deleteX">x</a></li>');
+$('.todoFrom').submit(function (e) {
+    e.preventDefault();
+    if ($('.todosubmit').val() !== '') {
+        var todosubmit_value = $('.todosubmit').val();
+        $('ul').append('<li class="todoItem">' + todosubmit_value + '<a href=" " class="deleteX" id="deleteX">x</a></li>');
     };
-    $('input').val('');
-    return false;
+    $('.todosubmit').val('');
+    return false
 });
 // Need to look it to where the href needs to point to, and how ot prevent page reload
 
