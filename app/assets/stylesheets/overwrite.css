@@ -121,12 +121,20 @@ h1.greet {
   color: #ffffff;
   text-align: center;
   font-size: 45pt;
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
 }
 .greeting {
   position: absolute;
   width: 50%;
-  /* margin-left: 10%; */
-  /* margin-right: 10%; */
   bottom: 35%;
   left: 25%;
+}
+.weather {
+  position: absolute;
+}
+
+p.temp {
+  font-size: 32pt;
+  color: #ffffff;
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
 }
