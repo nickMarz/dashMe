@@ -1,3 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+  /*need to change with jquery*/
+  background-image: url(https://farm8.staticflickr.com/7281/16750986185_6a600b70fc_k.jpg);
+  background-size: cover;
+}
+
+
 div#dragContainer {
   width: 100vw;
   height: 100vh;
@@ -6,19 +20,16 @@ div#dragContainer {
   overflow: hidden;
 }
 
-.signForm {
+/*no longer being used???*/
+/*.signForm {
   margin-left: auto;
   margin-right: auto;
   width: 250px;
   background-color: rgba(113, 113, 113, 0.70);
   padding: 5px;
   text-align: center;
-}
-
-body {
-  background-image: url(https://farm8.staticflickr.com/7281/16750986185_6a600b70fc_k.jpg);
-  background-size: cover;
-}
+}*/
+/*no longer being used???*/
 
 .tweetBox {
 	padding: 10px;
@@ -36,6 +47,18 @@ form {
 	width: 200px;
   height: 200px;
 }
+ul, ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+li.todoItem {
+  color: #fff;
+  font-size: 12pt;
+  font-weight: 200;
+  font-style: normal;
+}
+
 
 .text-center.alert.alert-warning {
   border-radius: 0px;
@@ -73,7 +96,7 @@ form {
 }
 
 
-a {
+.deleteX {
     margin-left: 20px;
     color: maroon;
     text-decoration: none;
