@@ -3,9 +3,12 @@
 <% if current_user %>
   Signed in as <%= current_user.name %>
   <br>
+  <div class="signin">
   <%= link_to "Sign out", signout_path, method: "Delete"%>
-<% else %>
+  </div>
+<% else %> <div class="signin">
   <%= link_to "Sign in with twitter", "/auth/twitter"%>
+  </div>
   <br>
 <% end %>
 </div>
