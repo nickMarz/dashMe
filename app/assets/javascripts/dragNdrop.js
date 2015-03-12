@@ -6,6 +6,7 @@ $(document).ready(function() {
     $('#todo-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
     $('.tweetSignIn').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: '#body', grid: [ 20, 20 ]});
     $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
+    $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
   }
   
   // to do list functionality
@@ -40,6 +41,15 @@ $(document).ready(function() {
   // store settings in localStorage //
     localStorage.todoTop = todoPosTop;
     localStorage.todoLeft = todoPosLeft;
+  });
+
+  $( ".timeline" ).on( "click", function() {
+  // grab values onClick //
+    var timnelinePosTop = $(".timeline").css("top");
+    var timnelinePosLeft = $(".timeline").css("left");
+  // store settings in localStorage //
+    localStorage.timnelineTop = timnelinePosTop;
+    localStorage.timnelineLeft = timnelinePosLeft; 
   });
 
   // load settings from localStorage //

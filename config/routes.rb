@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   post "/getweather", to: "weather#getweather"
-
+  # post "/tweets/show", to: "tweets#show"
   get 'sessions/index'
   root "sessions#index" 
 

@@ -8,7 +8,8 @@ class TweetsController < ApplicationController
   end
 
   def show  #experimental
-    current_user.feed
+    @user_timeline = current_user.feed
+    binding.pry
   end
 
   def twitter_params
