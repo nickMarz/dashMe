@@ -9,7 +9,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
     success: function(forecast) {
     console.log(forecast)
       var cTemp = $("p.temp").empty();
-      cTemp.text(forecast.currently.temperature)
+      cTemp.text(forecast.currently.temperature).append("˚F"); 
 
     }
   });
