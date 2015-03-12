@@ -45,11 +45,11 @@ $(document).ready(function() {
 
   $( ".timeline" ).on( "click", function() {
   // grab values onClick //
-    var timnelinePosTop = $(".timeline").css("top");
-    var timnelinePosLeft = $(".timeline").css("left");
+    var timelinePosTop = $(".timeline").css("top");
+    var timelinePosLeft = $(".timeline").css("left");
   // store settings in localStorage //
-    localStorage.timnelineTop = timnelinePosTop;
-    localStorage.timnelineLeft = timnelinePosLeft; 
+    localStorage.timelineTop = timelinePosTop;
+    localStorage.timelineLeft = timelinePosLeft; 
   });
 
   // load settings from localStorage //
@@ -60,6 +60,8 @@ $(document).ready(function() {
     $( "#todo-container" ).css("left", localStorage.todoLeft);
     $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
     $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
+    $( ".timeline" ).css("top", localStorage.timelineTop);
+    $( ".timeline" ).css("left", localStorage.timelineLeft);
   }
 
 
