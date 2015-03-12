@@ -1,0 +1,8 @@
+<div class="quoting">
+<% if current_user %>
+  <h1 id="quote">
+    <%= @quote.split('~')[0] %> <br> <br>
+   <strong> <%= @quote.split('~')[1] %> </strong>
+  </h1>
+<% end %>
+</div>

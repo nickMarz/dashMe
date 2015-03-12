@@ -22,30 +22,23 @@ class User < ActiveRecord::Base
   end
 
   def tweet(tweet)
-  client = Twitter::REST::Client.new do |config|
-    config.consumer_key        = Rails.application.config.twitter_key
-    config.consumer_secret     = Rails.application.config.twitter_secret
-    config.access_token        = oauth_token
-    config.access_token_secret = oauth_secret
-    end
-  client.update(tweet)
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = Rails.application.config.twitter_key
+      config.consumer_secret     = Rails.application.config.twitter_secret
+      config.access_token        = oauth_token
+      config.access_token_secret = oauth_secret
+      end
+    client.update(tweet)
   end
 
   def feed #experimental
-  client = Twitter::REST::Client.new do |config|
-    config.consumer_key        = Rails.application.config.twitter_key
-    config.consumer_secret     = Rails.application.config.twitter_secret
-    config.access_token        = oauth_token
-    config.access_token_secret = oauth_secret
-    end
-    binding.pry
-  return  @timeline = client.home_timeline()
-
-#     client.user do |object|
-#     puts object.text if object.is_a?(Twitter::Tweet)
-# end
-  # client.user_timeline
-
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = Rails.application.config.twitter_key
+      config.consumer_secret     = Rails.application.config.twitter_secret
+      config.access_token        = oauth_token
+      config.access_token_secret = oauth_secret
+      end
+    return @timeline = client.home_timeline()
   end
-
+  
 end

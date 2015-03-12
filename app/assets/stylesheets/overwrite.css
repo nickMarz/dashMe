@@ -80,7 +80,7 @@ li.todoItem {
 }
 
 .timeline {
-  background-color: rgba(113, 113, 113, 0.40);
+  background-color: rgba(113, 113, 114, 0.40);
   display: inline-block;
   padding: 25px;
   min-width: 200px;
@@ -162,8 +162,19 @@ p.sum {
 }
 
 
+.quoting {
+  position: absolute;
+  width: 80%;
+  bottom: 20px;
+  left: 10%;
+}
 
-
-
+#quote {
+  color: #ffffff;
+  text-align: center;
+  font-size: 17pt;
+  text-shadow: 2px 2px 1px Rgba(30, 20, 20, 1.0), -2px -2px 1px Rgba(30, 20, 20, 1.0);
+  font-weight: 100;
+}
 
 

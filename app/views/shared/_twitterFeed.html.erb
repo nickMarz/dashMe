@@ -1,17 +1,4 @@
 <div class="timeline" id="timeline">
 <h2>@Twitter</h2>
-  <% @user_timeline %> 
-  <% 20.times do |i| %>
-    <div class="tweet">
-      <p>
-      <%= @user_timeline[i].text %> <br>
-        Source: 
-        <%= @user_timeline[i].source %> <br>
-        Created At: 
-        <%= @user_timeline[i].created_at %>
-      </p>
-    </div>
-  <% (i+1) %>
-  <% end %>
-  <h2>@Twitter</h2>
+  
 </div>
