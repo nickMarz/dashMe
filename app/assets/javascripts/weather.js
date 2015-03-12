@@ -8,8 +8,8 @@ navigator.geolocation.getCurrentPosition(function(position) {
     data: { lat: lat, long: long},
     success: function(forecast) {
     console.log(forecast)
-      var list = $("p.temp").empty();
-      list.text(forecast.currently.temperature)
+      var cTemp = $("p.temp").empty();
+      cTemp.text(forecast.currently.temperature)
 
     }
   });
