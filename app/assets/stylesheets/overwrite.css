@@ -157,3 +157,18 @@ p.temp {
   z-index: 99999;
 }
 
+.quoting {
+  position: absolute;
+  width: 50%;
+  bottom: 15%;
+  left: 25%;
+}
+
+#quote {
+  color: #ffffff;
+  text-align: center;
+  font-size: 17pt;
+  text-shadow: 2px 3px 2px Rgba(30, 20, 20, 0.85);
+  font-weight: 100;
+}
+
