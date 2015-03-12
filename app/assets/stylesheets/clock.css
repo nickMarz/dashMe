@@ -16,8 +16,8 @@ body {
   left: 50%;
   /*margin-top: -141px;*/
   /*margin-left: -101px;*/
-  border: 0px solid #ccc;
-  background-color: rgb(69, 208, 238);
+  /*border: 0px solid #ccc;*/
+  background-color: rgba(0, 203, 247, 0.51);
 }
 
 #clock {
@@ -101,4 +101,6 @@ body {
 #time {
   font-size: 14em;
   text-align: center;
+  text-shadow: 3px 5px 9px Rgba(50, 50, 50, 0.35);
+
 }

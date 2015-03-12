@@ -36,8 +36,6 @@ $(document).ready(function() {
   // grab values onClick //
     var todoPosTop = $("#todo-container").css("top");
     var todoPosLeft = $("#todo-container").css("left");
-    // var todoPosBottom = $("#todo-container").css("left");
-    // var todoPosRight = $("#todo-container").css("left");
   // store settings in localStorage //
     localStorage.todoTop = todoPosTop;
     localStorage.todoLeft = todoPosLeft;

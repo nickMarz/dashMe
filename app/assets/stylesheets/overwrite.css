@@ -45,14 +45,16 @@ form {
 
 .tweetSignIn {
   background-color: rgba(113, 113, 113, 0.70);
-  width: 310px;
-  /*height: 90px;*/
+  width: 250px;
   text-align: center;
-  font-size: 16pt;
-  padding: 15px;
+  padding: 7px 4px;
   margin-right: auto;
   margin-left: auto;
+  position: absolute;
+  left: 40%;
+  top: 10px;
 }
+
 .timeline {
   background-color: rgba(113, 113, 113, 0.40);
   display: inline-block;
