@@ -38,8 +38,8 @@ class User < ActiveRecord::Base
     config.access_token        = oauth_token
     config.access_token_secret = oauth_secret
     end
-    client.sample do |object|
-  puts object.text if object.is_a?(Twitter::Tweet)
+    client.user do |object|
+    puts object.text if object.is_a?(Twitter::Tweet)
 end
   # client.user_timeline
   binding.pry
