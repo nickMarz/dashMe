@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Twitterauth</title>
+  <title>dashMe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,13 +20,12 @@
 
 
 <div class="dragContainer" id="dragContainer">
+<%= render 'shared/twitterconnect' %>
 <%= render 'shared/clock' %>
 <%= render 'shared/todo' %>
-<%= render 'shared/twitterconnect' %>
-</div>
 
 <%= render 'shared/newTweet' %>
 <%= yield %>
-
+</div>
 </body>
 </html>
