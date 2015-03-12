@@ -14,5 +14,10 @@ class TweetsController < ApplicationController
   def twitter_params
     params.require(:tweet).permit(:message)
   end
+  
+  def show  #experimental   
+    current_user.feed    
+    @user_timeline = current_user.feed     
+  end
 
 end
