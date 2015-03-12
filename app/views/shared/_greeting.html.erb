@@ -1,0 +1,7 @@
+<div class="greeting">
+<% if current_user %>
+  <h1 class="greet">
+    Hi, <%= current_user.name.split(' ')[0] %>!
+  </h1>
+<% end %>
+</div>

@@ -2,9 +2,9 @@ $(document).ready(function() {
   
   function draggableApply() {
     $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
-    $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 20, 20 ]});
-    $('#todo-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
-    // $('.tweetSignIn').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
+    // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 20, 20 ]});
+    $('#todo-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",  grid: [ 20, 20 ]});
+    $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
     $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
     $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 20, 20 ]});
   }
@@ -13,6 +13,16 @@ $(document).ready(function() {
   function flexibleList() {
     // $( "#todo-container" ).resizable();
   }
+
+   $( ".weather" ).on( "click", function() {
+  // grab values onClick //
+    var weatherPosTop = $(".weather").css("top");
+    var weatherPosLeft = $(".weather").css("left");
+  // store settings in localStorage //
+    localStorage.weatherTop = weatherPosTop;
+    localStorage.weatherLeft = weatherPosLeft; 
+  });
+
 
   $( "#clock-container" ).on( "click", function() {
   // grab values onClick //
@@ -60,6 +70,8 @@ $(document).ready(function() {
     $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
     $( ".timeline" ).css("top", localStorage.timelineTop);
     $( ".timeline" ).css("left", localStorage.timelineLeft);
+    $( ".weather" ).css("top", localStorage.weatherTop);
+    $( ".weather" ).css("left", localStorage.weatherLeft);
   }
 
 

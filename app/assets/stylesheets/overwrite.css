@@ -9,6 +9,7 @@ body {
   /*need to change with jquery*/
   background-image: url(https://farm8.staticflickr.com/7584/16765254266_db8360dcc0_c.jpg);
   background-size: cover;
+  overflow: hidden;
 }
 
 
@@ -112,12 +113,34 @@ input[type="text"] {
   color: #767676;
 }
 
-.weather {
-  padding: 10px;
-  background-color: rgba(200, 200, 200, 0.70);
-  width: 200px;
-  height: 100px;
-  display: inline-block;
+
+
+
+
+
+input[type="submit"] {
+  color: #767676;
 }
 
+h1.greet {
+  color: #ffffff;
+  text-align: center;
+  font-size: 45pt;
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+}
+.greeting {
+  position: absolute;
+  width: 50%;
+  bottom: 35%;
+  left: 25%;
+}
+.weather {
+  position: absolute;
+}
+
+p.temp {
+  font-size: 32pt;
+  color: #ffffff;
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+}
 
