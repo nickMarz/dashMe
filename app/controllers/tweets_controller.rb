@@ -16,8 +16,8 @@ class TweetsController < ApplicationController
   end
   
   def show  #experimental   
-    current_user.feed    
-    @user_timeline = current_user.feed     
+    current_user.feed #how do we get this to show up as JSON when the javascript is run!  
+    # @user_timeline = current_user.feed     
   end
 
 end
