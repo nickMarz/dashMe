@@ -9,6 +9,7 @@ body {
   /*need to change with jquery*/
   background-image: url(https://farm8.staticflickr.com/7584/16765254266_db8360dcc0_c.jpg);
   background-size: cover;
+  overflow: hidden;
 }
 
 
@@ -114,4 +115,18 @@ input[type="text"] {
 
 input[type="submit"] {
   color: #767676;
+}
+
+h1.greet {
+  color: #ffffff;
+  text-align: center;
+  font-size: 45pt;
+}
+.greeting {
+  position: absolute;
+  width: 50%;
+  /* margin-left: 10%; */
+  /* margin-right: 10%; */
+  bottom: 35%;
+  left: 25%;
 }
