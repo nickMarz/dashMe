@@ -1,8 +1,6 @@
-// $(document).ready(function() {
-//   $(selector).linkify()
-// });
-
-$(window).on('load', function () {
+$(document).ready(function () {
   $('p').linkify();
   console.log('linkify')
 });
+
+// $(window).on('load', 
