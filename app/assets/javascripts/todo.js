@@ -10,10 +10,12 @@ $('.todoForm').submit(function (e) {
 });
 
 
-$('deleteX').on('click', function (e) {
+$('#deleteX').on('click', '.deleteX',function (e) {
     e.preventDefault();
     $(this).parent().remove();
     console.log('removed item');
+    console.log(this);
+
 });
 
 });
