@@ -33,6 +33,9 @@ div#dragContainer {
 /*no longer being used???*/
 
 .tweetBox {
+  position: absolute;
+  top: 30px;
+  left: 5px;
 	padding: 10px;
 	background-color: rgba(113, 113, 113, 0.70);
 	width: 200px;
@@ -44,6 +47,9 @@ form {
 }
 
 #todo-container {
+  position: absolute;
+  top: 70px;
+  left: 5px;
 	background-color: rgba(113, 113, 113, 0.70);
 	width: 200px;
   height: 200px;
@@ -80,6 +86,9 @@ li.todoItem {
 }
 
 .timeline {
+  position: absolute;
+  top: 30px;
+  right: 5px;
   background-color: rgba(113, 113, 114, 0.40);
   display: inline-block;
   padding: 25px;
@@ -136,6 +145,8 @@ h1.greet {
 }
 .weather {
   position: absolute;
+  top: 30px;
+  left: 5px;
 }
 
 p.temp {
@@ -176,5 +187,18 @@ p.sum {
   text-shadow: 2px 2px 1px Rgba(30, 20, 20, 1.0), -2px -2px 1px Rgba(30, 20, 20, 1.0);
   font-weight: 100;
 }
+.slidingDiv {
+   position: absolute;
+  top: 30px;
+  left: 5px;
+  background-color: rgba(113, 113, 113, 0.70);
+  width: 600px;
+  height: 400px;
+  text-align: center;
+  padding: 15px;
+}
 
+.show_hide {
+    display:none;
 
+}
