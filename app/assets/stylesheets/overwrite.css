@@ -183,9 +183,10 @@ p.sum {
 #quote {
   color: #ffffff;
   text-align: center;
-  font-size: 17pt;
+  font-size: 12pt;
   text-shadow: 2px 2px 1px Rgba(30, 20, 20, 1.0), -2px -2px 1px Rgba(30, 20, 20, 1.0);
-  font-weight: 100;
+  font-weight: 200;
+  line-height: 1.5;
 }
 .slidingDiv {
   position: absolute;
@@ -195,7 +196,7 @@ p.sum {
   width: 99%;
   text-align: center;
   padding: 15px;
-    z-index: 9999999;
+  z-index: 9999999;
 }
 
 .show_hide {
@@ -203,11 +204,10 @@ p.sum {
 
 }
 
-
 .dever {
   padding: 7px;
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.52);
+  background-color: rgba(255, 255, 255, 0.75);
   width: 32%;
 }
 a.show_hide {
@@ -219,3 +219,16 @@ a.show_hide {
   padding: 5px 20px;
   cursor: pointer;
 }
+img.linkPic {
+  width: 50%;
+  height: 50%;
+  border-radius: 110px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p.info {
+  color: #158CBA;}
