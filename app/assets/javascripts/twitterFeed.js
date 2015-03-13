@@ -1,13 +1,13 @@
 $(document).ready(function() {
   function getTweets() {
-        $.getJSON("/tweets/show.json",function(data){
-            console.log(data);
-            var list = $("ul").empty();
-            data.forEach(function (tweet) {
-            var item = $("<li>").text(tweet);
-            list.append(tweet);
-            });
-   });
-    }
-$(getTweets);
+    $.getJSON("/tweets/show.json",function(data){
+      var list = $("timelist").empty();
+      data.forEach(function (tweet) {
+      var item = $("<li>").text(tweet.text);
+      list.append(item);
+      });
+    });  
+  }
+  $(getTweets);
+  var moarTweets = setInterval($(getTweets), 10000); 
 }); 
