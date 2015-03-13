@@ -144,18 +144,23 @@ h1.greet {
   left: 25%;
 }
 .weather {
+  display: inline-block;
   position: absolute;
-  top: 30px;
+  top: 80%;
   left: 5px;
+  width: 160px;
+  height: 118px;
 }
 
 p.temp {
+  display: inline-block;
   font-size: 32pt;
   color: #ffffff;
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
 }
 
 p.sum {
+  display: inline-block;
   color: #ffffff;
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
 }
