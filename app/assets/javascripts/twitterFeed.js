@@ -6,7 +6,7 @@ $(document).ready(function() {
         console.log(data[i].text);
       }
     });
-  }
-  $(getTweets);
-  $(getTweets);
+  } 
+  getTweets();
+  setInterval (getTweets, 120000); 
 });
