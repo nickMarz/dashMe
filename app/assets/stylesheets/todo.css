@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: 'Times New Roman', 'Times', serif;
+  font-size: 12px;
+  color: #222;
+}
+
+#todo-container {
+  width: 240px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  border: 1px solid #ccc;
+  background-color: #E5E832;
+}
+
+#todo {
+  width: 240px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}

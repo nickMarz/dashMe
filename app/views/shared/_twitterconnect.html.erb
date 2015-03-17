@@ -1,14 +1,8 @@
-
-<div class="tweetSignIn">
-<% if current_user %>
-  Signed in as <%= current_user.name %>
-  <br>
-  <div class="signin">
-  <%= link_to "Sign out", signout_path, method: "Delete"%>
-  </div>
-<% else %> <div class="signin">
-  <%= link_to "Sign in with twitter", "/auth/twitter"%>
-  </div>
-  <br>
-<% end %>
+<div class="tweet">
+  <% if current_user_identity %>
+    Signed in as <strong> <%= current_user_identity.nick_name %> </strong>!
+    <%= link_to "Sign Out", signout_path, id: "sign_out" %>
+    <% else %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter", id: "sign_in" %>
+    <% end %>
 </div>

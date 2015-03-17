@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>dashMe</title>
+  <title>Dashboard</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/lumen/bootstrap.min.css" rel="stylesheet"> 
+
 </head>
 <body>
-<% flash.each do |key, value| %>
-  <% if key == "notice" %>
-    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
-  <% elsif key == "alert" %>
-    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
-  <% else %>
-    <%= content_tag :div, value, class: "text-center alert alert-success" %>
-  <% end %>
-<% end %>
-
-
 
 <div class="dragContainer" id="dragContainer">
-<%= render 'shared/aboutUs' %>
-<%= render 'shared/twitterconnect' %>
-<% if current_user %>
-<%= render 'shared/twitterFeed' %>
 <%= render 'shared/clock' %>
+<%= render 'shared/twitterconnect' %>
+
 <%= render 'shared/todo' %>
-<%= render 'shared/weather' %>
-<%= render 'shared/newTweet' %>
-<%= yield %>
-<%= render 'shared/greeting' %>
-<%= render 'shared/quote' %>
-<% end %>
+
 </div>
+  <div id="user_nav">
+  <% if @current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log out", logout_path %>
+  <% else %>
+    <%= link_to "Sign up", signup_path %> or
+    <%= link_to "log in", login_path %>
+  <% end %>
+</div>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+  
+<%= yield %>
+
+
+<%= @timeline %>
+
 </body>
+
 </html>

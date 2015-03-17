@@ -1,0 +1,46 @@
+
+<script>
+  var callbackFunction = function(data) {
+    var ttl = data.query.results.channel.ttl;
+    alert(ttl);
+  };
+</script>
+
+
+<div class="signForm" id="signFrom">
+
+<h1>Sign up</h1>
+<br><br>
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any?  %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @user.errors.full_messages %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= f.label :user_email %>
+<%= f.text_field :user_email, id:"user_email", :placeholder => "email"  %>
+<br><br>
+<%= f.label :first_name %>
+<%= f.text_field :first_name, :placeholder => "first_name"  %>
+
+<br><br>
+<%= f.label :last_name %>
+<%= f.text_field :last_name, :placeholder => "last_name"  %>
+<br><br>
+<%= f.label :password %>
+<%= f.password_field :password, id:"password", :placeholder => "password" %>
+<br><br>
+<%= f.submit "sign up!",  id: "signupSubmit" %>
+
+<!-- <p class="button"></p>  Use without bootswatch styling. --> 
+<% end %>
+<br><br>
+<%= link_to "Already have a profile?", login_path %>
+</div>
