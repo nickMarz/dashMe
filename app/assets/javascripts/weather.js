@@ -9,12 +9,13 @@ function getWeather() {
     data: { lat: lat, long: long},
     success: function(forecast) {
     console.log(forecast);
+    console.log(forecast.currently.icon);
       var cTemp = $("p.temp").empty();
       cTemp.text(forecast.currently.temperature).append("˚F"); 
       var cSum = $("p.sum").empty();
       cSum.text(forecast.currently.summary);
       var cImage = $("svg.image").empty();
-      cImage.text(forecast.currently.image);
+      cImage.text(forecast.currently.icon);
     }
     });
   }
