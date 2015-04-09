@@ -147,6 +147,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
     quoth (0.0.1)
       nokogiri
     rack (1.6.0)
@@ -251,6 +253,7 @@ DEPENDENCIES
   omniauth-twitter (~> 1.1.0)
   pg
   pry-rails
+  puma
   quoth
   rails (= 4.2.0)
   sass-rails (~> 5.0)
