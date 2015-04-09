@@ -46,7 +46,7 @@ form {
   text-align: center;
 }
 
-#todo-container {
+#todo_container {
   position: absolute;
   top: 70px;
   left: 5px;
@@ -148,13 +148,13 @@ h1.greet {
   position: absolute;
   top: 80%;
   left: 5px;
-  width: 160px;
-  height: 118px;
+  width: 125px;
+  height: 75px;
 }
 
 p.temp {
   display: inline-block;
-  font-size: 32pt;
+  font-size: 24pt;
   color: #ffffff;
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
     margin: 0 0 0px;
@@ -174,7 +174,7 @@ p.sum {
   font-size: 18pt;
   border-radius: 0px;
   position: absolute;
-  top: 44px;
+  top: 30%;
   left: 40%;
   z-index: 99999;
 }
@@ -235,6 +235,9 @@ img.linkPic {
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 0;
   margin-bottom: 0;
+}
+h2 {
+  color: #fff;
 }
 
 p.info {
