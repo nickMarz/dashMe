@@ -2,12 +2,13 @@ navigator.geolocation.getCurrentPosition(function(position) {
  lat = (position.coords.latitude);
  long = (position.coords.longitude);
 
+function getWeather() {
   $.ajax({
     method: "GET",
     url: "/getweather.json",
     data: { lat: lat, long: long},
     success: function(forecast) {
-    console.log(forecast)
+    console.log(forecast);
       var cTemp = $("p.temp").empty();
       cTemp.text(forecast.currently.temperature).append("˚F"); 
       var cSum = $("p.sum").empty();
@@ -15,5 +16,8 @@ navigator.geolocation.getCurrentPosition(function(position) {
       var cImage = $("svg.image").empty();
       cImage.text(forecast.currently.image);
     }
-  });
+    });
+  }
+  getWeather();
+  setInterval (getWeather, 50000);
 });
