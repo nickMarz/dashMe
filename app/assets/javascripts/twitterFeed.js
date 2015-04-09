@@ -11,5 +11,5 @@ $(document).ready(function() {
     });
   } 
   getTweets();
-  setInterval (getTweets, 120000); 
+  setInterval (getTweets, 180000); 
 });
