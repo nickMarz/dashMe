@@ -244,4 +244,21 @@ p.info {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+a.show_hide_opt {
+  text-decoration: none;
+  /*background-color: rgba(53, 53, 53, 0.52);*/
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.opt {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+}
+.optionsDiv {
+  background-color: rgba(53, 53, 53, 0.52);
+  padding: 5px;
+  width: 200px;
 }
