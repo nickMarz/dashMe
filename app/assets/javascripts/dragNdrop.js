@@ -3,7 +3,7 @@ $(document).ready(function() {
   function draggableApply() {
     $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 10, 10 ]});
-    $('#todo-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",  grid: [ 10, 10 ]});
+    $('#todoHide').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",  grid: [ 10, 10 ]});
     $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
@@ -11,7 +11,7 @@ $(document).ready(function() {
   
   // to do list functionality
   function flexibleList() {
-    // $( "#todo-container" ).resizable();
+    // $( "#todoHide" ).resizable();
   }
 
    $( ".weather" ).on( "click", function() {
@@ -42,10 +42,10 @@ $(document).ready(function() {
     localStorage.tweetBoxLeft = tweetBoxPosLeft; 
   });
 
-  $( "#todo-container" ).on( "click", function() {
+  $( "#todoHide" ).on( "click", function() {
   // grab values onClick //
-    var todoPosTop = $("#todo-container").css("top");
-    var todoPosLeft = $("#todo-container").css("left");
+    var todoPosTop = $("#todoHide").css("top");
+    var todoPosLeft = $("#todoHide").css("left");
   // store settings in localStorage //
     localStorage.todoTop = todoPosTop;
     localStorage.todoLeft = todoPosLeft;
@@ -64,8 +64,8 @@ $(document).ready(function() {
   function loadSettings() {
     $( "#clock-container" ).css("top", localStorage.clockTop);
     $( "#clock-container" ).css("left", localStorage.clockLeft);
-    $( "#todo-container" ).css("top", localStorage.todoTop);
-    $( "#todo-container" ).css("left", localStorage.todoLeft);
+    $( "#todoHide" ).css("top", localStorage.todoTop);
+    $( "#todoHide" ).css("left", localStorage.todoLeft);
     $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
     $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
     $( ".timeline" ).css("top", localStorage.timelineTop);
@@ -76,9 +76,12 @@ $(document).ready(function() {
 
 
 // run functions onload //
-  $(draggableApply);
+  // $(draggableApply);
   $(loadSettings);
   $(flexibleList);
+  setInterval(draggableApply, 1000);
+  setInterval(console.log("draggableApply"), 1000);
+
 
 });
 

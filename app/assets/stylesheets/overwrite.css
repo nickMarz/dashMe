@@ -269,3 +269,6 @@ a.show_hide_opt {
 i.fa.fa-cogs.fa-3x {
   padding-bottom: 10px;
 }
+.done {
+    text-decoration: line-through;
+}
