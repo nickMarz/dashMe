@@ -238,4 +238,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 p.info {
-  color: #158CBA;}
+  color: #158CBA;
+  min-height: 180px;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+}
