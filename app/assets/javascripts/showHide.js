@@ -8,6 +8,7 @@ $(".slidingDiv").hide();
 	$(".slidingDiv").slideToggle();
 	});
 
+// Options Panel
 $(".optionsDiv").hide();
   $(".show_hide_opt").show();
   
@@ -15,5 +16,12 @@ $(".optionsDiv").hide();
   $(".optionsDiv").slideToggle();
   });
 
+// Hide Clock
+$("#clock").hide();
+  $(".show_hide_clock").show();
+  
+  $('.show_hide_clock').click(function(){
+  $("#clock").slideToggle();
+  });
 
 });
