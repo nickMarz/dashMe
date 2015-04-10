@@ -1,4 +1,4 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 // // $('.todoForm').submit(function (e) {
 // //     e.preventDefault();
 // //     if ($('.todosubmit').val() !== '') {
@@ -18,69 +18,69 @@
 
 // // });
 
-// function todoDelay () {
+function todoDelay () {
  
 
 
-// function appendTaskToList(val) {
-//     $('#list').append("<li>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
-// }
-// var task;
+function appendTaskToList(val) {
+    $('#list').append("<li>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
+}
+var task;
 
-// if (localStorage.tasks) {
-//     tasks = JSON.parse(localStorage.tasks);
-// }else {
-//     tasks = [];
-// }
+if (localStorage.tasks) {
+    tasks = JSON.parse(localStorage.tasks);
+}else {
+    tasks = [];
+}
 
-// for(var i=0;i<tasks.length;i++) {
-//     appendTaskToList(tasks[i]);
-// }
+for(var i=0;i<tasks.length;i++) {
+    appendTaskToList(tasks[i]);
+}
 
-// var addTask = function(){
-//     // get value from #name input
-//     var val = $('#name').val();
+var addTask = function(){
+    // get value from #name input
+    var val = $('#name').val();
     
-//     // add the task to the array
-//     tasks.push(val);
+    // add the task to the array
+    tasks.push(val);
     
-//     // save to local storage
-//     localStorage.tasks = JSON.stringify(tasks);
+    // save to local storage
+    localStorage.tasks = JSON.stringify(tasks);
     
-//     // append the name to the list
-//     appendTaskToList(val);
+    // append the name to the list
+    appendTaskToList(val);
     
-//     // reset the input field and focus it.
-//     $('#name').val("").focus();
-// };
+    // reset the input field and focus it.
+    $('#name').val("").focus();
+};
 
-// $('#add-btn').click(addTask);
-// $('#name').keyup(function(e){
-//     if (e.keyCode === 13) {
-//         addTask();
-//     }
-// });
+$('#add-btn').click(addTask);
+$('#name').keyup(function(e){
+    if (e.keyCode === 13) {
+        addTask();
+    }
+});
 
 
-// // approach 1
-// /*$('.done-btn').click(function(){
-//     $(this).parent('li').addClass('done');
-// });*/
+// approach 1
+/*$('.done-btn').click(function(){
+    $(this).parent('li').addClass('done');
+});*/
 
-// // correct approach
-// $('.done-btn').on( 'click', function() {
-//   $(this).parent('li').addClass('done');
-// });    
+// correct approach
+$('.done-btn').on( 'click', function() {
+  $(this).parent('li').addClass('done');
+});    
     
-// $('.cancel-btn').on( 'click', function() {
-//   $(this).parent('li').fadeOut();
-// });    
+$('.cancel-btn').on( 'click', function() {
+  $(this).parent('li').fadeOut();
+});    
 
 
-// }
-// setInterval(todoDelay(), 1000);
-// setInterval(console.log("todoDelay"), 1000);
+}
+setInterval(todoDelay(), 1000);
+setInterval(console.log("todoDelay"), 1000);
 
-// });
+});
 
 // // Need to add localStorage and fix page reload on the deleteX

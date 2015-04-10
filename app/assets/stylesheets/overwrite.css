@@ -38,7 +38,7 @@ div#dragContainer {
   left: 5px;
 	padding: 10px;
 	background-color: rgba(113, 113, 113, 0.70);
-	width: 200px;
+	width: 400px;
 	display: inline-block;
 }
 
@@ -89,7 +89,7 @@ li.todoItem {
   position: absolute;
   top: 30px;
   right: 5px;
-  background-color: rgba(113, 113, 114, 0.40);
+  background-color: rgba(113, 113, 114, 0.70);
   display: inline-block;
   padding: 25px;
   min-width: 200px;
@@ -113,10 +113,6 @@ li.todoItem {
     font-weight: bold;
 }
 
-h2 {
-  font-size: 30px;
-  color: #ffffff;
-}
 
 input[type="text"] {
   color: #767676;
@@ -271,4 +267,10 @@ i.fa.fa-cogs.fa-3x {
 }
 .done {
     text-decoration: line-through;
+}
+
+h2.twiTitle {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
 }
