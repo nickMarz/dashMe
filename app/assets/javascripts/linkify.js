@@ -1,11 +1,8 @@
 $(document).ready(function () {
-setTimeout(function() {
-  $('p').linkify();
-  console.log('linkify')
-}, 5000);
-// Do something after 5 seconds
+  setInterval(function() {
+    $('p').linkify();}, 500);
+  setInterval(function() { console.log('linkify');
+  }, 500);
 
-  
+$('p').linkify();
 });
-
-// $(window).on('load', 

@@ -53,6 +53,7 @@ form {
 	background-color: rgba(113, 113, 113, 0.70);
 	width: 200px;
   min-height: 200px;
+  text-align: center;
 }
 ul, ol {
   margin-top: 10px;

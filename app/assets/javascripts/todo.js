@@ -23,7 +23,7 @@ function todoDelay () {
 
 
 function appendTaskToList(val) {
-    $('#list').append("<li>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
+    $('#list').append("<li.todoItem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
 }
 var task;
 
