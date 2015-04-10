@@ -3,7 +3,7 @@ $(document).ready(function() {
 // //     e.preventDefault();
 // //     if ($('.todosubmit').val() !== '') {
 // //         var todosubmit_value = $('.todosubmit').val();
-// //         $('ul').append('<li class="todoItem">' + todosubmit_value + '<a href="#" class="deleteX" id="deleteX">x</a> </li>');
+// //         $('ul').append('<li class="todoitem">' + todosubmit_value + '<a href="#" class="deleteX" id="deleteX">x</a> </li>');
 // //     }
 // //     $('.todosubmit').val('');
 // //     return false;
@@ -18,26 +18,23 @@ $(document).ready(function() {
 
 // // });
 
-function todoDelay () {
- 
+// function todoDelay () {
+  function appendTaskToList(val) {
+    $('#list').append("<li.todoitem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
+  }
+  var task;
 
-
-function appendTaskToList(val) {
-    $('#list').append("<li.todoItem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
-}
-var task;
-
-if (localStorage.tasks) {
+  if (localStorage.tasks) {
     tasks = JSON.parse(localStorage.tasks);
-}else {
+  }else {
     tasks = [];
-}
+  }
 
-for(var i=0;i<tasks.length;i++) {
+  for(var i=0;i<tasks.length;i++) {
     appendTaskToList(tasks[i]);
-}
+  }
 
-var addTask = function(){
+  var addTask = function(){
     // get value from #name input
     var val = $('#name').val();
     
@@ -52,34 +49,35 @@ var addTask = function(){
     
     // reset the input field and focus it.
     $('#name').val("").focus();
-};
+  };
 
-$('#add-btn').click(addTask);
-$('#name').keyup(function(e){
+  $('#add-btn').click(addTask);
+  $('#name').keyup(function(e){
     if (e.keyCode === 13) {
-        addTask();
+      addTask();
     }
-});
+  });
 
 
 // approach 1
 /*$('.done-btn').click(function(){
     $(this).parent('li').addClass('done');
-});*/
+  });*/
 
 // correct approach
-$('.done-btn').on( 'click', function() {
-  $(this).parent('li').addClass('done');
-});    
-    
-$('.cancel-btn').on( 'click', function() {
-  $(this).parent('li').fadeOut();
-});    
+    $('.done-btn').on( 'click', function() {
+      $(this).parent('li.todoitem').addClass('done');
+    });    
+
+    $('.cancel-btn').on( 'click', function() {
+      $(this).parent('li.todoitem').fadeOut();
+    });    
 
 
-}
-setInterval(todoDelay(), 1000);
-setInterval(console.log("todoDelay"), 1000);
+  // }
+// todoDelay();
+// setInterval(todoDelay(), 1000);
+// setInterval(console.log("todoDelay"), 1000);
 
 });
 
