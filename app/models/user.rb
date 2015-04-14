@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
       config.access_token        = oauth_token
       config.access_token_secret = oauth_secret
       end
+      binding.pry
     client.update(tweet)
   end
 
@@ -40,5 +41,6 @@ class User < ActiveRecord::Base
       end
     return @timeline = client.home_timeline()
   end
+
   
 end
