@@ -18,6 +18,16 @@ $(".optionsDiv").hide();
   e.preventDefault();
   });
 
+// Hide todo
+$("#clock").show();
+  $(".show_hide_todo_container").show();
+  
+  $('.show_hide_todo_container').click(function(e){
+    
+    $("#todo_containerID").slideToggle(); 
+    e.preventDefault();
+  });
+
 // Hide Clock
 $("#clock").show();
   $(".show_hide_clock").show();
@@ -26,9 +36,8 @@ $("#clock").show();
     
     $("#clock").slideToggle(); 
     e.preventDefault();
-
-   
   });
+
 $('.show_hide_clock').click(function(){
    if (localStorage.clockshowHide === "0") {
     localStorage.clockshowHide = 1;

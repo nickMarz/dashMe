@@ -3,7 +3,7 @@ $(document).ready(function() {
   function draggableApply() {
     $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 10, 10 ]});
-    $('#todo_container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
+    $('#todo_containerID').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
     $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
@@ -11,11 +11,11 @@ $(document).ready(function() {
   
   // to do list functionality
   function flexibleList() {
-    // $( "#todo_container" ).resizable();
+    // $( "#todo_containerID" ).resizable();
   }
 
    $( ".weather" ).on( "click", function() {
-  // grab values onClick //
+  // grab values onClick // 
     var weatherPosTop = $(".weather").css("top");
     var weatherPosLeft = $(".weather").css("left");
   // store settings in localStorage //
@@ -42,10 +42,10 @@ $(document).ready(function() {
     localStorage.tweetBoxLeft = tweetBoxPosLeft; 
   });
 
-  $( "#todo_container" ).on( "click", function() {
+  $( "#todo_containerID" ).on( "click", function() {
   // grab values onClick //
-    var todoPosTop = $("#todo_container").css("top");
-    var todoPosLeft = $("#todo_container").css("left");
+    var todoPosTop = $("#todo_containerID").css("top");
+    var todoPosLeft = $("#todo_containerID").css("left");
   // store settings in localStorage //
     localStorage.todoTop = todoPosTop;
     localStorage.todoLeft = todoPosLeft;
@@ -64,8 +64,8 @@ $(document).ready(function() {
   function loadSettings() {
     $( "#clock-container" ).css("top", localStorage.clockTop);
     $( "#clock-container" ).css("left", localStorage.clockLeft);
-    $( "#todo_container" ).css("top", localStorage.todoTop);
-    $( "#todo_container" ).css("left", localStorage.todoLeft);
+    $( "#todo_containerID" ).css("top", localStorage.todoTop);
+    $( "#todo_containerID" ).css("left", localStorage.todoLeft);
     $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
     $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
     $( ".timeline" ).css("top", localStorage.timelineTop);

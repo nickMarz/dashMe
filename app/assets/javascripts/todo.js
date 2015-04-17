@@ -18,9 +18,9 @@ $(document).ready(function() {
 
 // // });
 
-// function todoDelay () {
+function todoDelay () {
   function appendTaskToList(val) {
-    $('#list').append("<li.todoitem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li>");
+    $('#list').append("<li.todoitem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li> <br>");
   }
   var task;
 
@@ -40,13 +40,10 @@ $(document).ready(function() {
     
     // add the task to the array
     tasks.push(val);
-    
     // save to local storage
-    localStorage.tasks = JSON.stringify(tasks);
-    
+    localStorage.tasks = JSON.stringify(tasks);    
     // append the name to the list
-    appendTaskToList(val);
-    
+    appendTaskToList(val);    
     // reset the input field and focus it.
     $('#name').val("").focus();
   };
@@ -58,27 +55,19 @@ $(document).ready(function() {
     }
   });
 
-
-// approach 1
-/*$('.done-btn').click(function(){
-    $(this).parent('li').addClass('done');
-  });*/
-
-// correct approach
-    $('.done-btn').on( 'click', function() {
-      $(this).parent('li.todoitem').addClass('done');
+    $('.done-btn').click(function() { 
+      $(this).parent().addClass('done');
     });    
 
-    $('.cancel-btn').on( 'click', function() {
-      $(this).parent('li.todoitem').fadeOut();
+    $('.cancel-btn').click(function() {
+      $(this).parent().fadeOut();
     });    
 
 
-  // }
-// todoDelay();
-// setInterval(todoDelay(), 1000);
-// setInterval(console.log("todoDelay"), 1000);
+  }
+todoDelay();
+setInterval(todoDelay(), 1000);
+setInterval(console.log("todoDelay"), 1000);
 
 });
 
-// // Need to add localStorage and fix page reload on the deleteX

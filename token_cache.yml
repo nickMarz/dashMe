@@ -1,0 +1,6 @@
+--- !ruby/object:Flickr::Auth::Token
+token: 72157651564058257-b0eed36113488ef8
+permisions: write
+user_id: 48904461@N03
+username: NickMarz
+user_real_name: Nick Marz

@@ -46,13 +46,13 @@ form {
   text-align: center;
 }
 
-#todo_container {
+#todo_containerID {
   position: absolute;
   top: 70px;
   left: 5px;
 	background-color: rgba(113, 113, 113, 0.70);
 	width: 200px;
-  min-height: 200px;
+  /*min-height: 200px;*/
   text-align: center;
 }
 ul, ol {
@@ -267,7 +267,9 @@ i.fa.fa-cogs.fa-3x {
   padding-bottom: 10px;
 }
 .done {
-    text-decoration: line-through;
+  text-decoration: line-through;
+  color: black;
+  border-bottom: solid 2px #353535;
 }
 
 h2.twiTitle {
