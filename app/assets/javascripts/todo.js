@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 // // });
 
-function todoDelay () {
+// function todoDelay () {
   function appendTaskToList(val) {
     $('#list').append("<li.todoitem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li> <br>");
   }
@@ -57,17 +57,19 @@ function todoDelay () {
 
     $('.done-btn').click(function() { 
       $(this).parent().addClass('done');
+      console.log($(this).parent());
     });    
 
     $('.cancel-btn').click(function() {
       $(this).parent().fadeOut();
+      console.log($(this).parent());
     });    
 
 
-  }
-todoDelay();
-setInterval(todoDelay(), 1000);
-setInterval(console.log("todoDelay"), 1000);
+  // }
+// todoDelay();
+// setInterval(todoDelay(), 1000);
+// setInterval(console.log("todoDelay"), 1000);
 
 });
 

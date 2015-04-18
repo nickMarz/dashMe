@@ -31,6 +31,7 @@ gem 'omniauth'
 
 gem 'omniauth-twitter', '~> 1.1.0'
 gem 'omniauth-facebook'
+gem "omniauth-google-oauth2"
 gem 'puma'
 gem 'forecast_io'
 gem 'quoth'
