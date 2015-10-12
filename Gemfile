@@ -30,7 +30,7 @@ gem 'omniauth'
 
 gem 'omniauth-twitter', '~> 1.1.0'
 gem 'omniauth-facebook'
-gem 'puma'
+# gem 'puma'
 gem 'forecast_io'
 gem 'quoth'
 gem 'wikiquote'
