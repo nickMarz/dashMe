@@ -1,75 +1,153 @@
 $(document).ready(function() {
-// // $('.todoForm').submit(function (e) {
-// //     e.preventDefault();
-// //     if ($('.todosubmit').val() !== '') {
-// //         var todosubmit_value = $('.todosubmit').val();
-// //         $('ul').append('<li class="todoitem">' + todosubmit_value + '<a href="#" class="deleteX" id="deleteX">x</a> </li>');
-// //     }
-// //     $('.todosubmit').val('');
-// //     return false;
-// // });
+
+ var storageEnv = 'dashMe_todos_dev';
+
+  var listItemHelper = '<li class="todo-item" data-due="%dueDate%" data-done="%done%">%data% <span class="todo-item-controls"> <input type=checkbox class="done-btn"></input>  <a href="#" class="del-btn">Delete</a><span></li>';
+  var todoList = ('#todo_containerID');
+  // var todo_item = new Create_todo_item();
+  // console.log( todo_item );
+  // $('#todoEnter').val("SET VALUE");
 
 
-// // $('#deleteX').on('click', '.deleteX',function (e) {
-// //     e.preventDefault();
-// //     $(this).parent().remove();
-// //     console.log('removed item');
-// //     console.log(this);
-
-// // });
-
-// function todoDelay () {
-  function appendTaskToList(val) {
-    $('#list').append("<li.todoitem>" + val + "  <a href='#' class='done-btn'>Done</a> <a href='#' class='cancel-btn'>Cancel Task</a></li> <br>");
-  }
-  var task;
-
-  if (localStorage.tasks) {
-    tasks = JSON.parse(localStorage.tasks);
-  }else {
-    tasks = [];
+  function Create_todo_item(todo) {
+    this.todo     = todo;
+    this.completed  = false;
+    this.createdAt  = Date();
+    this.dueDate  = $( '#datepicker' ).datepicker( 'getDate' );
   }
 
-  for(var i=0;i<tasks.length;i++) {
-    appendTaskToList(tasks[i]);
-  }
-
-  var addTask = function(){
-    // get value from #name input
-    var val = $('#name').val();
-    
-    // add the task to the array
-    tasks.push(val);
-    // save to local storage
-    localStorage.tasks = JSON.stringify(tasks);    
-    // append the name to the list
-    appendTaskToList(val);    
-    // reset the input field and focus it.
-    $('#name').val("").focus();
-  };
-
-  $('#add-btn').click(addTask);
-  $('#name').keyup(function(e){
-    if (e.keyCode === 13) {
-      addTask();
+  function logItems(arg) {
+  for (var i = 0; i < arg.length; i++) {
+    console.log(arg[i].todo);
+    console.log(arg[i].dueDate);
+    console.log(arg[i].completed);
+    console.log(arg[i].createdAt);
     }
+  }
+
+  function refreshClicks() {
+
+    $('.done-btn').click(function() {
+      // e.preventDefault();
+      console.log($(this).parent());
+      console.log( 'Done Button Clicked ' );
+      var itemIndex = $(this).parent().parent().index();
+      console.log( itemIndex);
+      $(this).parent().parent().toggleClass( 'done-item' );
+
+        var state = 'false';
+      if ( $(this).parent().parent().attr('data-done') === 'false') {
+        $(this).parent().parent().attr('data-done', 'true');
+        state = 'true';
+        console.log( state );
+        updateItem( itemIndex, state);
+      } else if ( $(this).parent().parent().attr('data-done') === 'true') {
+        $(this).parent().parent().attr('data-done', 'false');
+        state = 'false';
+        console.log( state );
+        updateItem( itemIndex, state);
+      }
+
+      console.log( 'Done State ' + state );
+
+
+    });
+
+    $('.del-btn').click(function(e) {
+      e.preventDefault();
+      console.log( 'Delete Button Clicked ' );
+      var itemIndex = $(this).parent().parent().index();
+      deleteItem( itemIndex );
+      $(this).parent().parent().fadeOut( "slow", function() {
+          $(this).remove();
+          });
+    });
+
+
+  }
+   function uiUpdates() {
+    var upDateItems = $('.todo-item');
+
+    for (var i = upDateItems.length - 1; i >= 0; i--) {
+      // upDateItems[i]
+
+      if ( $(upDateItems).eq(i).attr('data-done') === 'true' ) {
+        console.log( 'Item Done:' +  $(upDateItems).eq(i).find('input').attr('checked') );
+        $(upDateItems).eq(i).find('input').attr('checked','checked');
+        $(upDateItems).eq(i).addClass('done-item');
+      }
+    }
+  }
+
+  function addItem(arg) {
+    console.log(" addItem function");
+    var newItem = listItemHelper.replace('%data%', arg.todo)
+      .replace('%dueDate%', arg.dueDate)
+      .replace('%done%', arg.completed);
+    $(todoList).prepend(newItem);
+    // logItems(arg);
+  }
+
+  function deleteItem(arg) {
+    console.log(" Delete function");
+    var getItems = JSON.parse(localStorage.getItem(storageEnv) );
+    getItems.splice(arg, 1);
+    localStorage.setItem(storageEnv, JSON.stringify(getItems) );
+
+  }
+  function updateItem(arg, state) {
+    var getItems = JSON.parse(localStorage.getItem(storageEnv) );
+    console.log ('Update Item: ' + state);
+    getItems[arg].completed = state;
+    console.log (getItems[arg].completed);
+    localStorage.setItem(storageEnv, JSON.stringify(getItems) );
+    console.log (getItems);
+    // return getItems;
+  }
+
+  $('#add-btn').click(function(e) {
+    e.preventDefault();
+    var newTodoVal = $('#todoEnter').val();
+    if (newTodoVal === '') { return false; }
+    var todo_item = new Create_todo_item(newTodoVal);
+
+    $(todoList).children().remove();
+    addItem(todo_item);
+    saveItems(todo_item);
+    $('#todoEnter').val("");
+    refreshClicks();
+    uiUpdates();
   });
 
-    $('.done-btn').click(function() { 
-      $(this).parent().addClass('done');
-      console.log($(this).parent());
-    });    
+  function loadItems() {
+    var getItems = JSON.parse(localStorage.getItem(storageEnv) );
+    // for (var i = 0; i < getItems.length; i++) {
+    //  addItem(getItems[i]);
+    // }
+    for (var i = getItems.length - 1; i >= 0; i--) {
+      addItem(getItems[i]);
+    }
+    refreshClicks();
+    uiUpdates();
+    return getItems;
+  }
 
-    $('.cancel-btn').click(function() {
-      $(this).parent().fadeOut();
-      console.log($(this).parent());
-    });    
+  function saveItems(itemArg) {
+    var localData = loadItems();
+    if (localData.length === 0) { localData = []; }
 
+    localData.push( itemArg );
+    localStorage.setItem(storageEnv, JSON.stringify(localData) );
+  }
 
-  // }
-// todoDelay();
-// setInterval(todoDelay(), 1000);
-// setInterval(console.log("todoDelay"), 1000);
+  $(function pageLoad() {
+    var pageLoadData = loadItems();
+    $( '#datepicker' ).datepicker({
+      defaultDate: +7,
+      nextText: 'Later'
+    });
+    logItems(pageLoadData);
+    console.log(   );
+  });
 
 });
-

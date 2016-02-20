@@ -11,7 +11,7 @@ function getWeather() {
     console.log(forecast);
     console.log(forecast.currently.icon);
       var cTemp = $("p.temp").empty();
-      cTemp.text(forecast.currently.temperature).append("˚F"); 
+      cTemp.text(forecast.currently.temperature).append("˚F");
       var cSum = $("p.sum").empty();
       cSum.text(forecast.currently.summary);
       var cImage = $("svg.image").empty();
@@ -21,4 +21,11 @@ function getWeather() {
   }
   getWeather();
   setInterval (getWeather, 50000);
+
+  function weatherIconSet() {
+    var weatherText = $('svg.image').text();
+    $('svg.image').css('background', 'URL("/assets/svg/'+weatherText+'.svg")');
+    $('svg.image').css('background', 'URL("/assets/svg/'+weatherText+'.svg")');
+
+    }
 });

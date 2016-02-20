@@ -23,16 +23,18 @@
 <div class="dragContainer" id="dragContainer">
 <%= render 'shared/aboutUs' %>
 <%= render 'shared/twitterconnect' %>
-<% if current_user %>
-<%= render 'shared/twitterFeed' %>
 <%= render 'shared/clock' %>
 <%= render 'shared/todo' %>
 <%= render 'shared/weather' %>
+<%= render 'shared/options' %>
+<% if current_user %>
+<%= render 'shared/twitterFeed' %>
+
 <%= render 'shared/newTweet' %>
 <%= yield %>
 <%= render 'shared/greeting' %>
 <%= render 'shared/quote' %>
-<%= render 'shared/options' %>
+
 <% end %>
 </div>
 </body>
