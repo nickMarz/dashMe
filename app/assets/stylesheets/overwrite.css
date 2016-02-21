@@ -141,7 +141,7 @@ li.todo-item {
 }
 
 .tweetSignIn {
-  background-color: rgba(113, 113, 113, 0.70);
+  // background-color: rgba(113, 113, 113, 0.70);
   width: 20%;
   text-align: center;
   padding: 7px 4px;
@@ -206,8 +206,13 @@ h1.greet {
   bottom: 35%;
   left: 25%;
 }
+
+canvas#icon1 {
+    width: 50px;
+}
+
 .weather {
-  display: inline-block;
+  display: initial;
   position: absolute;
   top: 80%;
   left: 5px;
@@ -217,7 +222,7 @@ h1.greet {
 }
 
 p.temp {
-  display: block;
+  display: initial;
   font-size: 24pt;
   color: #ffffff;
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
@@ -225,7 +230,7 @@ p.temp {
 }
 
 p.sum {
-  display: block;
+  display: initial;
   color: #ffffff;
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
     margin: 0 0 0px;
@@ -272,6 +277,8 @@ p.sum {
 
 .show_hide {
     display:none;
+    color: #767676;
+    padding: 2px;
 
 }
 

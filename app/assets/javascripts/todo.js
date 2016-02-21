@@ -30,33 +30,33 @@
 
     $('.done-btn').click(function() {
       // e.preventDefault();
-      console.log($(this).parent());
-      console.log( 'Done Button Clicked ' );
+      // console.log($(this).parent());
+      // console.log( 'Done Button Clicked ' );
       var itemIndex = $(this).parent().parent().index();
-      console.log( itemIndex);
+      // console.log( itemIndex);
       $(this).parent().parent().toggleClass( 'done-item' );
 
         var state = 'false';
       if ( $(this).parent().parent().attr('data-done') === 'false') {
         $(this).parent().parent().attr('data-done', 'true');
         state = 'true';
-        console.log( state );
+        // console.log( state );
         updateItem( itemIndex, state);
       } else if ( $(this).parent().parent().attr('data-done') === 'true') {
         $(this).parent().parent().attr('data-done', 'false');
         state = 'false';
-        console.log( state );
+        // console.log( state );
         updateItem( itemIndex, state);
       }
 
-      console.log( 'Done State ' + state );
+      // console.log( 'Done State ' + state );
 
 
     });
 
     $('.del-btn').click(function(e) {
       e.preventDefault();
-      console.log( 'Delete Button Clicked ' );
+      // console.log( 'Delete Button Clicked ' );
       var itemIndex = $(this).parent().parent().index();
       deleteItem( itemIndex );
       $(this).parent().parent().fadeOut( "slow", function() {
@@ -73,7 +73,7 @@
       // upDateItems[i]
 
       if ( $(upDateItems).eq(i).attr('data-done') === 'true' ) {
-        console.log( 'Item Done:' +  $(upDateItems).eq(i).find('input').attr('checked') );
+        // console.log( 'Item Done:' +  $(upDateItems).eq(i).find('input').attr('checked') );
         $(upDateItems).eq(i).find('input').attr('checked','checked');
         $(upDateItems).eq(i).addClass('done-item');
       }
@@ -81,7 +81,7 @@
   }
 
   function addItem(arg) {
-    console.log(" addItem function");
+    // console.log(" addItem function");
     var newItem = listItemHelper.replace('%data%', arg.todo)
       .replace('%dueDate%', arg.dueDate)
       .replace('%done%', arg.completed);
@@ -90,7 +90,7 @@
   }
 
   function deleteItem(arg) {
-    console.log(" Delete function");
+    // console.log(" Delete function");
     var getItems = JSON.parse(localStorage.getItem(storageEnv) );
     getItems.splice(arg, 1);
     localStorage.setItem(storageEnv, JSON.stringify(getItems) );
@@ -98,11 +98,11 @@
   }
   function updateItem(arg, state) {
     var getItems = JSON.parse(localStorage.getItem(storageEnv) );
-    console.log ('Update Item: ' + state);
+    // console.log ('Update Item: ' + state);
     getItems[arg].completed = state;
-    console.log (getItems[arg].completed);
+    // console.log (getItems[arg].completed);
     localStorage.setItem(storageEnv, JSON.stringify(getItems) );
-    console.log (getItems);
+    // console.log (getItems);
     // return getItems;
   }
 
@@ -152,8 +152,8 @@
       defaultDate: +7,
       nextText: 'Later'
     });
-    logItems(pageLoadData);
-    console.log(  "pageLoadData" );
+    // logItems(pageLoadData);
+    // console.log(  "pageLoadData" );
   };
 pageLoad();
 // });

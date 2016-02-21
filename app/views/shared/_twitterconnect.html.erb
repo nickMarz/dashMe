@@ -4,10 +4,11 @@
   Signed in as <%= current_user.name %>
   <br>
   <div class="signin">
-  <%= link_to "Sign out", signout_path, method: "Delete"%>
+  <%= button_to "Sign out", signout_path, method: "Delete"%>
   </div>
-<% else %> <div class="signin">
-  <%= link_to "Sign in with twitter", "/auth/twitter"%>
+<% else %>
+<div class="signin">
+  <%= button_to "Sign in with twitter", "/auth/twitter"%>
   </div>
   <br>
 <% end %>

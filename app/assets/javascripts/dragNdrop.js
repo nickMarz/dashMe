@@ -77,11 +77,11 @@ $(document).ready(function() {
 
 // run functions onload //
   // $(draggableApply);
-  $(loadSettings);
-  $(flexibleList);
-  setInterval(draggableApply(), 1000);
+  loadSettings();
+  flexibleList();
+  // setInterval(draggableApply(), 1000);
   // setInterval(console.log("draggableApply"), 1000);
-draggableApply()
+draggableApply();
 
 });
 

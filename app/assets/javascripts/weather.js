@@ -10,22 +10,27 @@ function getWeather() {
     success: function(forecast) {
     console.log(forecast);
     console.log(forecast.currently.icon);
+    var current_temp = forecast.currently.temperature;
+
       var cTemp = $("p.temp").empty();
-      cTemp.text(forecast.currently.temperature).append("˚F");
+          cTemp.text(current_temp).append("˚F");
       var cSum = $("p.sum").empty();
+
       cSum.text(forecast.currently.summary);
-      var cImage = $("svg.image").empty();
-      cImage.text(forecast.currently.icon);
-    }
+      var weatherIcon = forecast.currently.icon;
+
+      var ctx = document.getElementById('icon1');
+        $(ctx).addClass(weatherIcon)
+      var icons = new Skycons(),
+          list  = ["icon1"]
+      icons.color = "white";
+      icons.interval = 1000;
+      icons.set(list[0], weatherIcon);
+      icons.play();
+
+      }
     });
   }
   getWeather();
   setInterval (getWeather, 50000);
-
-  function weatherIconSet() {
-    var weatherText = $('svg.image').text();
-    $('svg.image').css('background', 'URL("/assets/svg/'+weatherText+'.svg")');
-    $('svg.image').css('background', 'URL("/assets/svg/'+weatherText+'.svg")');
-
-    }
 });
