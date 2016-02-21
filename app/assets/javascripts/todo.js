@@ -1,9 +1,9 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
  var storageEnv = 'dashMe_todos_dev';
 
   var listItemHelper = '<li class="todo-item" data-due="%dueDate%" data-done="%done%">%data% <span class="todo-item-controls"> <input type=checkbox class="done-btn"></input>  <a href="#" class="del-btn">Delete</a><span></li>';
-  var todoList = ('#todo_containerID');
+  var todoList = ('#todo-list');
   // var todo_item = new Create_todo_item();
   // console.log( todo_item );
   // $('#todoEnter').val("SET VALUE");
@@ -17,6 +17,7 @@ $(document).ready(function() {
   }
 
   function logItems(arg) {
+    if (arg === null) { return false };
   for (var i = 0; i < arg.length; i++) {
     console.log(arg[i].todo);
     console.log(arg[i].dueDate);
@@ -124,8 +125,13 @@ $(document).ready(function() {
     // for (var i = 0; i < getItems.length; i++) {
     //  addItem(getItems[i]);
     // }
-    for (var i = getItems.length - 1; i >= 0; i--) {
+    if (getItems !== null) {
+      for (var i = getItems.length - 1; i >= 0; i--) {
       addItem(getItems[i]);
+      }
+      if (getItems === null) {
+        getItems = []
+      }
     }
     refreshClicks();
     uiUpdates();
@@ -134,20 +140,20 @@ $(document).ready(function() {
 
   function saveItems(itemArg) {
     var localData = loadItems();
-    if (localData.length === 0) { localData = []; }
+    if (localData === null) { localData = []; }
 
     localData.push( itemArg );
     localStorage.setItem(storageEnv, JSON.stringify(localData) );
   }
 
-  $(function pageLoad() {
+  function pageLoad() {
     var pageLoadData = loadItems();
     $( '#datepicker' ).datepicker({
       defaultDate: +7,
       nextText: 'Later'
     });
     logItems(pageLoadData);
-    console.log(   );
-  });
-
-});
+    console.log(  "pageLoadData" );
+  };
+pageLoad();
+// });

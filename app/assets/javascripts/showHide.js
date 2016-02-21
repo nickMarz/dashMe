@@ -20,9 +20,9 @@ $(document).ready(function(){
 
 // Hide todo
   $("#clock").show();
-  $(".show_hide_todo_container").show();
+  $("#show_hide_todo_container").show();
 
-  $('.show_hide_todo_container').click(function(e){
+  $('#show_hide_todo_container').click(function(e){
     e.preventDefault();
     $("#todo_containerID").slideToggle();
 
@@ -30,9 +30,9 @@ $(document).ready(function(){
 
 // Hide Clock
   $("#clock").show();
-  $(".show_hide_clock").show();
+  $("#show_hide_clock").show();
 
-  $('.show_hide_clock').click(function(e){
+  $('#show_hide_clock').click(function(e){
     e.preventDefault();
     $("#clock").slideToggle();
 
@@ -65,5 +65,5 @@ $('.show_hide_clock').click(function(){
 
 // run functions onload //
   $(loadHideSettings);
-
+$( '#datepicker' ).datepicker();
 });

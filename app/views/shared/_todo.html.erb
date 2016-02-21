@@ -1,30 +1,21 @@
-<div class="todoHide">
- <!--  <div id="todo_containerID" class="todo_container">
-    <div  class="todo">
-
-
-<label>Enter a Todo and hit enter!</label>
-  <input type='text' id='name' placeholder='New Task'>
-    <a href='#' id='add-btn'>Add</a>
-      <ul id='list'>
-      </ul>
+  <div id="todo_containerID" class="todo_container container">
+    <div class="row todo-controls">
+      <div class="col-xs-6">
+    <!-- <label for="todoEnter">Todo's</label> -->
+        <input type="text" id="todoEnter" placeholder="New Task">
+      </div>
+      <div class="col-xs-2">
+        <!-- <label for="datepicker"> Date:</label> -->
+        <input type="text" id="datepicker">
+      </div>
+      <div class="col-xs-2">
+        <button id="add-btn" type="button" class="btn btn-default btn-xs">+</button>
     </div>
-  </div> -->
-
-  <div id="todo_containerID" class="todo_container">
-    <div class="todo-controls">
-
-    <label for="todoEnter">Todo's</label>
-
-      <input type="text" id="todoEnter" placeholder="New Task">
-      <label for="datepicker"> Date:</label>
-      <input type="text" id="datepicker">
-      <a href="#" id="add-btn">Add</a>
-    </div>
-      <ul id="todo-list">
-
-      </ul>
-
   </div>
-
+    <div class="row">
+      <div class="col-xs-12">
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+  </div>
 </div>

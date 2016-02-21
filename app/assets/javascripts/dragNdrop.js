@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   function draggableApply() {
     $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 10, 10 ]});
@@ -8,19 +8,19 @@ $(document).ready(function() {
     $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
     $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
   }
-  
+
   // to do list functionality
   function flexibleList() {
     // $( "#todo_containerID" ).resizable();
   }
 
    $( ".weather" ).on( "click", function() {
-  // grab values onClick // 
+  // grab values onClick //
     var weatherPosTop = $(".weather").css("top");
     var weatherPosLeft = $(".weather").css("left");
   // store settings in localStorage //
     localStorage.weatherTop = weatherPosTop;
-    localStorage.weatherLeft = weatherPosLeft; 
+    localStorage.weatherLeft = weatherPosLeft;
   });
 
 
@@ -30,16 +30,16 @@ $(document).ready(function() {
     var clockPosLeft = $("#clock-container").css("left");
   // store settings in localStorage //
     localStorage.clockTop = clockPosTop;
-    localStorage.clockLeft = clockPosLeft; 
+    localStorage.clockLeft = clockPosLeft;
   });
- 
+
   $( ".tweetBox" ).on( "click", function() {
   // grab values onClick //
     var tweetBoxPosTop = $(".tweetBox").css("top");
     var tweetBoxPosLeft = $(".tweetBox").css("left");
   // store settings in localStorage //
     localStorage.tweetBoxTop = tweetBoxPosTop;
-    localStorage.tweetBoxLeft = tweetBoxPosLeft; 
+    localStorage.tweetBoxLeft = tweetBoxPosLeft;
   });
 
   $( "#todo_containerID" ).on( "click", function() {
@@ -57,7 +57,7 @@ $(document).ready(function() {
     var timelinePosLeft = $(".timeline").css("left");
   // store settings in localStorage //
     localStorage.timelineTop = timelinePosTop;
-    localStorage.timelineLeft = timelinePosLeft; 
+    localStorage.timelineLeft = timelinePosLeft;
   });
 
   // load settings from localStorage //
@@ -79,9 +79,9 @@ $(document).ready(function() {
   // $(draggableApply);
   $(loadSettings);
   $(flexibleList);
-  setInterval(draggableApply, 1000);
-  setInterval(console.log("draggableApply"), 1000);
-
+  setInterval(draggableApply(), 1000);
+  // setInterval(console.log("draggableApply"), 1000);
+draggableApply()
 
 });
 
