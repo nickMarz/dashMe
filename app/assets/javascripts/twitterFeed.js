@@ -7,9 +7,11 @@ $(document).ready(function() {
         var profilePic = data[i].user.profile_image_url;
         var userName = data[i].user.name;
         var userTweet = data[i].text;
-        list.append('<div class="twitt"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'<br> BY: ' + userName + '</p></div>');
+        var finishedTweet = '<div class="twitt"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'<br> BY: ' + userName + '</p></div>'
+        list.append(finishedTweet);
       // $('p.tweets').linkify(); somthing is up with the linkify javascript?
-      console.log(data);
+      console.log(data[i]);
+      console.log(finishedTweet);
       }
       $('.tweets').linkify();
     });
