@@ -1,9 +1,9 @@
 
   function showpics(){
-	$("#box").val("popular")
+	$("#box").val("explore")
     var pic= $("#box").val();
 
-    $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?tags='
+    $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?tags='
       +pic+"&tagmode=any&format=json&jsoncallback=?",
       function(data){ $("#images").hide().html(data).fadeIn('fast');
 
