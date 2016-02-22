@@ -44,8 +44,10 @@ $('#show_hide_clock').click(function(e){
     $("#clock").slideToggle();
 
     if (localStorage.clockshowHide === false) {
+      clock.hidden = true;
     localStorage.clockshowHide = true;
    } else  if (localStorage.clockshowHide === true){
+    clock.hidden = false;
     localStorage.clockshowHide = false;
   }
 });
