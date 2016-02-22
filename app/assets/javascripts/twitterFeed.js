@@ -17,4 +17,5 @@ $(document).ready(function() {
   }
   getTweets();
   setInterval (getTweets, 180000);
+  setInterval ($('.tweets').linkify(), 180000);
 });
