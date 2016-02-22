@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
   function draggableApply() {
-    $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
-    // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , containment: 'parent', grid: [ 10, 10 ]});
+    $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , grid: [ 10, 10 ]});
     $('#todo_containerID').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
-    $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
-    $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
-    $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", containment: 'parent', grid: [ 10, 10 ]});
+    $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
   }
 
   // to do list functionality

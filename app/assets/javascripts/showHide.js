@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+  function Visibility_tracking(name) {
+    this.name     = name;
+    this.hidden  = false;
+  }
+var clock = new Visibility_tracking( $("#clock") );
+var todoList = new Visibility_tracking( $("#todo_containerID") );
+
 // About dev's show hide function
   $(".slidingDiv").hide();
 	$(".show_hide").show();
@@ -32,32 +39,24 @@ $(document).ready(function(){
   $("#clock").show();
   $("#show_hide_clock").show();
 
-  $('#show_hide_clock').click(function(e){
+$('#show_hide_clock').click(function(e){
     e.preventDefault();
     $("#clock").slideToggle();
 
-  });
-
-$('.show_hide_clock').click(function(){
-   if (localStorage.clockshowHide === "0") {
-    localStorage.clockshowHide = 1;
-    $("#clock").css('display', 'none');
-    var shod = $("#clock").css('display', 'none');
-    console.log(shod);
-    // e.preventDefault();
-   } else  if (localStorage.clockshowHide === "1"){
-    localStorage.clockshowHide = 0;
-    $("#clock").css('display', 'block');
-    var shod2 = $("#clock").css('display', 'block');
-      console.log(shod2);
-      // e.preventDefault();
+    if (localStorage.clockshowHide === false) {
+    localStorage.clockshowHide = true;
+   } else  if (localStorage.clockshowHide === true){
+    localStorage.clockshowHide = false;
   }
 });
   // load settings from localStorage //
   function loadHideSettings() {
-    clockVisible = $( "#clock" ).css('display', localStorage.clockVisible);
-    $( "#clock" ).css('display', localStorage.clockVisible);
-    console.log(clockVisible);
+    if (localStorage.clockshowHide === false) { $("#clock").show();}
+    if (localStorage.clockshowHide === true) { $("#clock").hide();}
+
+    // clockVisible = $( "#clock" ).css('display', localStorage.clockVisible);
+    // $( "#clock" ).css('display', localStorage.clockVisible);
+    // console.log(clockVisible);
     console.log("set state");
 
   }

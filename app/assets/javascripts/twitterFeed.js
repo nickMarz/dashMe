@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
   function getTweets() {
+    //TODO: add connection if check to handle errors
     $.getJSON("/tweets/show",function (data) {
       var list = $("p.tweets").empty();
       for (var i = 0; i < 10; i++) {
@@ -10,7 +11,7 @@ $(document).ready(function() {
       console.log(data);
       }
     });
-  } 
+  }
   getTweets();
-  setInterval (getTweets, 180000); 
+  setInterval (getTweets, 180000);
 });
