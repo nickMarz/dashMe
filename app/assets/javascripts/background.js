@@ -1,6 +1,6 @@
 
   function showpics(){
-	$("#box").val("explore")
+	$("#box").val("sunset");
     var pic= $("#box").val();
 
     $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?tags='
