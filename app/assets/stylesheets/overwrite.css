@@ -175,7 +175,7 @@ li.todo-item {
 .twitt {
     display: inline;
     margin-left: -55px;
-    // padding-right: 15px;
+    padding-right: 10px;
 }
 
 h2.twiTitle {

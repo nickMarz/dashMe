@@ -1,17 +1,19 @@
-
 $(document).ready(function() {
   function getTweets() {
     //TODO: add connection if check to handle errors
     $.getJSON("/tweets/show",function (data) {
-      var list = $("p.tweets").empty();
+      var list = $(".tweets").empty();
       for (var i = 0; i < 10; i++) {
-        list.append("<div class='twitt'><img src='"+data[i].user.profile_image_url+"' class='twitPic'>");
-        list.append(data[i].text+" BY: "+data[i].user.name+"</div><br>");
+        var profilePic = data[i].user.profile_image_url;
+        var userName = data[i].user.name;
+        var userTweet = data[i].text;
+        list.append('<div class="twitt"><img src="'+ profilePic +'" class="twitPic"><p>' userTweet +' BY: '+ userName +'</p></div>');
       // $('p.tweets').linkify(); somthing is up with the linkify javascript?
       console.log(data);
       }
+      $('.tweets').linkify();
     });
-    $('p.tweets').linkify();
+
   }
   getTweets();
   setInterval (getTweets, 180000);
