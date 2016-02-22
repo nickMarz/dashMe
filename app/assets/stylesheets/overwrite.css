@@ -207,8 +207,9 @@ h1.greet {
   left: 25%;
 }
 
-canvas#icon1 {
-    width: 50px;
+#icon1 {
+    width: 40px;
+    margin-left: 10px;
 }
 
 .weather {
@@ -220,6 +221,9 @@ canvas#icon1 {
   height: 75px;
   padding: 10px;
 }
+.weather.container {
+    width: 200px;
+}
 
 p.temp {
   display: initial;
@@ -230,10 +234,11 @@ p.temp {
 }
 
 p.sum {
-  display: initial;
-  color: #ffffff;
-  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+    display: initial;
+    color: #ffffff;
+    text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
     margin: 0 0 0px;
+    vertical-align: top;
 }
 
 .text-center.alert.alert-warning {

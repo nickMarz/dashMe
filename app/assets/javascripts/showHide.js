@@ -36,8 +36,8 @@ var todoList = new Visibility_tracking( $("#todo_containerID") );
   });
 
 // Hide Clock
-  $("#clock").show();
-  $("#show_hide_clock").show();
+  // $("#clock").show();
+  // $("#show_hide_clock").show();
 
 $('#show_hide_clock').click(function(e){
     e.preventDefault();
