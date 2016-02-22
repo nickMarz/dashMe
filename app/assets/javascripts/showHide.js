@@ -65,6 +65,6 @@ $('#show_hide_clock').click(function(e){
 
 
 // run functions onload //
-  $(loadHideSettings);
+loadHideSettings();
 $( '#datepicker' ).datepicker();
 });
