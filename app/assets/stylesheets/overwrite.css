@@ -163,6 +163,7 @@ li.todo-item {
   max-width: 400px;
     max-height: 300px;
   overflow-y: scroll;
+  padding-left: 75px;
 }
 
 .tweet {
@@ -171,8 +172,18 @@ li.todo-item {
   margin-top: 4px;
   margin-bottom: 4px;
 }
+.twitt {
+    display: inline;
+    margin-left: -55px;
+    // padding-right: 15px;
+}
 
-
+h2.twiTitle {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    margin: 0 auto 10px -25px;
+}
 .deleteX {
     margin-left: 20px;
     color: rgba(0, 203, 247, 2.0);
@@ -349,10 +360,4 @@ i.fa.fa-cogs.fa-3x {
   text-decoration: line-through;
   color: black;
   border-bottom: solid 2px #353535;
-}
-
-h2.twiTitle {
-  color: #fff;
-  text-align: center;
-  font-size: 32px;
 }
