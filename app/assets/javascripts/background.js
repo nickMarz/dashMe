@@ -6,9 +6,11 @@
     $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?tags='
       +pic+"&tagmode=any&format=json&jsoncallback=?",
       function(data){ $("#images").hide().html(data).fadeIn('fast');
-
-      $('body').css('background-image', 'URL(' +data.items[10].media.m + ')')
-      console.log(data)
+      var newURL = data.items[10].media.m;
+          newURL = newURL.replace("_m", "_h");
+      $('body').css('background-image', 'URL(' +newURL+ ')')
+      console.log("flickr updates " + data);
+      console.log(newURL);
       testing = data;
     // $.each(data.items, function(i,item) {
     //   $("<img/>").attr("src", item.media.m).appendTo("#images");
