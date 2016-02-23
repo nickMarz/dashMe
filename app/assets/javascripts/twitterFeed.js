@@ -4,7 +4,7 @@ $(document).ready(function() {
     $.getJSON("/tweets/show",function (data) {
       var list = $(".tweets");
       list.innerHTML = "";
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < 15; i++) {
         var profilePic = data[i].user.profile_image_url;
         var userName = data[i].user.name;
         var userTweet = data[i].text;
@@ -12,10 +12,10 @@ $(document).ready(function() {
         // list.append(finishedTweet);
         list.innerHTML += finishedTweet;
         // $(".tweets").innerHTML = finishedTweet;
-      // $('p.tweets').linkify(); somthing is up with the linkify javascript?
-      console.log(data[i]);
-      console.log(finishedTweet);
-      }
+        // $('p.tweets').linkify(); somthing is up with the linkify javascript?
+        console.log(data[i]);
+        console.log(finishedTweet);
+        }
       $('.tweets').linkify();
     });
 
