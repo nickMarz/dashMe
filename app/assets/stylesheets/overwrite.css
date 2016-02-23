@@ -314,9 +314,9 @@ a.show_hide {
   cursor: pointer;
 }
 img.linkPic {
-  width: 50%;
-  height: 50%;
-  border-radius: 110px;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
