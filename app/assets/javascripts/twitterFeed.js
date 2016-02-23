@@ -4,20 +4,25 @@ $(document).ready(function() {
     $.getJSON("/tweets/show",function (data) {
       var list = $(".tweets");
 
-      var allTweets = ""
+      var allTweets = "";
       for (var i = 0; i < 15; i++) {
         var profilePic = data[i].user.profile_image_url;
         var userName = data[i].user.name;
         var userTweet = data[i].text;
         var finishedTweet = '<div class="twitt"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'<br> BY: ' + userName + '</p></div>';
         // list.append(finishedTweet);
-        allTweets += finishedTweet;
+
         // $(".tweets").innerHTML = finishedTweet;
         // $('p.tweets').linkify(); somthing is up with the linkify javascript?
-        console.log(data[i]);
-        console.log(finishedTweet);
+        allTweets += finishedTweet;
+        console.log(profilePic);
+        console.log(userName);
+        console.log(userTweet);
+        $(".tweets").eq(0).append(finishedTweet);
         }
-        $(".tweets").eq(0).html(allTweets)
+        console.log("allTweets " + allTweets);
+
+        // $(".tweets").eq(0).html(allTweets);
         // list.innerHTML = allTweets;
       $('.tweets').linkify();
     });

@@ -173,16 +173,18 @@ li.todo-item {
   margin-bottom: 4px;
 }
 .twitt {
-    display: inline;
-    margin-left: -55px;
-    padding-right: 10px;
+    display: inline-flex;
+    margin-left: -45px;
 }
 
 h2.twiTitle {
     color: #fff;
     text-align: center;
     font-size: 32px;
-    margin: 0 auto 10px -25px;
+    margin: 0 auto 10px -50px;
+}
+img.twitPic {
+    margin-right: 20px;
 }
 .deleteX {
     margin-left: 20px;
