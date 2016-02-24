@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
   function draggableApply() {
+
     $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , grid: [ 10, 10 ]});
-    $('#todo_containerID').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
+    $('#todo_list').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
     $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
     $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
     $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
@@ -11,7 +12,7 @@ $(document).ready(function() {
 
   // to do list functionality
   function flexibleList() {
-    // $( "#todo_containerID" ).resizable();
+    // $( "#todo_list" ).resizable();
   }
 
    $( ".weather" ).on( "click", function() {
@@ -42,10 +43,10 @@ $(document).ready(function() {
     localStorage.tweetBoxLeft = tweetBoxPosLeft;
   });
 
-  $( "#todo_containerID" ).on( "click", function() {
+  $( "#todo_list" ).on( "click", function() {
   // grab values onClick //
-    var todoPosTop = $("#todo_containerID").css("top");
-    var todoPosLeft = $("#todo_containerID").css("left");
+    var todoPosTop = $("#todo_list").css("top");
+    var todoPosLeft = $("#todo_list").css("left");
   // store settings in localStorage //
     localStorage.todoTop = todoPosTop;
     localStorage.todoLeft = todoPosLeft;
@@ -64,8 +65,8 @@ $(document).ready(function() {
   function loadSettings() {
     $( "#clock-container" ).css("top", localStorage.clockTop);
     $( "#clock-container" ).css("left", localStorage.clockLeft);
-    $( "#todo_containerID" ).css("top", localStorage.todoTop);
-    $( "#todo_containerID" ).css("left", localStorage.todoLeft);
+    $( "#todo_list" ).css("top", localStorage.todoTop);
+    $( "#todo_list" ).css("left", localStorage.todoLeft);
     $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
     $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
     $( ".timeline" ).css("top", localStorage.timelineTop);

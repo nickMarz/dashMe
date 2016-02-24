@@ -13,16 +13,15 @@ class TweetsController < ApplicationController
   end
 
   def show
-    binding.pry
-    if current_user === 'nil'
-      binding.pry
-      render :text => "Error!"
-      break
-    end
-    current_user.feed #how do we get this to show up as JSON when the javascript is run!
-    @user_timeline = current_user.feed
-       #what we used to show it before
 
+    # Error checking
+    if current_user === nil
+      render :text => "Error!"
+      return
+    end
+
+    current_user.feed
+    @user_timeline = current_user.feed
     render :json => @user_timeline
   end
 

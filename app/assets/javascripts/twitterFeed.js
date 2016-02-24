@@ -1,11 +1,10 @@
 $(document).ready(function() {
   function getTweets() {
-    //TODO: add connection if check to handle errors
     $.getJSON("/tweets/show",function (data) {
 
     })
     .done(function() {
-    console.log( "second success" );
+    console.log( "Done/Success" );
     var list = $(".tweets").empty();
 
       var allTweets = "";
@@ -14,14 +13,7 @@ $(document).ready(function() {
         var userName = data[i].user.name;
         var userTweet = data[i].text;
         var finishedTweet = '<div class="twitt"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'<br> BY: ' + userName + '</p></div>';
-        // list.append(finishedTweet);
-
-        // $(".tweets").innerHTML = finishedTweet;
-        // $('p.tweets').linkify(); somthing is up with the linkify javascript?
         allTweets += finishedTweet;
-        console.log(profilePic);
-        console.log(userName);
-        console.log(userTweet);
         $(".tweets").eq(0).append(finishedTweet);
         }
         console.log("allTweets " + allTweets);
@@ -31,11 +23,14 @@ $(document).ready(function() {
       $('.tweets').linkify();
     })
     .fail(function() {
-    console.log( "error" )
+      $('body').append('<div class="timeline" id="timeline"> <h2 class="twiTitle">@Twitter</h2> <div class="tweets"></div></div>');
+      var load_error = '<div class="load_error">Load Error</div>';
+
+      $(".tweets").eq(0).append(load_error);
+    console.log( "Error/Fail" );
     });
 
   }
   getTweets();
   setInterval (getTweets, 180000);
-  // setInterval ($('.tweets').linkify(), 180000);
 });
