@@ -3,7 +3,7 @@ $(document).ready(function() {
     $.getJSON("/tweets/show",function (data) {
 
     })
-    .done(function() {
+    .done(function(data) {
     console.log( "Done/Success" );
     var list = $(".tweets").empty();
 
