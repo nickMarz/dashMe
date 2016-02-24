@@ -12,9 +12,6 @@ $(document).ready(function(){
       var storageHidden = this.hidden;
       var obj = JSON.stringify(this);
       console.log(storageName+" / "+storageId.selector+" / "+storageHidden);
-      // console.log(obj);
-      // console.log();
-
       localStorage.setItem( storageName, storageHidden );
     };
 
@@ -40,11 +37,13 @@ $(document).ready(function(){
 // console.log(todoList);
 // About dev's show hide function
   $(".slidingDiv").hide();
-	$(".show_hide").show();
+	// $(".show_hide").show();
 
 	$('.show_hide').click(function(e){
+    e.preventDefault();
+    console.log('.show_hide click')
 	$(".slidingDiv").slideToggle();
-	e.preventDefault();
+
   });
 
 // Options Panel
@@ -53,8 +52,11 @@ $(document).ready(function(){
 // Options Panel
 
   $('.show_hide_opt').click(function(e){
+    e.preventDefault();
+    console.log('show/hide Options')
+
   $(".optionsDiv").slideToggle();
-  e.preventDefault();
+
   });
 
 // Hide todo
@@ -119,5 +121,4 @@ $(document).ready(function(){
 // run functions onload //
 loadHideSettings();
 $( '#datepicker' ).datepicker();
-localStorage.todoListData = "tutiuui"
 });
