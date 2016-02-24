@@ -175,6 +175,8 @@ li.todo-item {
 .twitt {
     display: inline-flex;
     margin-left: -45px;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 10px;
 }
 
 h2.twiTitle {

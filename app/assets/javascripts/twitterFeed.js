@@ -2,7 +2,7 @@ $(document).ready(function() {
   function getTweets() {
     //TODO: add connection if check to handle errors
     $.getJSON("/tweets/show",function (data) {
-      var list = $(".tweets");
+      var list = $(".tweets").empty();
 
       var allTweets = "";
       for (var i = 0; i < 15; i++) {
