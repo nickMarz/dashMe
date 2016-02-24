@@ -16,7 +16,7 @@ $(document).ready(function() {
         allTweets += finishedTweet;
         $(".tweets").eq(0).append(finishedTweet);
         }
-        console.log("allTweets " + allTweets);
+        // console.log("allTweets " + allTweets);
 
         // $(".tweets").eq(0).html(allTweets);
         // list.innerHTML = allTweets;

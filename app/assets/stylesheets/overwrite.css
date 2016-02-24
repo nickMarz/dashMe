@@ -187,6 +187,8 @@ h2.twiTitle {
 }
 img.twitPic {
     margin-right: 20px;
+    height: 50px;
+    width: auto;
 }
 .deleteX {
     margin-left: 20px;
