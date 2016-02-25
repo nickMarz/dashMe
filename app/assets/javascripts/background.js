@@ -2,7 +2,7 @@
     var picked = 0;
     var date = new Date();
     var hour = date.getHours();
-    var searchItem = ['moonlight', 'sunrise', 'beach', 'sunset', 'night' ];
+    var searchItem = ['moonlight', 'sunrise', 'beach', 'sunset', 'moon' ];
 
     function checkTime(timeCheck) {
       if (timeCheck < 4) {
