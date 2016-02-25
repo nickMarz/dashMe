@@ -8,7 +8,7 @@ function getWeather() {
     url: "/getweather.json",
     data: { lat: lat, long: long},
     success: function(forecast) {
-    console.log(forecast);
+    devTestForcast = forecast;
     console.log(forecast.currently.icon);
     var current_temp = forecast.currently.temperature;
 
