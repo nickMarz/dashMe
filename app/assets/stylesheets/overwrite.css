@@ -253,7 +253,7 @@ p.temp {
 p.sum {
     display: initial;
     color: #ffffff;
-    text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+    // text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
     margin: 0 0 0px;
     vertical-align: top;
 }
