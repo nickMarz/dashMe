@@ -43,15 +43,6 @@ div#dragContainer {
   overflow: hidden;
 }
 
-.tweetBox {
-  position: absolute;
-  top: 30px;
-  left: 5px;
-	padding: 10px;
-	// background-color: rgba(113, 113, 113, 0.70);
-	width: 400px;
-	display: inline-block;
-}
 
 form {
   text-align: center;
@@ -84,6 +75,42 @@ a {
   // color: #FFFFFF;
   text-decoration: none !important;
 }
+.text-center.alert.alert-warning {
+  position: absolute;
+  border-radius: 0px;
+  margin-bottom: 31px;
+}
+.text-center.alert.alert-warning {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18pt;
+  border-radius: 0px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  z-index: 99999;
+}
+
+.deleteX {
+    margin-left: 20px;
+    color: rgba(0, 203, 247, 2.0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input[type="text"] {
+  color: #767676;
+}
+
+input[type="submit"] {
+  color: #767676;
+}
+
+
+
+
+// todo //
 #datepicker {
     width: 20px;
 }
@@ -120,12 +147,26 @@ li.todo-item {
   padding: 5px;
 }
 
-.text-center.alert.alert-warning {
-  position: absolute;
-  border-radius: 0px;
-  margin-bottom: 31px;
+.done {
+  text-decoration: line-through;
+  color: black;
+  border-bottom: solid 2px #353535;
 }
 
+// todo //
+
+
+
+// Twiiter Feed //
+.tweetBox {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  padding: 10px;
+  // background-color: rgba(113, 113, 113, 0.70);
+  width: 400px;
+  display: inline-block;
+}
 .tweetSignIn {
   // background-color: rgba(113, 113, 113, 0.70);
   position: absolute;
@@ -178,22 +219,11 @@ li.todo-item {
     height: 50px;
     width: auto;
 }
-.deleteX {
-    margin-left: 20px;
-    color: rgba(0, 203, 247, 2.0);
-    text-decoration: none;
-    font-weight: bold;
-}
+
+// Twiiter Feed //
 
 
-input[type="text"] {
-  color: #767676;
-}
-
-input[type="submit"] {
-  color: #767676;
-}
-
+// greeting //
 .greet {
   // color: #ffffff;
   text-align: center;
@@ -207,7 +237,9 @@ input[type="submit"] {
   left: 25%;
   z-index: -1;
 }
+// greeting //
 
+// weather //
 #icon1 {
     width: 40px;
     margin-left: 10px;
@@ -242,19 +274,19 @@ input[type="submit"] {
     vertical-align: top;
 }
 
-.text-center.alert.alert-warning {
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 18pt;
-  border-radius: 0px;
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  z-index: 99999;
+// goals //
+
+.goals {
+
 }
 
+.goals_container {
 
+}
+
+// goals //
+
+// quote //
 .quote_box {
   position: absolute;
   width: 50%;
@@ -270,6 +302,9 @@ input[type="submit"] {
   font-weight: 200;
   line-height: 1.5;
 }
+// quote //
+
+// About Us //
 .slidingDiv {
   position: absolute;
   top: 40px;
@@ -315,7 +350,10 @@ input[type="submit"] {
   padding-left: 10px;
   padding-right: 10px;
 }
+// About Us //
 
+
+// Options //
 .show_hide_opt {
   text-decoration: none;
   /*background-color: rgba(53, 53, 53, 0.52);*/
@@ -337,8 +375,4 @@ input[type="submit"] {
 i.fa.fa-cogs.fa-3x {
   padding-bottom: 10px;
 }
-.done {
-  text-decoration: line-through;
-  color: black;
-  border-bottom: solid 2px #353535;
-}
+// Options //
