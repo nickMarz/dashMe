@@ -13,7 +13,7 @@ $(document).ready(function() {
             profilePic    = profilePic.replace('http', 'https');
         var userName      = data[i].user.name;
         var userTweet     = data[i].text;
-        var finishedTweet = '<div class="twitt"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'<br> BY: <a href="https://twitter.com/'+'userName" target="_blank">' + ('@' + userName) + '</a></p> <p class="tweetAt">tweet@ '+userName+'</p> </div>';
+        var finishedTweet = '<div class="twitt"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'</p> <p class="tweet_author">BY: <a href="https://twitter.com/'+userName+'" target="_blank">' + '@' + userName + '</a></p> <p class="tweetAt">tweet @'+userName+'</p> </div>';
             allTweets    += finishedTweet;
         $(".tweets").eq(0).append(finishedTweet);
         }
@@ -35,4 +35,10 @@ $(document).ready(function() {
   }
   getTweets();
   setInterval (getTweets, 180000);
+
+  $('.tweetAt').click(function(){
+    var reply = $(this).text().replace('tweet@ ', '@') + " ";
+    $('#message').val( reply )
+  });
+
 });
