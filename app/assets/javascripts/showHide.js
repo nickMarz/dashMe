@@ -55,9 +55,7 @@ $(document).ready(function(){
       } else {
         $('#hide_forecast').next().css('transform', 'rotate(0deg)');
       }
-
   });
-      }
 
 // Options Panel
   $(".optionsDiv").hide();
