@@ -49,7 +49,7 @@ $(document).ready(function() {
     if (charCount.val().length > 140 ) {
       var newStr = charCount.val().substring(0, charCount.val().length-1);
       $(charCount).val(newStr);
-      $('.inputCounter').val(140 - charCount.val().length);
+      $('.inputCounter').html(140 - charCount.val().length);
     }
   })
 
