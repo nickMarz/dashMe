@@ -30,9 +30,11 @@ $(document).ready(function(){
 
    clock = new Visibility_tracking( $("#clock"), 'clock' );
    todoList = new Visibility_tracking( $("#todo_list"), 'todoList' );
+   forecast = new Visibility_tracking( $(".forecast_daily"), 'forecast' );
 
   clock.save();
   todoList.save();
+  forecast.save();
 
 // console.log(clock);
 // console.log(todoList);
@@ -117,7 +119,7 @@ $(document).ready(function(){
 
   }
 
-
+$('.forecast_daily').hide();
 
 // run functions onload //
 loadHideSettings();
