@@ -32,11 +32,12 @@ $(document).ready(function() {
         });
 
       $('#message').keydown(function(e) {
+        $('.inputCounter').html(140 - charCount.val().length);
           var charCount = $('#message');
           if (charCount.val().length > 140 ) {
             var newStr = charCount.val().substring(0, charCount.val().length-1);
             $(charCount).val(newStr);
-            $('.inputCounter').html(140 - charCount.val().length);
+
           }
       })
     })
