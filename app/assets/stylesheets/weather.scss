@@ -1,3 +1,49 @@
-// Place all the styles related to the weather controller here.
+/*// Place all the styles related to the weather controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*/
+/*// weather //*/
+#icon1 {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.weather {
+  display: initial;
+  position: absolute;
+  top: 80%;
+  left: 5px;
+  width: 200px;
+  height: 75px;
+  padding: 10px;
+}
+.weather.container {
+    width: 200px;
+}
+
+.temp {
+  display: initial;
+  font-size: 24pt;
+  /*// color: #ffffff;*/
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+  margin: 0px 15px 0px;
+}
+
+.sum {
+    display: initial;
+    // color: #ffffff;
+    // text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+    margin: 0 0 0px;
+    vertical-align: top;
+}
+.forecast {
+    list-style: none;
+    padding: 0;
+    width: 200px;
+}
+
+ul.daily_weather_ul {
+    border: 1px solid #fff;
+    list-style: none;
+    padding: 0;
+}

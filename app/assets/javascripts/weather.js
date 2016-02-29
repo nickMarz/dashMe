@@ -9,36 +9,25 @@ function getWeather() {
     data: { lat: lat, long: long},
     success: function(forecast) {
     devTestForcast = forecast;
-    console.log(forecast.currently.icon);
+    // console.log(forecast.currently.icon);
     var current_temp = forecast.currently.temperature;
     var dailyForecast = forecast.daily.data;
-
+    $('.forecast').empty();
     $(dailyForecast).each(function(i) {
-      console.log(dailyForecast[i])
 
       var tempForecast = dailyForecast[i];
       var tempHtml = '<ul class="daily_weather_ul">'
-          tempHtml += '<li class="daily_weather_item">'+ dailyForecast[i].summary + '</li>';
-          tempHtml += '<li class="daily_weather_item">Low Temp '+ dailyForecast[i].temperatureMin + '</li>';
-          tempHtml += '<li class="daily_weather_item">Hi Temp '+ dailyForecast[i].temperatureMax + '</li>';
+          tempHtml += '<li class="daily_weather_item summary">'+ dailyForecast[i].summary + '</li>';
+          tempHtml += '<li class="daily_weather_item low_temp"><span>Low Temp</span> '+ dailyForecast[i].temperatureMin + '</li>';
+          tempHtml += '<li class="daily_weather_item hi_temp"><span>Hi Temp</span> '+ dailyForecast[i].temperatureMax + '</li>';
           tempHtml += '</ul>';
-
-          // $(tempForecast).each(function(x) {
-          //    console.log(tempForecast[x])
-          //     tempHtml += '<li class="daily_weather_item>'+ tempForecast[x].summary + '<li>';
-          //     tempHtml += '<li class="daily_weather_item>Low Temp '+ tempForecast[x].temperatureMin + '<li>';
-          //     tempHtml += '<li class="daily_weather_item>Hi Temp '+ tempForecast[x].temperatureMax + '<li>';
-          // })
-
-
-      $('.forecast').append('<li>' + tempHtml + '</li>')
+      $('.forecast').append('<li>' + tempHtml + '</li>');
     })
 
       var cTemp = $("p.temp").empty();
           cTemp.text(current_temp).append("˚F");
       var cSum = $("p.sum").empty();
-
-      cSum.text(forecast.currently.summary);
+          cSum.text(forecast.currently.summary);
       var weatherIcon = forecast.currently.icon;
 
       var ctx = document.getElementById('icon1');

@@ -44,16 +44,12 @@ $(document).ready(function(){
 
 	$('.show_hide').click(function(e){
     e.preventDefault();
-    console.log('.show_hide click')
-	$(".slidingDiv").slideToggle();
-
+      console.log('.show_hide click')
+	   $(".slidingDiv").slideToggle();
   });
 
     $('#hide_forecast').click(function(e){
-    e.preventDefault();
-    console.log('.forecast_daily')
-  $(".forecast_daily").slideToggle();
-
+      $(".forecast_daily").slideToggle();
   });
 
 // Options Panel
