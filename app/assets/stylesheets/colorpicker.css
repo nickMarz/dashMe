@@ -170,6 +170,8 @@
 }
 
 #colorSelector  div{
+	background: #fff;
+	border: 5px solid #000;
     position: relative;
     width: 36px;
     height: 36px;
