@@ -50,7 +50,7 @@ $(document).ready(function(){
 
     $('#hide_forecast').click(function(e){
       $(".forecast_daily").slideToggle();
-      if (true === "matrix(1, 0, 0, 1, 0, 0)" ) {
+      if ($('#hide_forecast i').css('transform') === "matrix(1, 0, 0, 1, 0, 0)" ) {
         $('#hide_forecast i').css('transform', 'rotate(180deg)');
       } else {
         $('#hide_forecast i').css('transform', 'rotate(0deg)');
