@@ -31,7 +31,7 @@ $(document).ready(function() {
           $('#message').val( reply )
         });
 
-      $('#message').keydown(function(e) {
+      $('#message').keypress(function(e) {
           var charCount = $('#message');
           $('.inputCounter').html(140 - charCount.val().length);
           if (charCount.val().length > 140 ) {
