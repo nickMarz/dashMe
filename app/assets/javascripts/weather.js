@@ -14,16 +14,23 @@ function getWeather() {
     var dailyForecast = forecast.daily.data;
 
     $(dailyForecast).each(function(i) {
-
+      console.log(dailyForecast[i])
 
       var tempForecast = dailyForecast[i];
       var tempHtml = '<ul class="daily_weather_ul">'
-
-          $(tempForecast).each(function(x) {
-              tempHtml += '<li class="daily_weather_item>'+ tempForecast[x] + '<li>';
-          })
-
+          tempHtml += '<li class="daily_weather_item">'+ dailyForecast[i].summary + '</li>';
+          tempHtml += '<li class="daily_weather_item">Low Temp '+ dailyForecast[i].temperatureMin + '</li>';
+          tempHtml += '<li class="daily_weather_item">Hi Temp '+ dailyForecast[i].temperatureMax + '</li>';
           tempHtml += '</ul>';
+
+          // $(tempForecast).each(function(x) {
+          //    console.log(tempForecast[x])
+          //     tempHtml += '<li class="daily_weather_item>'+ tempForecast[x].summary + '<li>';
+          //     tempHtml += '<li class="daily_weather_item>Low Temp '+ tempForecast[x].temperatureMin + '<li>';
+          //     tempHtml += '<li class="daily_weather_item>Hi Temp '+ tempForecast[x].temperatureMax + '<li>';
+          // })
+
+
       $('.forecast').append('<li>' + tempHtml + '</li>')
     })
 
