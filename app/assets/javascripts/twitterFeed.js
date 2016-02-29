@@ -6,8 +6,8 @@ $(document).ready(function() {
     .done(function(data) {
     console.log( "Done/Success" );
     var list = $(".tweets").empty();
+    var allTweets = "";
 
-      var allTweets = "";
       for (var i = 0; i < 15; i++) {
         var profilePic    = data[i].user.profile_image_url;
             profilePic    = profilePic.replace('http', 'https');
@@ -19,17 +19,13 @@ $(document).ready(function() {
         $(".tweets").eq(0).append(finishedTweet);
         }
         devTestData = data[i];
-        // console.log("allTweets " + allTweets);
-
-        // $(".tweets").eq(0).html(allTweets);
-        // list.innerHTML = allTweets;
       $('.tweets').linkify();
-        $('.tweetAt').click(function(){
-          $('#message').val('')
-          var reply = $(this).text().replace('tweet @ ', '@') + " ";
-          console.log(reply);
-          $('#message').val( reply )
-        });
+
+      $('.tweetAt').click(function(){
+        $('#message').val('')
+        var reply = $(this).text().replace('tweet @ ', '@') + " ";
+        $('#message').val( reply )
+      });
 
       $('#message').keypress(function(e) {
           var charCount = $('#message');
@@ -37,14 +33,12 @@ $(document).ready(function() {
           if (charCount.val().length > 140 ) {
             var newStr = charCount.val().substring(0, charCount.val().length-1);
             $(charCount).val(newStr);
-
           }
-      })
+      });
+
     })
     .fail(function() {
-      // $('body').append('<div class="timeline" id="timeline"> <h2 class="twiTitle">@Twitter</h2> <div class="tweets"></div></div>');
       var load_error = '<div class="load_error">Connection Error</div>';
-
       $(".tweets").eq(0).append(load_error);
       console.log( "Error/Fail" );
     });
