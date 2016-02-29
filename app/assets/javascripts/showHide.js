@@ -49,6 +49,13 @@ $(document).ready(function(){
 
   });
 
+    $('#hide_forecast').click(function(e){
+    e.preventDefault();
+    console.log('.forecast_daily')
+  $(".forecast_daily").slideToggle();
+
+  });
+
 // Options Panel
   $(".optionsDiv").hide();
   // $(".show_hide_opt").show();
