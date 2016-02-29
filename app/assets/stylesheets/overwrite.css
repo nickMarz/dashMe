@@ -99,12 +99,14 @@ a {
     font-weight: bold;
 }
 
-input[type="text"] {
+.tweetBox input[type="text"] {
   color: #767676;
+  width: 80%;
 }
 
-input[type="submit"] {
+.tweetBox input[type="submit"] {
   color: #767676;
+  width: 10%;
 }
 
 
@@ -202,24 +204,32 @@ li.todo-item {
 }
 
 .twitt {
-    display: inline-flex;
+    display: inline-block;
     margin-left: -45px;
     border-bottom: 1px solid #eeeeee;
     margin-bottom: 10px;
 }
 
 .twiTitle {
-    // color: #fff;
-    text-align: center;
-    font-size: 32px;
-    margin: 0 auto 10px -50px;
+    /* text-align: center; */
+    font-size: 26px;
+    margin: -15px auto 20px -50px;
 }
 .twitPic {
     margin-right: 20px;
     height: 50px;
     width: auto;
+    float: left;
 }
 
+.tweet_author {
+    float: left;
+}
+
+.tweetAt {
+
+    float: right;
+}
 // Twiiter Feed //
 
 
@@ -298,7 +308,7 @@ li.todo-item {
   // color: #ffffff;
   text-align: center;
   font-size: 12pt;
-  text-shadow: 2px 2px 1px Rgba(30, 20, 20, 1.0), -2px -2px 1px Rgba(30, 20, 20, 1.0);
+  text-shadow: 1px 1px 0px Rgba(255, 255, 255, 1);
   font-weight: 200;
   line-height: 1.5;
 }
