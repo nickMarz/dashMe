@@ -24,6 +24,21 @@ $(document).ready(function() {
         // $(".tweets").eq(0).html(allTweets);
         // list.innerHTML = allTweets;
       $('.tweets').linkify();
+        $('.tweetAt').click(function(){
+          $('#message').val('')
+          var reply = $(this).text().replace('tweet @ ', '@') + " ";
+          console.log(reply);
+          $('#message').val( reply )
+        });
+
+      $('#message').keydown(function(e) {
+          var charCount = $('#message');
+          if (charCount.val().length > 140 ) {
+            var newStr = charCount.val().substring(0, charCount.val().length-1);
+            $(charCount).val(newStr);
+            $('.inputCounter').html(140 - charCount.val().length);
+          }
+      })
     })
     .fail(function() {
       // $('body').append('<div class="timeline" id="timeline"> <h2 class="twiTitle">@Twitter</h2> <div class="tweets"></div></div>');
@@ -36,21 +51,5 @@ $(document).ready(function() {
   }
   getTweets();
   setInterval (getTweets, 180000);
-
-  $('.tweetAt').click(function(){
-    $('#message').val('')
-    var reply = $(this).text().replace('tweet @ ', '@') + " ";
-    console.log(reply);
-    $('#message').val( reply )
-  });
-
-  $('.tweetBox input#message').keydown(function(e) {
-    var charCount = $('.tweetBox input#message');
-    if (charCount.val().length > 140 ) {
-      var newStr = charCount.val().substring(0, charCount.val().length-1);
-      $(charCount).val(newStr);
-      $('.inputCounter').html(140 - charCount.val().length);
-    }
-  })
 
 });
