@@ -44,6 +44,10 @@ $(document).ready(function() {
           }
       });
 
+      $('input+.fa-twitter ').click(function() {
+          $('input .fa-twitter').click();
+      })
+
     })
     .fail(function() {
       var load_error = '<div class="load_error">Connection Error</div>';

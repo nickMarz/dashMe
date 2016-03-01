@@ -36,11 +36,44 @@ $(document).ready(function(){
   todoList.save();
   forecast.save();
 
+// var degArrow = [0,180,360];
+// var counter = 0;
+
+// function AnimateRotate(d, target){
+//   console.log('ani ro')
+//     $({deg: degArrow}).animate({deg: d}, {
+//         step: function(now, fx){
+//             $(target).css({
+//                  transform: 'rotate(' + now + 'deg)'
+//             });
+//         }
+
+//     });
+
+
+//       if (degArrow[counter] > 0) {
+//         if (degArrow[counter] === 2) {counter = 0};
+//         if (degArrow[counter] === 1) {counter = 2};
+
+//       };
+
+
+//                 degArrow[counter];
+//             console.log(degArrow);
+//             console.log(counter);
+
+// }
+
+
+
+
+
 // console.log(clock);
 // console.log(todoList);
 // About dev's show hide function
   $(".slidingDiv").hide();
 	$(".show_hide").show();
+  $('.forecast_daily').hide();
 
 	$('.show_hide').click(function(e){
     e.preventDefault();
@@ -50,11 +83,7 @@ $(document).ready(function(){
 
     $('#hide_forecast').click(function(e){
       $(".forecast_daily").slideToggle();
-      if ($('#hide_forecast i').css('transform') === "matrix(1, 0, 0, 1, 0, 0)" ) {
-        $('#hide_forecast i').css('transform', 'rotate(180deg)');
-      } else {
-        $('#hide_forecast i').css('transform', 'rotate(0deg)');
-      }
+      // AnimateRotate(degArrow,'.fa-arrow-circle-down');
   });
 
 // Options Panel
@@ -127,9 +156,8 @@ $(document).ready(function(){
 
   }
 
-$('.forecast_daily').hide();
+
 
 // run functions onload //
 loadHideSettings();
-$( '#datepicker' ).datepicker();
 });

@@ -162,14 +162,29 @@
 }
 
 
-#colorSelector {
+#colorSelector_backcolor {
     position: relative;
     width: 36px;
     height: 36px;
     background: url(https://res.cloudinary.com/dashme/image/upload/v1456786676/select.png);
 }
 
-#colorSelector  div{
+#colorSelector_backcolor  div{
+	background: #fff;
+	border: 5px solid #000;
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+#colorSelector_textcolor {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background: url(https://res.cloudinary.com/dashme/image/upload/v1456786676/select.png);
+}
+
+#colorSelector_textcolor  div{
 	background: #fff;
 	border: 5px solid #000;
     position: relative;

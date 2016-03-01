@@ -11,15 +11,18 @@ function getWeather() {
     devTestForcast = forecast;
     // console.log(forecast.currently.icon);
     var current_temp = forecast.currently.temperature;
+
     var dailyForecast = forecast.daily.data;
     $('.forecast').empty();
-    $(dailyForecast).each(function(i) {
 
+    $(dailyForecast).each(function(i) {
       var tempForecast = dailyForecast[i];
       var tempHtml = '<ul class="daily_weather_ul">'
+
+          tempHtml += '<li class="daily_weather_item low_temp"><span>Low˚</span> '+ dailyForecast[i].temperatureMin + '</li>';
+          tempHtml += '<li class="daily_weather_item hi_temp"><span>Hi˚</span> '+ dailyForecast[i].temperatureMax + '</li>';
+
           tempHtml += '<li class="daily_weather_item summary">'+ dailyForecast[i].summary + '</li>';
-          tempHtml += '<li class="daily_weather_item low_temp"><span>Low Temp</span> '+ dailyForecast[i].temperatureMin + '</li>';
-          tempHtml += '<li class="daily_weather_item hi_temp"><span>Hi Temp</span> '+ dailyForecast[i].temperatureMax + '</li>';
           tempHtml += '</ul>';
       $('.forecast').append('<li>' + tempHtml + '</li>');
     })
