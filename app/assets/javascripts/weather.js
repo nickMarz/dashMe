@@ -17,20 +17,12 @@ function getWeather() {
 
     $(dailyForecast).each(function(i) {
       var tempForecast = dailyForecast[i];
-      var tempHtml = '<table class="daily_weather_table" style="width:100%">'
+      var tempHtml = '<div class="daily_weather_ul">'
 
-          tempHtml += '<tr>   <th class="low_temp">Low˚</th>  <th class="hi_temp">Hi˚</th><th class="summary">Summary</th></tr>'
-          tempHtml += '<tr>   <td class="low_temp">' + dailyForecast[i].temperatureMin +
-                      '</td>  <td class="hi_temp">' + dailyForecast[i].temperatureMax +
-                      '</td>  <td class="summary">' + dailyForecast[i].summary + '</td></tr>'
-
-
-
-          // tempHtml += '<li class="daily_weather_item low_temp"><span>Low˚</span> '+ dailyForecast[i].temperatureMin + '</li>';
-          // tempHtml += '<li class="daily_weather_item hi_temp"><span>Hi˚</span> '+ dailyForecast[i].temperatureMax + '</li>';
-
-          // tempHtml += '<li class="daily_weather_item summary">'+ dailyForecast[i].summary + '</li>';
-          tempHtml += '</table>';
+          tempHtml += '<span class="temp_marker low">Low˚</span> ' + '<span class="low_temp">' + dailyForecast[i].temperatureMin + '</span>' +
+                      '<span class="temp_marker hi">Hi˚</span> '   + '<span class="hi_temp">' + dailyForecast[i].temperatureMax + '</span>' +
+                      '<span class="summary">'+ dailyForecast[i].summary + '<span>';
+          tempHtml += '</div>';
       $('.forecast').append('<li>' + tempHtml + '</li>');
     })
 
