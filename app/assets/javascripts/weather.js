@@ -23,7 +23,7 @@ function getWeather() {
                       '<span class="temp_marker hi">Hi</span> '   + ' <span class="temp hi_temp">' + dailyForecast[i].temperatureMax + '˚</span>' +
                       ' <span class="summary">'+ dailyForecast[i].summary + '<span>';
 
-      $('.forecast').append('<li class="daily_weather_li>' + tempHtml + '</li>');
+      $('.forecast').append('<li class="daily_weather_li">' + tempHtml + '</li>');
     })
 
       var cTemp = $("p.temp").empty();
