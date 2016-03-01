@@ -32,8 +32,8 @@
 .tweetBox .fa-twitter{
     padding-left: 20px;
 }
-.tweetBox .fa-twitter:hover
-color: #3cf{
+.tweetBox .fa-twitter:hover{
+  color: #3cf;
 }
 .tweetSignIn {
   // background-color: rgba(113, 113, 113, 0.70);
