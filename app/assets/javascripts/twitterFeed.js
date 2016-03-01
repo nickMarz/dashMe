@@ -8,6 +8,9 @@ $(document).ready(function() {
     var list = $(".tweets").empty();
     var allTweets = "";
 
+
+    // need to update to another number beside 15, also need to
+    // figure out a storage option for older tweets and how to
       for (var i = 0; i < 15; i++) {
         var profilePic    = data[i].user.profile_image_url;
             profilePic    = profilePic.replace('http', 'https');
@@ -19,14 +22,19 @@ $(document).ready(function() {
         $(".tweets").eq(0).append(finishedTweet);
         }
         devTestData = data[i];
+
       $('.tweets').linkify();
 
+      //adds the ability to click on the screen name and
+      // fill in the new tweet input with their @screen_name
       $('.tweetAt').click(function(){
         $('#message').val('')
-        var reply = $(this).text().replace('tweet @ ', '@') + " ";
+        var reply = $(this).text().replace('tweet @', '@') + " ";
         $('#message').val( reply )
       });
 
+      // Limits the users tweet char count to the needed <140 and updates the character counter
+      // need to switch to to keyup maybe? Also delete does not update the count
       $('#message').keypress(function(e) {
           var charCount = $('#message');
           $('.inputCounter').html(140 - charCount.val().length);

@@ -1,6 +1,7 @@
 <div class="tweetBox primary_back_color" data-pipe="tweetBox">
-<%= form_tag(tweets_path) do %>
-    <%= text_field_tag :message %>      <i class="fa fa-twitter"> <%= submit_tag %> </i>
-  <% end %>
-  <div class="inputCounter light_text_color">140</div>
+	<%= form_tag(tweets_path) do %>
+		<%= text_field_tag :message %>       <%= submit_tag 'Tweet'%>
+		<i class="fa fa-twitter light_text_color"></i>
+		<div class="inputCounter light_text_color">140</div>
+	<% end %>
 </div>
