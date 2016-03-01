@@ -2,6 +2,7 @@
 // Twiiter Feed //
 .tweetBox form{
     display: inline-block;
+    width: 100%;
   }
 .tweetBox input[type="text"] {
   color: #767676;
@@ -10,7 +11,12 @@
 
 .tweetBox input[type="submit"] {
   color: #767676;
-  width: 10%;
+  // width: 10%;
+}
+
+.inputCounter {
+    display: inline;
+    float: right;
 }
 
 
@@ -22,6 +28,12 @@
   // background-color: rgba(113, 113, 113, 0.70);
   width: 400px;
   display: inline-block;
+}
+.tweetBox .fa-twitter{
+    padding-left: 20px;
+}
+.tweetBox .fa-twitter:hover
+color: #3cf{
 }
 .tweetSignIn {
   // background-color: rgba(113, 113, 113, 0.70);
@@ -85,12 +97,4 @@
     float: right;
 }
 
-.tweetBox .fa-twitter{
-    padding-left: 20px;
-}
-
-.inputCounter {
-    display: inline;
-    float: right;
-}
 // Twiiter Feed //
