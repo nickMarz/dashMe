@@ -61,6 +61,9 @@ span.summary {
     display: inline-block;
 }
 
+span.temp {
+    font-size: inherit;
+}
 span.temp_marker.low {
     color: #8AE7FF;
 }
