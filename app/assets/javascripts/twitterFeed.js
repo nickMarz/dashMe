@@ -28,24 +28,37 @@ $(document).ready(function() {
       //adds the ability to click on the screen name and
       // fill in the new tweet input with their @screen_name
       $('.tweetAt').click(function(){
-        $('#message').val('')
+        var message = $('#message');
+        message.val('')
         var reply = $(this).text().replace('tweet @', '@') + " ";
-        $('#message').val( reply )
+        message.val( reply )
+        message.focus();
       });
 
       // Limits the users tweet char count to the needed <140 and updates the character counter
       // need to switch to to keyup maybe? Also delete does not update the count
       $('#message').keypress(function(e) {
-          var charCount = $('#message');
+        var key = e.keyCode;
+        var charCount = $('#message');
+
+        if (key === 13 && charCount.val().length > 0 ) {
+          $('input+.fa-twitter ').prev().click();
+
+        }
+
           $('.inputCounter').html(140 - charCount.val().length);
+
           if (charCount.val().length > 140 ) {
             var newStr = charCount.val().substring(0, charCount.val().length-1);
             $(charCount).val(newStr);
           }
       });
+      $('input+.fa-twitter ').prev().hide();
 
       $('input+.fa-twitter ').click(function() {
-          $('input .fa-twitter').click();
+        if ($('#message').val().length > 0 ) {
+          $(this).prev().click();
+        }
       })
 
     })
