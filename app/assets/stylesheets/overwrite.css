@@ -99,17 +99,6 @@ a {
     font-weight: bold;
 }
 
-.tweetBox input[type="text"] {
-  color: #767676;
-  width: 80%;
-}
-
-.tweetBox input[type="submit"] {
-  color: #767676;
-  width: 10%;
-}
-
-
 
 
 // todo //
@@ -160,6 +149,18 @@ li.todo-item {
 
 
 // Twiiter Feed //
+
+.tweetBox input[type="text"] {
+  color: #767676;
+  width: 80%;
+}
+
+.tweetBox input[type="submit"] {
+  color: #767676;
+  width: 10%;
+}
+
+
 .tweetBox {
   position: absolute;
   top: 30px;
