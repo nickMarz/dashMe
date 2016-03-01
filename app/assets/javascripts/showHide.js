@@ -40,7 +40,7 @@ $(document).ready(function(){
 // console.log(todoList);
 // About dev's show hide function
   $(".slidingDiv").hide();
-	// $(".show_hide").show();
+	$(".show_hide").show();
 
 	$('.show_hide').click(function(e){
     e.preventDefault();
