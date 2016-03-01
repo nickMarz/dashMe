@@ -36,10 +36,18 @@
     margin: 0 0 0px;
     vertical-align: top;
 }
+
+
+/* forecast CSS */
 .forecast {
     list-style: none;
     padding: 0;
     width: 200px;
+}
+
+.forecast li {
+    padding: 5px;
+    border-bottom: 1px solid #fff;
 }
 
 ul.daily_weather_ul {
@@ -47,3 +55,15 @@ ul.daily_weather_ul {
     list-style: none;
     padding: 0;
 }
+
+
+span.summary {
+    display: inline-block;
+}
+
+span.temp_marker.low {
+    color: #8AE7FF;
+}
+
+span.temp_marker.hi {
+    color: #FFB4B4;

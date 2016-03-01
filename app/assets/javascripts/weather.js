@@ -19,9 +19,9 @@ function getWeather() {
       var tempForecast = dailyForecast[i];
       var tempHtml = '<div class="daily_weather_ul">'
 
-          tempHtml += '<span class="temp_marker low">Low˚</span> ' + '<span class="low_temp">' + dailyForecast[i].temperatureMin + '</span>' +
-                      '<span class="temp_marker hi">Hi˚</span> '   + '<span class="hi_temp">' + dailyForecast[i].temperatureMax + '</span>' +
-                      '<span class="summary">'+ dailyForecast[i].summary + '<span>';
+          tempHtml += '<span class="temp_marker low">Low</span> ' + ' <span class="temp low_temp">' + dailyForecast[i].temperatureMin + '˚</span>' +
+                      '<span class="temp_marker hi">Hi</span> '   + ' <span class="temp hi_temp">' + dailyForecast[i].temperatureMax + '˚</span>' +
+                      ' <span class="summary">'+ dailyForecast[i].summary + '<span>';
           tempHtml += '</div>';
       $('.forecast').append('<li>' + tempHtml + '</li>');
     })
