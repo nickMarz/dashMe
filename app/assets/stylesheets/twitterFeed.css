@@ -1,6 +1,8 @@
 
 // Twiiter Feed //
-
+.tweetBox form{
+    display: inline-block;
+  }
 .tweetBox input[type="text"] {
   color: #767676;
   width: 80%;
@@ -80,6 +82,15 @@
 
 .tweetAt {
 
+    float: right;
+}
+
+.tweetBox .fa-twitter{
+    padding-left: 20px;
+}
+
+.inputCounter {
+    display: inline;
     float: right;
 }
 // Twiiter Feed //
