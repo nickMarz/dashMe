@@ -56,13 +56,22 @@ ul.daily_weather_ul {
     padding: 0;
 }
 
+.temp_summary_block {
 
+}
 span.summary {
     display: inline-block;
 }
 
+.temp_block {
+
+}
 span.temp {
     font-size: inherit;
+}
+
+.temp:after {
+    content: "˚"
 }
 span.temp_marker.low {
     color: #8AE7FF;
@@ -70,4 +79,14 @@ span.temp_marker.low {
 
 span.temp_marker.hi {
     color: #FFB4B4;
-  }
+}
+
+.temp_f:after {
+  content: "˚F"
+}
+
+.temp_c:after {
+  content: "˚C"
+}
+
+

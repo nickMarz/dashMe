@@ -19,15 +19,15 @@ function getWeather() {
       var tempForecast = dailyForecast[i];
       var tempHtml = ''
 
-          tempHtml += '<span class="temp_marker low">Low</span> ' + ' <span class="temp low_temp">' + dailyForecast[i].temperatureMin + '˚</span>' +
-                      '<span class="temp_marker hi">Hi</span> '   + ' <span class="temp hi_temp">' + dailyForecast[i].temperatureMax + '˚</span>' +
-                      ' <span class="summary">'+ dailyForecast[i].summary + '<span>';
+          tempHtml += '<p class="temp_block"><span class="temp_marker low">Low</span> ' + ' <span class="temp low_temp">' + dailyForecast[i].temperatureMin + '</span></p>' +
+                      '<p class="temp_block"><span class="temp_marker hi">Hi</span> '   + ' <span class="temp hi_temp">' + dailyForecast[i].temperatureMax + '</span></p>' +
+                      '<p class="temp_summary_block"><span class="summary">'+ dailyForecast[i].summary + '<span></p>';
 
       $('.forecast').append('<li class="daily_weather_li">' + tempHtml + '</li>');
     })
 
       var cTemp = $("p.temp").empty();
-          cTemp.text(current_temp).append("˚F");
+          cTemp.text(current_temp)
       var cSum = $("p.sum").empty();
           cSum.text(forecast.currently.summary);
       var weatherIcon = forecast.currently.icon;
@@ -41,9 +41,69 @@ function getWeather() {
       icons.set(list[0], weatherIcon);
       icons.play();
 
+      $(".temp").addClass("temp_f"); // TODO: Move this to a CSS property/Class to change instead
       }
     });
   }
   getWeather();
   setInterval (getWeather, 50000);
+
+  // Added classes for Fahrenhiet & Cel, use that to reference the way the temp is currently being displayed
+  var allTemps = $(".temp");
+
+  function changeTemp(temp, start) {
+    console.log('Temp '+temp+' Start '+start);
+    if (start === "F" || start === "f") {
+      return (temp - 32) * 5 / 9; // need to add rounding to 2 decimal places
+    }
+
+    if (start === "C" || start === "c") {
+     return temp * 9 /5 + 32; // need to add rounding to 2 decimal places
+    }
+  }
+
+  function uiTempClassChange() {
+    console.log(allTemps);
+    console.log( $(allTemps).hasClass('temp_f') );
+    console.log( $(allTemps).hasClass('temp_c') );
+    if ($(allTemps).hasClass('temp_f')) {
+      $(allTemps).each(function(i) {
+
+
+        var temp2Change = $(allTemps).eq(i).text()
+        var newTemp = changeTemp(temp2Change, "f");
+        console.log('Temp 2 Change ' + temp2Change + " New Temp " + newTemp);
+        $(allTemps).eq(i).text(newTemp)
+
+      })
+      $(allTemps).addClass('temp_c').removeClass('temp_f');
+      return
+    }
+
+      if ($(allTemps).hasClass('temp_c')) {
+      $(allTemps).each(function(i) {
+
+
+        var temp2Change = $(allTemps).eq(i).text()
+        var newTemp = changeTemp(temp2Change, "c");
+        console.log('Temp 2 Change ' + temp2Change + " New Temp " + newTemp);
+        $(allTemps).eq(i).text(newTemp)
+
+      })
+      $(allTemps).addClass('temp_f').removeClass('temp_c');
+      return
+    }
+  }
+
+  $(allTemps).click(function() {
+    console.log('Temp Clicked')
+    uiTempClassChange();
+  })
+
+
+function trimDegree(arg) {
+    $(allTemps).each(function(i) {
+    $(allTemps).eq(i).text( $(allTemps).eq(i).text().replace('˚','') );
+    }
+  )}
 });
