@@ -44,6 +44,11 @@ function getWeather() {
       $(".temp").addClass("temp_f"); // TODO: Move this to a CSS property/Class to change instead
       }
     });
+      $(".temp").click(function() {
+        console.log('Temp Clicked')
+        uiTempClassChange();
+      })
+
   }
   getWeather();
   setInterval (getWeather, 50000);
@@ -65,9 +70,6 @@ function getWeather() {
   }
 
   function uiTempClassChange() {
-    console.log(allTemps);
-    console.log( $(allTemps).hasClass('temp_f') );
-    console.log( $(allTemps).hasClass('temp_c') );
     if ($(allTemps).hasClass('temp_f')) {
       $(allTemps).each(function(i) {
 
@@ -97,10 +99,6 @@ function getWeather() {
     }
   }
 
-  $(allTemps).click(function() {
-    console.log('Temp Clicked')
-    uiTempClassChange();
-  })
 
 
 function trimDegree(arg) {
