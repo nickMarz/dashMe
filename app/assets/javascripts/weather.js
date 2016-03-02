@@ -54,11 +54,13 @@ function getWeather() {
   function changeTemp(temp, start) {
     console.log('Temp '+temp+' Start '+start);
     if (start === "F" || start === "f") {
-      return (temp - 32) * 5 / 9; // need to add rounding to 2 decimal places
+      var calTemp = (temp - 32) * 5 / 9;
+      return  calTemp.toFixed(2)// need to add rounding to 2 decimal places
     }
 
     if (start === "C" || start === "c") {
-     return temp * 9 /5 + 32; // need to add rounding to 2 decimal places
+      var calTemp = temp * 9 /5 + 32;
+     return  calTemp.toFixed(2)// need to add rounding to 2 decimal places
     }
   }
 
