@@ -30,7 +30,9 @@ h2 {
   color: #ffffff;
 
 }
-
+.text_hover_color:hover {
+  color: #FF00FF;
+}
 .weather_color {
   color: #ffffff !important;
 }
@@ -46,46 +48,10 @@ div#dragContainer {
 
 form {
   text-align: center;
+
 }
 
-#add-btn {
-    font-size: 1.1rem;
-    border-radius: 50%;
-    padding: 1px 5px 0px;
-    vertical-align: top;
-}
 
-#todo_list {
-    width: 400px;
-    height: 200px;
-    text-align: center;
-    position: absolute;
-    top: 70px;
-    left: 5px;
-    // background-color: rgba(113, 113, 113, 0.70);
-}
-.todo-controls {
-    height: 2rem;
-    padding: 1.2rem 0 0;
-    font-size: 1rem;
-}
-
-#datepicker {
-    width: 0;
-    height: 0;
-    color: transparent;
-    background: transparent;
-    display: none;
-}
-
-#datepicker:after {
-    /* symbol for "opening" panels */
-    font-family: 'FontAwesome';
-    content: "\f073"
-    }
-#dateCalendar {
-    font-size: 2rem;
-}
 
 a {
   // color: #158CBA;
@@ -109,27 +75,67 @@ a {
   z-index: 99999;
 }
 
-.deleteX {
-    margin-left: 20px;
-    color: rgba(0, 203, 247, 2.0);
-    text-decoration: none;
-    font-weight: bold;
-}
+// .deleteX {
+//     margin-left: 20px;
+//     color: rgba(0, 203, 247, 2.0);
+//     text-decoration: none;
+//     font-weight: bold;
+// }
 
 
 
 // todo //
+
+#datepicker:after {
+    /* symbol for "opening" panels */
+    font-family: 'FontAwesome';
+    content: "\f073"
+    }
 #datepicker {
-    width: 20px;
+    width: 0;
+    height: 0;
+    color: transparent;
+    background: transparent;
+    display: none;
+}
+
+#dateCalendar {
+    font-size: 2rem;
+}
+.ui-datepicker-trigger {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+#add-btn {
+    font-size: 2.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    /* padding: 1px 5px 0px; */
+    /* vertical-align: top; */
+}
+
+#todo_list {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 5px;
+    text-align: left;
+    // background-color: rgba(113, 113, 113, 0.70);
+}
+.todo-controls {
+    height: 2rem;
+    padding: 1.2rem 0 0;
+    font-size: 1rem;
 }
 
 #todoEnter {
     width: 100%;
 }
 
-#todo-list {
-  text-align: left;
-}
 .todo-item-controls {
   padding-right: 10px;
   float: right;
@@ -144,11 +150,11 @@ a {
     margin-left: -35px;
 }
 
-li.todo-item a {
+.todo-item a {
     // text-decoration: none !important;
 }
 
-li.todo-item {
+.todo-item {
   font-size: 1rem;
   list-style: none;
   margin-left: -27px;
