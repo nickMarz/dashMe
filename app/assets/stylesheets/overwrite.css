@@ -255,8 +255,8 @@ li.todo-item {
 
 .opt {
   position: fixed;
-  bottom: 5px;
-  left: 5px;
+  top: 5px;
+  right: 5px;
 }
 .optionsDiv {
   // background-color: rgba(53, 53, 53, 0.52);
