@@ -38,26 +38,37 @@ function getWeather() {
       icons.set(list[0], weatherIcon);
       icons.play();
 
-        $(".temp").addClass("temp_f"); // TODO: Move this to a CSS property/Class to change instead
+        $(".temp").addClass("temp_f");
 
-        $(".temp").click(function() {
+        // reapply click handlers to the newly created extended forecast div's
+        $(".temp").not('p').click(function() {
           console.log('Temp Clicked')
           uiTempClassChange();
         });
+
+        if (localStorage.tempPreference === "c") {
+          uiTempClassChange();
+         console.log("Change temps to user preference")
+        }
+
       } // success end
     }); // Ajax end
   } // End getWeather
 
+      $("p.temp").click(function() {
+          console.log('Temp Clicked')
+          uiTempClassChange();
+        });
 
 
   function changeTemp(temp, start) {
     if (start === "F" || start === "f") {
       var calTemp = (temp - 32) * 5 / 9;
-      return  calTemp.toFixed(2)// need to add rounding to 2 decimal places
+      return  calTemp.toFixed(2);
     }
     if (start === "C" || start === "c") {
       var calTemp = temp * 9 /5 + 32;
-     return  calTemp.toFixed(2)// need to add rounding to 2 decimal places
+     return  calTemp.toFixed(2);
     }
   }
 
@@ -70,7 +81,8 @@ function getWeather() {
         $(allTemps).eq(i).text(newTemp)
       })
       $(allTemps).addClass('temp_c').removeClass('temp_f');
-      return
+      localStorage.tempPreference = "c";
+      return;
     }
     if ($(allTemps).hasClass('temp_c')) {
       $(allTemps).each(function(i) {
@@ -79,7 +91,8 @@ function getWeather() {
         $(allTemps).eq(i).text(newTemp)
       })
       $(allTemps).addClass('temp_f').removeClass('temp_c');
-      return
+      localStorage.tempPreference = "f";
+      return;
     }
   }
 
