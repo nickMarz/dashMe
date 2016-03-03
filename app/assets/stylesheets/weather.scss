@@ -20,13 +20,24 @@
 .weather.container {
     width: 250px;
 }
+.weather p.temp {
+    font-size: 2.4rem;
+    display: inline;
+}
 
 .temp {
-  display: initial;
-  font-size: 24pt;
-  /*// color: #ffffff;*/
   text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
   margin: 0px 15px 0px;
+}
+.temp:after {
+    content: "˚"
+}
+.temp_f:after {
+  content: "˚F"
+}
+
+.temp_c:after {
+  content: "˚C"
 }
 
 .sum {
@@ -59,34 +70,32 @@ ul.daily_weather_ul {
 .temp_summary_block {
 
 }
-span.summary {
+.summary {
     display: inline-block;
 }
 
 .temp_block {
 
 }
-span.temp {
-    font-size: inherit;
+th.temp_marker {
+    text-align: center;
 }
-
-.temp:after {
-    content: "˚"
-}
-span.temp_marker.low {
+.low {
     color: #8AE7FF;
 }
 
-span.temp_marker.hi {
+.hi {
     color: #FFB4B4;
 }
 
-.temp_f:after {
-  content: "˚F"
+
+
+span.icon {
+    display: none;
 }
 
-.temp_c:after {
-  content: "˚C"
+
+.forecast_table {
+    background-color: transparent;
+    text-align: center;
 }
-
-

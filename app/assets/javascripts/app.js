@@ -54,6 +54,6 @@ $('#colorSelector_textcolor').colorpicker({
     });
 
 
-$( '#datepicker' ).datepicker();
+// $( '#datepicker' ).datepicker();
 
 });

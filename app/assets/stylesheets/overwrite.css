@@ -70,6 +70,23 @@ form {
     font-size: 1rem;
 }
 
+#datepicker {
+    width: 0;
+    height: 0;
+    color: transparent;
+    background: transparent;
+    display: none;
+}
+
+#datepicker:after {
+    /* symbol for "opening" panels */
+    font-family: 'FontAwesome';
+    content: "\f073"
+    }
+#dateCalendar {
+    font-size: 2rem;
+}
+
 a {
   // color: #158CBA;
   // color: #FFFFFF;

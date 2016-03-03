@@ -1,5 +1,4 @@
-// $(document).ready(function() {
-
+$(document).ready(function() {
  var storageEnv = 'dashMe_todos_dev';
 
   var listItemHelper = '<li class="todo-item" data-due="%dueDate%" data-done="%done%">%data% <span class="todo-item-controls"> <input type=checkbox class="done-btn"></input>  <a href="#" class="del-btn">Delete</a><span></li>';
@@ -7,7 +6,17 @@
   // var todo_item = new Create_todo_item();
   // console.log( todo_item );
   // $('#todoEnter').val("SET VALUE");
+  $('#dateCalendar').click(function(e) {
+    $('.ui-datepicker-trigger').click();
+  })
 
+  $( "#datepicker" ).datepicker({
+      showOn: "button",
+      buttonImage: '',
+      buttonImageOnly: false,
+      buttonText: "Select date",
+      "showAnim": "fold"
+    });
 
   function Create_todo_item(todo) {
     this.todo     = todo;
@@ -81,7 +90,8 @@
   }
 
   function addItem(arg) {
-    // console.log(" addItem function");
+    console.log(" addItem function");
+    console.log(arg);
     var newItem = listItemHelper.replace('%data%', arg.todo)
       .replace('%dueDate%', arg.dueDate)
       .replace('%done%', arg.completed);
@@ -111,7 +121,8 @@
     var newTodoVal = $('#todoEnter').val();
     if (newTodoVal === '') { return false; }
     var todo_item = new Create_todo_item(newTodoVal);
-
+console.log(newTodoVal);
+console.log(todo_item);
     $(todoList).children().remove();
     addItem(todo_item);
     saveItems(todo_item);
@@ -152,8 +163,8 @@
       defaultDate: +7,
       nextText: 'Later'
     });
-    // logItems(pageLoadData);
-    // console.log(  "pageLoadData" );
+    logItems(pageLoadData);
+    console.log(  "pageLoadData" );
   };
 pageLoad();
-// });
+});
