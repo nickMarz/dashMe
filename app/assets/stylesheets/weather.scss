@@ -18,7 +18,9 @@
   padding: 10px;
 }
 .weather.container {
+    text-align: center;
     width: 250px;
+    cursor: pointer;
 }
 .weather p.temp {
     font-size: 2.4rem;
@@ -98,4 +100,5 @@ span.icon {
 .forecast_table {
     background-color: transparent;
     text-align: center;
+    width: 100%;
 }

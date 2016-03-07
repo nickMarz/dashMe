@@ -1,3 +1,6 @@
+.tweetSignIn input[type="submit"] {
+    border: none;
+}
 
 // Twiiter Feed //
 .tweetBox form{

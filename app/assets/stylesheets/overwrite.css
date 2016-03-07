@@ -134,6 +134,12 @@ a {
 
 #todoEnter {
     width: 100%;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    font-size: 1.1rem;
+
 }
 
 .todo-item-controls {
@@ -155,12 +161,16 @@ a {
 }
 
 .todo-item {
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   list-style: none;
-  margin-left: -27px;
+  margin-left: -43px;
   padding: 5px;
 }
 
+.done-btn {
+    margin-right: 35px;
+}
 .done {
   text-decoration: line-through;
   color: black;
@@ -194,7 +204,6 @@ a {
 .goals {
 
 }
-
 .goals_container {
 
 }
