@@ -2,13 +2,13 @@ navigator.geolocation.getCurrentPosition(function(position) {
  lat = (position.coords.latitude);
  long = (position.coords.longitude);
 
-function getWeather() {
+ function getWeather() {
   $.ajax({
     method: "GET",
     url: "/getweather.json",
     data: { lat: lat, long: long},
     success: function(forecast) {
-    devTestForcast = forecast;
+      devTestForcast = forecast;
     // console.log(forecast.currently.icon);
     var current_temp = forecast.currently.temperature;
     var dailyForecast = forecast.daily.data;
@@ -22,31 +22,31 @@ function getWeather() {
                       // '<p class="temp_block"><span class="temp_marker hi">Hi</span> '   + ' <span class="temp hi_temp">' + dailyForecast[i].temperatureMax + '</span></p>' +
                       // '<p class="temp_summary_block"><span class="summary">'+ dailyForecast[i].summary + '</span></p>';
 
-        tempHtml += '<table class="forecast_table"><tr class="temp_headers"><th class="temp_marker low">Low</th><th class="temp_marker hi">HI</th></tr>' +
-                    '<tfoot class="temp_summary"><tr><td colspan="2" ><p class="summary">'+ dailyForecast[i].summary +'</p><span class="icon">'+ icon +'</span></td></tr></tfoot>' +
-                    '<tr class="temp_row"><td class="temp low low_temp temp_f">'+dailyForecast[i].temperatureMin+'</td><td class="temp hi hi_temp temp_f">'+dailyForecast[i].temperatureMax+'</td></tr></table>';
-      $('.forecast').append('<li class="daily_weather_li">' + tempHtml + '</li>');
-    })
+                      tempHtml += '<table class="forecast_table"><tr class="temp_headers"><th class="temp_marker low">Low</th><th class="temp_marker hi">HI</th></tr>' +
+                      '<tfoot class="temp_summary"><tr><td colspan="2" ><p class="summary">'+ dailyForecast[i].summary +'</p><span class="icon">'+ icon +'</span></td></tr></tfoot>' +
+                      '<tr class="temp_row"><td class="temp low low_temp temp_f">'+dailyForecast[i].temperatureMin+'</td><td class="temp hi hi_temp temp_f">'+dailyForecast[i].temperatureMax+'</td></tr></table>';
+                      $('.forecast').append('<li class="daily_weather_li">' + tempHtml + '</li>');
+                    })
 
 
 
 
-      var cTemp = $("p.temp").empty();
-          cTemp.text(current_temp)
-      var cSum = $("p.sum").empty();
-          cSum.text(forecast.currently.summary);
-      var weatherIcon = forecast.currently.icon;
+    var cTemp = $("p.temp").empty();
+    cTemp.text(current_temp)
+    var cSum = $("p.sum").empty();
+    cSum.text(forecast.currently.summary);
+    var weatherIcon = forecast.currently.icon;
 
-      var ctx = document.getElementById('icon1');
-        $(ctx).addClass(weatherIcon)
-      var icons = new Skycons(),
-          list  = ["icon1"]
-      icons.color = "white";
-      icons.interval = 1000;
-      icons.set(list[0], weatherIcon);
-      icons.play();
+    var ctx = document.getElementById('icon1');
+    $(ctx).addClass(weatherIcon)
+    var icons = new Skycons(),
+    list  = ["icon1"]
+    icons.color = "white";
+    icons.interval = 1000;
+    icons.set(list[0], weatherIcon);
+    icons.play();
 
-        $(".temp").addClass("temp_f");
+    $(".temp").addClass("temp_f");
 
         // reapply click handlers to the newly created extended forecast div's
         $(".temp").not('p').click(function() {
@@ -56,17 +56,17 @@ function getWeather() {
 
         if (localStorage.tempPreference === "c") {
           uiTempClassChange();
-         console.log("Change temps to user preference")
+          console.log("Change temps to user preference")
         }
 
       } // success end
     }); // Ajax end
   } // End getWeather
 
-      $("p.temp").click(function() {
-          console.log('Temp Clicked')
-          uiTempClassChange();
-        });
+  $("p.temp").click(function() {
+    console.log('Temp Clicked')
+    uiTempClassChange();
+  });
 
 
   function changeTemp(temp, start) {
@@ -76,7 +76,7 @@ function getWeather() {
     }
     if (start === "C" || start === "c") {
       var calTemp = temp * 9 /5 + 32;
-     return  calTemp.toFixed(2);
+      return  calTemp.toFixed(2);
     }
   }
 

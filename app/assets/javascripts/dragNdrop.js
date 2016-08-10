@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   function draggableApply() {
-
     $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , grid: [ 10, 10 ]});
     $('#todo_list').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
@@ -15,7 +14,7 @@ $(document).ready(function() {
     // $( "#todo_list" ).resizable();
   }
 
-   $( ".weather" ).on( "click", function() {
+  $( ".weather" ).on( "click", function() {
   // grab values onClick //
     var weatherPosTop = $(".weather").css("top");
     var weatherPosLeft = $(".weather").css("left");
