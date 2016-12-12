@@ -219,12 +219,12 @@ a {
 }
 
 #quote {
-  // color: #ffffff;
   text-align: center;
   font-size: 12pt;
-  // text-shadow: 1px 1px 0px Rgba(255, 255, 255, 1);
   font-weight: 200;
   line-height: 1.5;
+  z-index: -5;
+    position: relative;
 }
 // quote //
 
