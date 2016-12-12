@@ -233,20 +233,30 @@ a {
   position: absolute;
   top: 40px;
   left: 5px;
-  // background-color: rgba(113, 113, 113, 0.70);
   width: 99%;
   text-align: center;
   padding: 15px;
   z-index: 9999999;
+  height: auto;
+    // position: relative;
 }
 
 
 .dever {
   padding: 7px;
-  display: inline-block;
+  display: inline-table;
   background-color: rgba(255, 255, 255, 0.75);
   width: 32%;
+  height: auto;
+  position: relative;
 }
+
+.linkPic {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
 .show_hide {
   display:none;
   position: fixed;
@@ -259,11 +269,7 @@ a {
   // background-color: rgba(53, 53, 53, 0.52);
 }
 
-.linkPic {
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-}
+
 
 
 
