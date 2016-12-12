@@ -1,12 +1,12 @@
 .tweetSignIn input[type="submit"] {
-    border: none;
+  border: none;
 }
 
 // Twiiter Feed //
 .tweetBox form{
-    display: inline-block;
-    width: 100%;
-  }
+  display: inline-block;
+  width: 100%;
+}
 .tweetBox input[type="text"] {
   color: #767676;
   width: 80%;
@@ -18,8 +18,8 @@
 }
 
 .inputCounter {
-    display: inline;
-    float: right;
+  display: inline;
+  float: right;
 }
 
 
@@ -33,7 +33,7 @@
   display: inline-block;
 }
 .tweetBox .fa-twitter{
-    padding-left: 20px;
+  padding-left: 20px;
 }
 .tweetBox .fa-twitter:hover{
   color: #3cf;
@@ -73,31 +73,31 @@
 }
 
 .twitt {
-    display: inline-block;
-    margin-left: -45px;
-    border-bottom: 1px solid #eeeeee;
-    margin-bottom: 10px;
+  display: inline-block;
+  margin-left: -45px;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 10px;
 }
 
 .twiTitle {
-    /* text-align: center; */
-    font-size: 26px;
-    margin: -15px auto 20px -50px;
+  /* text-align: center; */
+  font-size: 26px;
+  margin: -15px auto 20px -50px;
 }
 .twitPic {
-    margin-right: 20px;
-    height: 50px;
-    width: auto;
-    float: left;
+  margin-right: 20px;
+  height: 50px;
+  width: auto;
+  float: left;
 }
 
 .tweet_author {
-    float: left;
+  float: left;
 }
 
 .tweetAt {
 
-    float: right;
+  float: right;
 }
 
 // Twiiter Feed //

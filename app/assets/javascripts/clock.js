@@ -17,7 +17,7 @@ function setTime() {
   setHand('#second-container', ((s / 60) + (ms / 60000)) * 360);
 
   setText(h.toString(), m.toString());
-}
+};
 
 function setHand(hand, angle) {
   $(hand).css({
@@ -26,9 +26,9 @@ function setHand(hand, angle) {
     '-o-transform': 'rotate(' + angle + 'deg)',
     '-webkit-transform': 'rotate(' + angle + 'deg)',
   });
-}
+};
 
 function setText(h, m) {
   if(m.length == 1) m = '0' + m;
   $('#time').text(h + ':' + m);
-}
+};
