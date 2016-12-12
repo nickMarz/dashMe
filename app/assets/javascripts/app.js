@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#colorSelector_backcolor').colorpicker({
+  $('#colorSelector_textcolor').colorpicker({
     format: 'rgb', // force this format
     horizontal: true
   }).on('changeColor', function(ev) {
@@ -9,7 +9,7 @@ $(document).ready(function() {
     $('.light_text_color').css('color', allColor );
   });
 
-  $('#colorSelector_textcolor').colorpicker({
+  $('#colorSelector_backcolor').colorpicker({
     format: 'rgba', // force this format
     horizontal: true
   }).on('changeColor', function(ev) {
