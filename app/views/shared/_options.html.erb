@@ -1,27 +1,43 @@
 <!-- <div class="opt"> -->
 
-<a href="#" class="options_menu"><i class="fa fa-cogs fa-3x text_hover_color"> </i></a>
-  <div class="options_menu_container">
-	<ul class="unstyled inline_list">
+<a href="#" class="options_menu">
+	<i class="fa fa-cog fa-3x text_hover_color fa-pulse-3"> </i>
+	<i class="fa fa-cog fa-3x text_hover_color fa-pulse-3"> </i>
+	<i class="fa fa-cog fa-3x text_hover_color fa-pulse-3"> </i>
+</a>
+<div class="options_menu_container">
+	<ul class="inline_list">
 
 		<li class="inlinelist">
-			<a href="#" data-option="clock" id="show_hide_clock">Hide Clock</a>
+			Hide Clock
+			<!-- <div  class="slide-toggle"></div> -->
+			<div class="switch-wrapper">
+				<input id="show_hide_clock" type="checkbox" value="1" checked  data-option="clock">
+			</div>
 		</li>
 		<li class="inlinelist">
-			<a href="#" data-option="todo" id="show_hide_todo_container">Hide todo's</a>
+			Hide todo's
+			<!-- <div id="show_hide_todo_container"class="slide-toggle" data-option="todo"></div> -->
+			<div class="switch-wrapper">
+				<input id="show_hide_todo_container" type="checkbox" value="1" checked  data-option="todo">
+			</div>
+
 		</li>
 		<li class="inlinelist">
 			<a href="#" data-placement="top" data-option="colorBack" id="colorSelector_backcolor" class="colorpicker-element">
 				Background Color
 			</a>
+			
 		</li>
 
 		<li class="inlinelist">
 			<a href="#" data-placement="top" data-option="colorText" id="colorSelector_textcolor" class="colorpicker-element">
 				Text Color
 			</a>
+			
 		</li>
 	</ul>
 
-  </div>
+
+</div>
 <!-- </div> -->

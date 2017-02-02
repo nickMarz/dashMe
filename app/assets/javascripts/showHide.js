@@ -36,33 +36,28 @@ clock.save();
 todoList.save();
 forecast.save();
 
-// var degArrow = [0,180,360];
-// var counter = 0;
 
-// function AnimateRotate(d, target){
-//   console.log('ani ro')
-//     $({deg: degArrow}).animate({deg: d}, {
-//         step: function(now, fx){
-//             $(target).css({
-//                  transform: 'rotate(' + now + 'deg)'
-//             });
-//         }
-
-//     });
+// Options Toggle //
 
 
-//       if (degArrow[counter] > 0) {
-//         if (degArrow[counter] === 2) {counter = 0};
-//         if (degArrow[counter] === 1) {counter = 2};
+    // $( ".slide-toggle" ).slider({
+    //   value:0,
+    //   min: 0,
+    //   max: 1,
+    //   step: 1,
+    //   slide: function( event, ui ) {
+    //     console.log(ui.value)
+    //   }
+    // });
 
-//       };
+// $("input[type=checkbox]").switchButton({
+//   on_label: 'yes',
+//   off_label: 'no'
+// });
+   
+   
 
-
-//                 degArrow[counter];
-//             console.log(degArrow);
-//             console.log(counter);
-
-// }
+// Options Toggle //
 
 
 // About dev's show hide function
@@ -78,10 +73,10 @@ $('.about_us_reveal').click(function(e){
 
 
 // Weather Panel
-$('.forecast_daily').hide();
+// $('.forecast_daily').hide();
 // Weather Panel
 $('#hide_forecast').click(function(e){
-    $(".forecast_daily").slideToggle();
+    $(".forecast_daily").toggleClass('active');
 // AnimateRotate(degArrow,'.fa-arrow-circle-down');
 });
 
@@ -100,7 +95,7 @@ $('.options_menu').click(function(e){
 // $("#show_hide_todo_container").show();
 
 $('#show_hide_todo_container').click(function(e){
-    e.preventDefault();
+    // e.preventDefault();
     $("#todo_list").slideToggle();
 
     var t = "todoListData";
@@ -121,7 +116,7 @@ $('#show_hide_todo_container').click(function(e){
 });
 
 $('#show_hide_clock').click(function(e){
-    e.preventDefault();
+    // e.preventDefault();
     $('#clock').slideToggle();
 
     var t = 'clockData';

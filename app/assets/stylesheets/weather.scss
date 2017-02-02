@@ -56,11 +56,28 @@
     list-style: none;
     padding: 0;
     width: 200px;
+    // background-color: red;
 }
 
-.forecast li {
-    padding: 5px;
-    border-bottom: 1px solid #fff;
+.forecast_daily {
+  // height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 1s all;
+  &.active {
+    // height: auto;
+    opacity: 1;
+  }
+}
+.forecast {
+
+  & li {
+      padding: 5px;
+      border-bottom: 1px solid #fff;
+  }
+  & li:last-child {
+    border: none;
+  }
 }
 
 .daily_weather_ul {
