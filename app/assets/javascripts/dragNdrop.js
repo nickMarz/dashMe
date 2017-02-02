@@ -4,9 +4,9 @@ $(document).ready(function() {
     // $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , grid: [ 10, 10 ]});
     $('#todo_list').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
-    $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
-    $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
-    $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    // $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    // $('.tweetBox').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    // $('.timeline').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
   }
 
   // to do list functionality
@@ -66,12 +66,12 @@ $(document).ready(function() {
     // $( "#clock-container" ).css("left", localStorage.clockLeft);
     $( "#todo_list" ).css("top", localStorage.todoTop);
     $( "#todo_list" ).css("left", localStorage.todoLeft);
-    $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
-    $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
-    $( ".timeline" ).css("top", localStorage.timelineTop);
-    $( ".timeline" ).css("left", localStorage.timelineLeft);
-    $( ".weather" ).css("top", localStorage.weatherTop);
-    $( ".weather" ).css("left", localStorage.weatherLeft);
+    // $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
+    // $( ".tweetBox" ).css("left", localStorage.tweetBoxLeft);
+    // $( ".timeline" ).css("top", localStorage.timelineTop);
+    // $( ".timeline" ).css("left", localStorage.timelineLeft);
+    // $( ".weather" ).css("top", localStorage.weatherTop);
+    // $( ".weather" ).css("left", localStorage.weatherLeft);
   }
 
 

@@ -37,33 +37,16 @@ todoList.save();
 forecast.save();
 
 
-// Options Toggle //
 
+// Twitter Panel REveal 
 
-    // $( ".slide-toggle" ).slider({
-    //   value:0,
-    //   min: 0,
-    //   max: 1,
-    //   step: 1,
-    //   slide: function( event, ui ) {
-    //     console.log(ui.value)
-    //   }
-    // });
-
-// $("input[type=checkbox]").switchButton({
-//   on_label: 'yes',
-//   off_label: 'no'
-// });
-   
-   
-
-// Options Toggle //
+$('.twitter-container').click(function() {
+    // $(this).toggleClass('active');
+    $('.twitter-container').toggleClass('active');
+})
 
 
 // About dev's show hide function
-// $(".sliding_div").hide();
-// $(".show_hide").show();
-
 $('.about_us_reveal').click(function(e){
     e.preventDefault();
     console.log('.show_hide click')
@@ -76,13 +59,13 @@ $('.about_us_reveal').click(function(e){
 // $('.forecast_daily').hide();
 // Weather Panel
 $('#hide_forecast').click(function(e){
+    console.log('FOrcast')
     $(".forecast_daily").toggleClass('active');
 // AnimateRotate(degArrow,'.fa-arrow-circle-down');
 });
 
-// Options Panel
-// $(".options_menu_container").hide();
-// $(".options_menu").show();
+
+
 // Options Panel
 $('.options_menu').click(function(e){
     e.preventDefault();
@@ -90,10 +73,10 @@ $('.options_menu').click(function(e){
     $(".about_us").removeClass('active');
     $(this).toggleClass('active');
 });
+// Options Panel
+
 
 // Hide todo
-// $("#clock").show();
-// $("#show_hide_todo_container").show();
 
 $('#show_hide_todo_container').click(function(e){
     // e.preventDefault();
@@ -116,12 +99,8 @@ $('#show_hide_todo_container').click(function(e){
     }
 });
 
- // $('#clock-container').fadeOut();
 
 $('#show_hide_clock').click(function(e){
-    // e.preventDefault();
-    // $('#clock-container').fadeToggle();
-    // $('#time-container').fadeToggle();
     $('.analog-digital').toggleClass('digital');
     
     var t = 'clockData';

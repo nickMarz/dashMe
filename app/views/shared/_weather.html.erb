@@ -1,19 +1,15 @@
-<div class="weather light_text_color container" data-pipe="weather">
-	<div class="row">
-		<div class="col-xs-12">
+<div class="weather light_text_color" data-pipe="weather">
+	<div class="quick-stats">
+		
 			<p class="temp">-</p>
-		</div>
-		<div class="col-xs-12">
 			<p class="sum"></p>
-			<canvas id="icon1" width="64" height="64">Your Browser Does Not Support HTML Canvas.</canvas>
+			<canvas id="icon1" width="36" height="36">Your Browser Does Not Support HTML Canvas.</canvas>
+		<div id="hide_forecast">
+			Extended Forecast <i class="fa fa-arrow-circle-down"></i>
 		</div>
 	</div>
-	<div id="box"></div>
-	<div id="hide_forecast">
-	<h4 class="light_text_color">
-			Extended Forecast <i class="fa fa-arrow-circle-down"></i>
-		</h4>
-	</div>
+	<!-- <div id="box"></div> -->
+	
 	<div class="forecast_daily">
 		<ul class="forecast light_text_color primary_back_color">
 

@@ -1,0 +1,157 @@
+.stats {
+  background-color: black;
+  height: 50px;
+  left: 0;
+
+  position: fixed;
+  width: 100vw;
+
+  top: 0;
+
+  z-index: -1;
+}
+
+
+/*// weather //*/
+#icon1 {
+    width: 36px;
+    margin-left: 20px;
+}
+
+.weather {
+
+
+  & .quick-stats {
+    font-size: 16px;
+    height: 50px;
+    position: absolute;
+    padding: 5px 20px;
+    top: 0;
+    left: 0;
+    line-height: 2;
+    font-weight: 200;
+
+    & p {
+      display: inline-block;
+      // background: blueviolet;
+    }
+  }
+
+  & p.temp {
+    // font-size: 20px;
+    // display: inline;
+  }
+}
+
+
+.temp {
+  text-shadow: 2px 3px 5px Rgba(50, 50, 50, 0.65);
+  // margin: 0px 15px 0px;
+  margin: 0;
+  vertical-align: top;
+  &:after {
+    content: "˚"
+  }
+}
+
+.temp_f:after {
+  content: "˚F"
+}
+
+.temp_c:after {
+  content: "˚C"
+}
+
+.sum {
+    display: initial;
+    margin: 0 0 0px;
+    vertical-align: top;
+}
+
+
+/* forecast CSS */
+
+#hide_forecast {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 25px;
+  & .fa {
+    display: none;
+    margin-left: 5px;
+  }
+}
+
+
+.forecast_daily {
+  // opacity: 0;
+  width: 200px;
+  height: 0vh;
+  overflow: hidden;
+  transition: 1s all;
+  z-index: -1;
+  position: absolute;
+  &.active {
+    height: 100vh;
+    // opacity: 1;
+  }
+
+  & .forecast {
+    list-style: none;
+    padding: 0;
+    padding-top: 100px;
+    width: 200px;
+    background-color: #000;
+    font-weight: 200;
+
+    & li {
+      padding: 5px;
+      border-bottom: 1px solid #fff;
+    }
+    & li:last-child {
+      border: none;
+    }
+  }
+
+}
+
+
+.daily_weather_ul {
+    border: 1px solid #fff;
+    list-style: none;
+    padding: 0;
+}
+
+.temp_summary_block {
+
+}
+.summary {
+    display: inline-block;
+}
+
+.temp_block {
+
+}
+.temp_marker {
+    text-align: center;
+}
+.low {
+    color: #8AE7FF;
+}
+
+.hi {
+    color: #FFB4B4;
+}
+
+
+
+span.icon {
+    display: none;
+}
+
+
+.forecast_table {
+    background-color: transparent;
+    text-align: center;
+    width: 100%;
+}

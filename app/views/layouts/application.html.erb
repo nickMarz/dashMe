@@ -20,18 +20,23 @@
 
 
 
-<div class="dragContainer container-fluid" id="dragContainer">
+<!-- <div class="dragContainer container-fluid" id="dragContainer"> -->
   
   <%= render 'shared/aboutUs' %>
   <%= render 'shared/twitterconnect' %>
 
   <% if current_user %>
     <%= render 'shared/todo' %>
-    <%= render 'shared/weather' %>
+    
+    <div class="stats">
+      <%= render 'shared/weather' %>
+    </div>
     <%= render 'shared/options' %>
+  <!-- </div> -->
+
+
     <%= render 'shared/twitterFeed' %>
-    <%= render 'shared/newTweet' %>
-  </div>
+
   
   <%= render 'shared/clock' %>
 
