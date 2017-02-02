@@ -30,13 +30,18 @@ function showpics(){
 
 
   checkTime(hour);
+
   var pic = $('#box').val();
   var getR = 'https://api.flickr.com/services/feeds/photos_public.gne?tags='+pic+'&tagmode=any&format=json&jsoncallback=?';
 
   $.getJSON(getR, function(data){
   }).done(function(data) {
+    console.log(data);
+
+    
     $('#images').hide().html(data).fadeIn('fast');
-    var newURL = data.items[10].media.m;
+    
+    var newURL = data.items[Math.round (Math.random() * (20 - 0) + 0)].media.m;
     newURL = newURL.replace('_m', '_h');
     $('body').css('background-image', 'URL(' +newURL+ ')')
     var testing = data;
