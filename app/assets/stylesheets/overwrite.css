@@ -6,7 +6,7 @@ body {
   font-weight: bold;
   color: #FFFFFF;
   background-color: #353535;
-  // background-image: url(https://farm8.staticflickr.com/7584/16765254266_db8360dcc0_c.jpg);
+  /*// background-image: url(https://farm8.staticflickr.com/7584/16765254266_db8360dcc0_c.jpg);*/
   background-size: cover;
   overflow: hidden;
 }
@@ -54,8 +54,8 @@ form {
 
 
 a {
-  // color: #158CBA;
-  // color: #FFFFFF;
+  /*// color: #158CBA;*/
+  /*// color: #FFFFFF;*/
   text-decoration: none !important;
 }
 .text-center.alert.alert-warning {
@@ -74,17 +74,17 @@ a {
   left: 40%;
   z-index: 99999;
 }
-
+/*
 // .deleteX {
 //     margin-left: 20px;
 //     color: rgba(0, 203, 247, 2.0);
 //     text-decoration: none;
 //     font-weight: bold;
-// }
+// }*/
 
 
 
-// todo //
+/*// todo //*/
 
 #datepicker:after {
     /* symbol for "opening" panels */
@@ -177,12 +177,12 @@ a {
   border-bottom: solid 2px #353535;
 }
 
-// todo //
+/*// todo //*/
 
 
 
 
-// greeting //
+/*// greeting //*/
 .greet {
   // color: #ffffff;
   text-align: center;
@@ -196,10 +196,10 @@ a {
   left: 25%;
   z-index: -1;
 }
-// greeting //
+/*// greeting //*/
 
 
-// goals //
+/*// goals //*/
 
 .goals {
 
@@ -208,9 +208,9 @@ a {
 
 }
 
-// goals //
+/*// goals //*/
 
-// quote //
+/*// quote //*/
 .quote_box {
   position: absolute;
   width: 50%;
@@ -226,64 +226,11 @@ a {
   z-index: -5;
     position: relative;
 }
-// quote //
-
-// About Us //
-.slidingDiv {
-  position: absolute;
-  top: 40px;
-  left: 5px;
-  width: 99%;
-  text-align: center;
-  padding: 15px;
-  z-index: 9999999;
-  height: auto;
-    // position: relative;
-}
-
-
-.dever {
-  padding: 7px;
-  display: inline-table;
-  background-color: rgba(255, 255, 255, 0.75);
-  width: 32%;
-  height: auto;
-  position: relative;
-}
-
-.linkPic {
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.show_hide {
-  display:none;
-  position: fixed;
-  top: 5px;
-  left: 5px;
-  text-decoration: none;
-  padding: 5px 20px;
-  cursor: pointer;
-  // color: #eee;
-  // background-color: rgba(53, 53, 53, 0.52);
-}
+/*// quote //*/
 
 
 
-
-
-.info {
-  // color: #158CBA;
-  min-height: 180px;
-  text-align: justify;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-// About Us //
-
-
-// Options //
+/*// Options //*/
 .show_hide_opt {
   text-decoration: none;
   /*background-color: rgba(53, 53, 53, 0.52);*/
@@ -307,4 +254,4 @@ a {
 i.fa.fa-cogs.fa-3x {
   padding-bottom: 10px;
 }
-// Options //
+/*// Options //*/

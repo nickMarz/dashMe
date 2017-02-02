@@ -1,0 +1,74 @@
+
+/*// About Us //*/
+.about_container {
+  background: red;
+}
+/*// show/hide button //*/
+  .about_us_reveal {
+    cursor: pointer;
+    left: 5px;
+    padding: 5px 20px;
+
+    position: fixed;
+    text-decoration: none;
+    top: 5px;
+    transition: 0.4s all;
+    z-index: 1000;
+  }
+  .about_us_reveal:hover, .about_us_reveal:active, .about_us_reveal:focus {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+  }
+
+/*// show/hide button //*/
+
+
+/*// main container //*/
+  .about_us {
+    left: 0;  
+    padding: 50px 0px 10px 0px;
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    
+    text-align: center;
+    top: 0;
+    z-index: 999;
+    transition: 0.4s transform;
+    background-color: #000;
+    transform: translateX(-100vw);
+  }
+
+  .about_us.active {
+    transform: translateX(0vw);
+  }
+/*// main container //*/
+
+
+/*// Individual developer column //*/
+  .developer {
+    padding: 7px;
+    display: inline-table;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: calc(100vw / 3 - 5px);
+    height: auto;
+    position: relative;
+  }
+
+  .linkPic {
+      width: 50%;
+      height: auto;
+      border-radius: 50%;
+  }
+
+  .info {
+    // color: #158CBA;
+    min-height: 180px;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+/*// Individual developer column //*/
+
+/*// About Us //*/

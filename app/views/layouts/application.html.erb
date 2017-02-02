@@ -21,21 +21,23 @@
 
 
 <div class="dragContainer container-fluid" id="dragContainer">
-<%= render 'shared/aboutUs' %>
-<%= render 'shared/twitterconnect' %>
-<%= render 'shared/clock' %>
-<%= render 'shared/todo' %>
-<%= render 'shared/weather' %>
-<%= render 'shared/options' %>
-<% if current_user %>
-<%= render 'shared/twitterFeed' %>
+  
+  <%= render 'shared/aboutUs' %>
+  <%= render 'shared/twitterconnect' %>
 
-<%= render 'shared/newTweet' %>
-<%= yield %>
+  <% if current_user %>
+    <%= render 'shared/clock' %>
+    <%= render 'shared/todo' %>
+    <%= render 'shared/weather' %>
+    <%= render 'shared/options' %>
+    <%= render 'shared/twitterFeed' %>
+    <%= render 'shared/newTweet' %>
+  <%= yield %>
 </div>
-<%= render 'shared/goaloftheDay' %>
-<%= render 'shared/greeting' %>
-<%= render 'shared/quote' %>
+
+  <%= render 'shared/goaloftheDay' %>
+  <%= render 'shared/greeting' %>
+  <%= render 'shared/quote' %>
 
 <% end %>
 

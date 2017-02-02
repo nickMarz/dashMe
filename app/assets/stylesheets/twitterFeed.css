@@ -1,7 +1,3 @@
-.tweetSignIn input[type="submit"] {
-  border: none;
-}
-
 // Twiiter Feed //
 .tweetBox form{
   display: inline-block;
@@ -38,17 +34,47 @@
 .tweetBox .fa-twitter:hover{
   color: #3cf;
 }
+
 .tweetSignIn {
-  // background-color: rgba(113, 113, 113, 0.70);
+  background-color: rgba(113, 113, 113, 0.70);
   position: absolute;
-  left: 40%;
-  top: 10px;
-  width: 20%;
+  left: calc(50% - 150px);
+  top: calc(50% - 150px);
+  width: 300px;
   text-align: center;
   padding: 7px 4px;
   margin-right: auto;
   margin-left: auto;
 
+  height: 100%;
+  max-height: 300px;
+
+}
+.tweetSignIn.signout {
+  height: 50px;
+  top: 0;
+}
+.tweetSignIn input[type="submit"] {
+    border: none;
+    padding: 10px 30px;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    transition: 0.4s all;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.tweetSignIn input[type="submit"]:hover {
+  background-color: gray;
+}
+
+.tweetSignIn h1 {
+  color: #fff;
 }
 
 .timeline {
