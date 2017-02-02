@@ -40,7 +40,7 @@ forecast.save();
 
 // Twitter Panel REveal 
 
-$('.twitter-container').click(function() {
+$('.twitter-reveal').click(function() {
     // $(this).toggleClass('active');
     $('.twitter-container').toggleClass('active');
 })

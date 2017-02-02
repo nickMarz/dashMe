@@ -38,11 +38,15 @@ h2 {
 }
 
 div#dragContainer {
-  width: 100vw;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background: beige;
+    top: 50px;
+    left: 0;
+    position: absolute;
 }
 
 
@@ -204,6 +208,7 @@ a {
 
 }
 .goals_container {
+  display: none;
 
 }
 
