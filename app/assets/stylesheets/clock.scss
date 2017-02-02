@@ -1,96 +1,134 @@
-#clock-container {
-  width: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /*margin-top: -141px;*/
-  /*margin-left: -101px;*/
-  /*border: 0px solid #ccc;*/
-  background-color: rgba(0, 203, 247, 0.51);
-}
+// Analog Clock //
+  #clock-container {
+      max-width: 400px;
+      width: 100%;
+      max-height: 400px;
+      height: 100%;
+      position: absolute;
+      top: calc(50% - 200px);
+      left: calc(50% - 200px);
+    /*margin-top: -141px;*/
+    /*margin-left: -101px;*/
+    /*border: 0px solid #ccc;*/
+    z-index: -10;
+    // background-color: rgba(0, 203, 247, 0.51);
+  }
 
-#clock {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  position: relative;
-}
+  #clock {
+    max-width: 400px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
 
-.default-rotation {
-  transform: rotate(0);
-  -moz-transform: rotate(0);
-  -o-transform: rotate(0);
-  -webkit-transform: rotate(0);
-}
+  .default-rotation {
+    transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
 
-.hand {
-  width: 100%;
-  height: 50%;
-}
+  .hand {
+    width: 100%;
+    height: 50%;
+  }
 
-#hour-container {
-  width: 9%;
-  height: 50%;
-  margin-left: -4.5%;
-  margin-top: -25%;
-}
+  #hour-container {
+    width: 9%;
+    height: 50%;
+    margin-left: -4.5%;
+    margin-top: -25%;
+  }
 
-#minute-container {
-  width: 9%;
-  height: 70%;
-  margin-left: -4.5%;
-  margin-top: -35%;
-}
+  #minute-container {
+    width: 9%;
+    height: 70%;
+    margin-left: -4.5%;
+    margin-top: -35%;
+  }
 
-#second-container {
-  width: 2%;
-  height: 85%;
-  margin-left: -1%;
-  margin-top: -42.5%;
-}
+  #second-container {
+    width: 2%;
+    height: 85%;
+    margin-left: -1%;
+    margin-top: -42.5%;
+  }
 
-#hour-container .hand,
-#minute-container .hand {
-  background-color: #fff;
-  -moz-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
-}
+  #hour-container .hand,
+  #minute-container .hand {
+    background-color: #fff;
+    -moz-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  }
 
-#second-container .hand {
-  background-color: #222;
-  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
-}
+  #second-container .hand {
+    background-color: #222;
+    -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  }
 
-#second-base {
-  width: 300%;
-  height: 7%;
-  margin-left: -100%;
-  margin-top: -150%;
-}
+  #second-base {
+    width: 300%;
+    height: 7%;
+    margin-left: -100%;
+    margin-top: -150%;
+  }
+// Analog Clock //
 
-#time-container {
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0);
-  position: absolute;
-  width: 50%;
-  left: 25%;
-  top: 20%;
-  z-index: -10;
-}
+// Digital Clock //
+  #time-container {
+    // padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(50% - 150px);
+    z-index: -10;
+    height: 200px;
+  }
 
-#time {
-  font-size: 14em;
-  text-align: center;
-  text-shadow: 3px 5px 9px Rgba(50, 50, 50, 0.35);
-  color: #fff;
+  #time {
+    font-size: 14em;
+    text-align: center;
+    text-shadow: 3px 5px 9px Rgba(50, 50, 50, 0.35);
+    color: #fff;
 
+    &:after {
+    content: 'PM';
+    font-size: 14px;
+    vertical-align: text-top;
+    top: 0;
+    text-shadow: 2px 3px 6px Rgba(50, 50, 50, 0.35);
+    line-height: 10;
+    }
+
+    &.am {&:after {content: 'AM'} }
+    // &.am {&:after {content: 'PM'} }
+
+  }
+// Digital Clock //
+
+
+
+// Visibility Control //
+.analog-digital {
+    #time-container, #clock-container {transition: 1s opacity;}
+    #time-container   {opacity: 0;}
+    #clock-container  {opacity: 1;}
+
+  &.digital {
+    #time-container {opacity: 1;}
+    #clock-container {opacity: 0;}
+   }
 }
+// Visibility Control //

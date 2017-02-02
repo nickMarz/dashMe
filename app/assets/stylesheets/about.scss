@@ -37,7 +37,9 @@
     z-index: 999;
     transition: 0.4s all;
     background-color: #000;
-    transform: translateX(-100vw);
+    background-color: rgba(0, 0, 0, 0.85);
+
+    transform: translateX(-200vw);
 
     &.active {
       transform: translateX(0vw);
@@ -47,29 +49,44 @@
 /*// main container //*/
 
 
+
+
+
 /*// Individual developer column //*/
   .developer {
     padding: 7px;
-    display: inline-table;
-    background-color: rgba(255, 255, 255, 0.75);
-    width: calc(100vw / 3 - 5px);
-    height: auto;
-    position: relative;
+    // display: inline-table;
+    // background-color: rgba(255, 255, 255, 0.75);
+    // width: calc(100vw / 3 - 5px);
+    // height: auto;
+    height: calc(100vh / 3 - 25px);
+    // position: relative;
+    // border: 1px solid #fff;
+    overflow: hidden;
+
+    & .linkPic {
+        margin-top: 10px;
+        height: 100%;
+        height: calc(100vh / 3 - 150px);
+        min-height: 50px;
+        width: auto;
+        border-radius: 50%;
+    }
+
+    & .info {
+      color: #fff;
+      margin-top: 2vh;
+
+font-size: 16px;
+font-weight: 100;
+      min-height: 100px;
+      text-align: justify;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
-  .linkPic {
-      width: 50%;
-      height: auto;
-      border-radius: 50%;
-  }
-
-  .info {
-    // color: #158CBA;
-    min-height: 180px;
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  
 /*// Individual developer column //*/
 
 /*// About Us //*/

@@ -13,4 +13,15 @@
 //= require jquery
 //= require jquery-ui
 //= require turbolinks
-//= require_tree .
+//= require weather
+//= require twitterFeed
+//= require todo
+//= require skycons
+//= require signinFade
+//= require showHide
+//= require quote
+//= require jquery.linkify.min
+//= require clock
+//= require dragNdrop
+
+//= require background

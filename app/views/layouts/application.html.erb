@@ -26,14 +26,16 @@
   <%= render 'shared/twitterconnect' %>
 
   <% if current_user %>
-    <%= render 'shared/clock' %>
     <%= render 'shared/todo' %>
     <%= render 'shared/weather' %>
     <%= render 'shared/options' %>
     <%= render 'shared/twitterFeed' %>
     <%= render 'shared/newTweet' %>
+  </div>
+  
+  <%= render 'shared/clock' %>
+
   <%= yield %>
-</div>
 
   <%= render 'shared/goaloftheDay' %>
   <%= render 'shared/greeting' %>

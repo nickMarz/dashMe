@@ -30,7 +30,7 @@ function showpics(){
 
 
   checkTime(hour);
-  var pic= $('#box').val();
+  var pic = $('#box').val();
   var getR = 'https://api.flickr.com/services/feeds/photos_public.gne?tags='+pic+'&tagmode=any&format=json&jsoncallback=?';
 
   $.getJSON(getR, function(data){

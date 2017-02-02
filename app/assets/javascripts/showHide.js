@@ -87,6 +87,7 @@ $('#hide_forecast').click(function(e){
 $('.options_menu').click(function(e){
     e.preventDefault();
     $(".options_menu_container").toggleClass('active');
+    $(".about_us").removeClass('active');
     $(this).toggleClass('active');
 });
 
@@ -115,10 +116,14 @@ $('#show_hide_todo_container').click(function(e){
     }
 });
 
+ // $('#clock-container').fadeOut();
+
 $('#show_hide_clock').click(function(e){
     // e.preventDefault();
-    $('#clock').slideToggle();
-
+    // $('#clock-container').fadeToggle();
+    // $('#time-container').fadeToggle();
+    $('.analog-digital').toggleClass('digital');
+    
     var t = 'clockData';
     if (localStorage.getItem(t) === 'true') {
         console.log('!clock data');

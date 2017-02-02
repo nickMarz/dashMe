@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   function draggableApply() {
-    $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
+    // $('#clock-container').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
     // $('#signFrom').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag" , grid: [ 10, 10 ]});
     $('#todo_list').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag",   containment: 'parent', grid: [ 10, 10 ]});
     $('.weather').draggable({ scroll: false, cursor: 'move', snap: true, stack: ".drag", grid: [ 10, 10 ]});
@@ -24,14 +24,14 @@ $(document).ready(function() {
   });
 
 
-  $( "#clock-container" ).on( "click", function() {
-  // grab values onClick //
-    var clockPosTop = $("#clock-container").css("top");
-    var clockPosLeft = $("#clock-container").css("left");
-  // store settings in localStorage //
-    localStorage.clockTop = clockPosTop;
-    localStorage.clockLeft = clockPosLeft;
-  });
+  // $( "#clock-container" ).on( "click", function() {
+  // // grab values onClick //
+  //   var clockPosTop = $("#clock-container").css("top");
+  //   var clockPosLeft = $("#clock-container").css("left");
+  // // store settings in localStorage //
+  //   localStorage.clockTop = clockPosTop;
+  //   localStorage.clockLeft = clockPosLeft;
+  // });
 
   $( ".tweetBox" ).on( "click", function() {
   // grab values onClick //
@@ -62,8 +62,8 @@ $(document).ready(function() {
 
   // load settings from localStorage //
   function loadSettings() {
-    $( "#clock-container" ).css("top", localStorage.clockTop);
-    $( "#clock-container" ).css("left", localStorage.clockLeft);
+    // $( "#clock-container" ).css("top", localStorage.clockTop);
+    // $( "#clock-container" ).css("left", localStorage.clockLeft);
     $( "#todo_list" ).css("top", localStorage.todoTop);
     $( "#todo_list" ).css("left", localStorage.todoLeft);
     $( ".tweetBox" ).css("top", localStorage.tweetBoxTop);
