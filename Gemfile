@@ -35,9 +35,14 @@ gem 'forecast_io'
 gem 'quoth'
 gem 'wikiquote'
 group :development do
+  gem 'guard', '>= 2.2.2', require: false
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  
   gem 'binding_of_caller'
   gem 'awesome_print'
   gem 'better_errors'
+  
 end
 
 gem 'rails_12factor', group: :production

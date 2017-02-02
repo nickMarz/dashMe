@@ -86,13 +86,13 @@ $('#hide_forecast').click(function(e){
 });
 
 // Options Panel
-$(".optionsDiv").hide();
-// $(".show_hide_opt").show();
+// $(".options_menu_container").hide();
+// $(".options_menu").show();
 // Options Panel
-$('.show_hide_opt').click(function(e){
+$('.options_menu').click(function(e){
     e.preventDefault();
-    console.log('show/hide Options')
-    $(".optionsDiv").slideToggle();
+    $(".options_menu_container").toggleClass('active');
+    $(this).toggleClass('active');
 });
 
 // Hide todo

@@ -35,14 +35,15 @@
     text-align: center;
     top: 0;
     z-index: 999;
-    transition: 0.4s transform;
+    transition: 0.4s all;
     background-color: #000;
     transform: translateX(-100vw);
+
+    &.active {
+      transform: translateX(0vw);
+    }
   }
 
-  .about_us.active {
-    transform: translateX(0vw);
-  }
 /*// main container //*/
 
 

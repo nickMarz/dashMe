@@ -1,6 +1,6 @@
-<div class="tweetSignIn">
-	<% if current_user %>
-	
+<% if current_user %>
+
+	<div class="tweetSignIn signout">	
 		Signed in as <%= current_user.name %>
 		
 		
@@ -9,14 +9,15 @@
 			<%= button_to "Sign out", signout_path, method: "Delete"%>
 		
 		</div>
-	
-	<% else %>
-	
+	</div>
 
+<% else %>
+	
+	<div class="tweetSignIn">	
 		<h1>Welcome to dashMe!</h1>
 		<div class="signin">
 			<%= button_to "Sign in with twitter", "/auth/twitter"%>
 		</div>
-	
-	<% end %>
-</div>
+	</div>
+
+<% end %>

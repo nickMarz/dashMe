@@ -58,12 +58,11 @@ a {
   /*// color: #FFFFFF;*/
   text-decoration: none !important;
 }
+
 .text-center.alert.alert-warning {
   position: absolute;
   border-radius: 0px;
   margin-bottom: 31px;
-}
-.text-center.alert.alert-warning {
   width: 20%;
   margin-left: auto;
   margin-right: auto;
@@ -86,17 +85,17 @@ a {
 
 /*// todo //*/
 
-#datepicker:after {
-    /* symbol for "opening" panels */
-    font-family: 'FontAwesome';
-    content: "\f073"
-    }
 #datepicker {
     width: 0;
     height: 0;
     color: transparent;
     background: transparent;
     display: none;
+    &:after {
+    /* symbol for "opening" panels */
+    font-family: 'FontAwesome';
+    content: "\f073"
+    }
 }
 
 #dateCalendar {
@@ -231,24 +230,56 @@ a {
 
 
 /*// Options //*/
-.show_hide_opt {
-  text-decoration: none;
+.options_menu {
+  bottom: 5px;
   /*background-color: rgba(53, 53, 53, 0.52);*/
-  // padding: 5px 20px;
   cursor: pointer;
+
+  padding: 5px 20px;
+  left: 0px;
+  position: absolute;
+  text-decoration: none;
+  transition: 0.4s all;
+  z-index: 999999;
+     &.active {
+        left: 100px;
+  }
 }
 
-.opt {
-  position: fixed;
-  top: 5px;
-  right: 5px;
-  text-align: right;
-  width: 200px;
-}
-.optionsDiv {
-  // background-color: rgba(53, 53, 53, 0.52);
-  padding: 5px;
-  width: 200px;
+.options_menu_container {
+    color: #ffffff;
+    background-color: rgba(113, 113, 113, 0.9);
+    left: 0;
+    height: 100vh;
+    padding: 5px;
+    position: absolute;
+    width: 200px;
+    top: 0;
+    
+    z-index: 9999;
+    
+    transition: 0.4s all;
+    transform: translateX(-100vw);
+
+    &.active {
+      transform: translateX(0vw);
+
+      &.options_menu_container.active:after {
+        content: "";
+        background-color: rgba(220, 220, 220, 0.98);
+        width: calc(100vw - 200px);
+        height: 100vh;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 200px;
+        z-index: -99;
+
+    }
+    }
+    & a {
+      color: #fff;
+    }
 }
 
 i.fa.fa-cogs.fa-3x {
