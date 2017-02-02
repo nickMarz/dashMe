@@ -79,17 +79,13 @@
 
 
 .timeline {
-  // position: absolute;
-  // top: 30px;
-  // right: 5px;
-  // background-color: rgba(113, 113, 114, 0.70);
-  display: inline-block;
-  // padding: 25px;
-  // padding-left: 75px;
-  width: 100%;
-  max-width: 600px;
-  min-height: 300px;
-  overflow-y: scroll;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    overflow-y: scroll;
+    height: 50%;
+    margin-top: 50px;
 }
 
 .tweet {
@@ -101,7 +97,8 @@
 
 .twitt {
   display: inline-block;
-  margin-left: -45px;
+  // margin-left: -45px;
+  padding: 20px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 10px;
 }
@@ -109,7 +106,9 @@
 .twiTitle {
   /* text-align: center; */
   font-size: 26px;
-  margin: -15px auto 20px -50px;
+  // margin: -15px auto 20px -50px;
+      margin: 15px;
+    display: none;
 }
 .twitPic {
   margin-right: 20px;
