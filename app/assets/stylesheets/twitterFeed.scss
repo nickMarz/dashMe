@@ -55,10 +55,19 @@
 }
 
 .twitt {
-  display: inline-block;
-  padding: 20px;
+  display: block;
+  padding: 15px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 10px;
+  margin-bottom: auto;
+  transition: box-shadow .25s;
+  &:hover {
+      transition: box-shadow .55s;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+}
+.profile_img_wrap {
+
 }
 
 .twiTitle {
@@ -66,20 +75,23 @@
   margin: 15px;
   display: none;
 }
-.twitPic {
-  margin-right: 20px;
-  height: 50px;
-  width: auto;
-  float: left;
+.profile_pic {
+    /* margin-right: 20px; */
+    height: 50%;
+    width: auto;
+    /* float: left; */
+    display: inline-block;
 }
 
 .tweet_author {
-  float: left;
+  // float: left;
+  display: inline-block;
 }
 
-.tweetAt {
-
-  float: right;
+.tweet_at {
+    float: right;
+    /* text-align: right; */
+    display: inline-block;
 }
 
 // Twiiter Feed //

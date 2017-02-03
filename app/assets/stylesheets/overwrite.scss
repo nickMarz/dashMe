@@ -95,27 +95,17 @@ a {
 }
 
 .text-center.alert.alert-warning {
-  position: absolute;
-  border-radius: 0px;
-  margin-bottom: 31px;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 18pt;
-  border-radius: 0px;
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  z-index: 99999;
+    margin-bottom: 31px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18pt;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 150px);
+    z-index: 99999;
 }
-/*
-// .deleteX {
-//     margin-left: 20px;
-//     color: rgba(0, 203, 247, 2.0);
-//     text-decoration: none;
-//     font-weight: bold;
-// }*/
-
 
 
 /*// todo //*/

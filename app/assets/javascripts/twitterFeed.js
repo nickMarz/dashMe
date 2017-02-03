@@ -15,7 +15,12 @@ $(document).ready(function() {
       var userName      = data[i].user.name;
       var screenName    = data[i].user.screen_name;
       var userTweet     = data[i].text;
-      var finishedTweet = '<div class="twitt light_text_color"><img src="' + profilePic + '" class="twitPic"><p>' + userTweet +'</p> <p class="tweet_author">BY: <a href="https://twitter.com/'+userName+'" target="_blank">' + '@' + userName + '</a></p> <p class="tweetAt">tweet @'+screenName+'</p> </div>';
+      var finishedTweet = '<div class="twitt light_text_color"><div class="profile_img_wrap"><img src="' +
+                            profilePic + '" class="profile_pic"></div><p>' +
+                            userTweet +'</p> <p class="tweet_author">BY: <a href="https://twitter.com/' +
+                            userName+'" target="_blank">' + '@' +
+                            userName + '</a></p> <p class="tweet_at">tweet @' +
+                            screenName+'</p> </div>';
       allTweets    += finishedTweet;
       $(".tweets").eq(0).append(finishedTweet);
     }
@@ -25,7 +30,7 @@ $(document).ready(function() {
 
       //adds the ability to click on the screen name and
       // fill in the new tweet input with their @screen_name
-      $('.tweetAt').click(function(){
+      $('.tweet_at').click(function(){
         var message = $('#message');
         message.val('')
         var reply = $(this).text().replace('tweet @', '@') + " ";
