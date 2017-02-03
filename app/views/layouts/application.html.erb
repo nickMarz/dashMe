@@ -8,26 +8,26 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-<% flash.each do |key, value| %>
-  <% if key == "notice" %>
+  <div class="background-overlay">
+    <% flash.each do |key, value| %>
+    <% if key == "notice" %>
     <%= content_tag :div, value, class: "text-center alert alert-warning" %>
-  <% elsif key == "alert" %>
+    <% elsif key == "alert" %>
     <%= content_tag :div, value, class: "text-center alert alert-danger" %>
-  <% else %>
+    <% else %>
     <%= content_tag :div, value, class: "text-center alert alert-success" %>
-  <% end %>
-<% end %>
+    <% end %>
+    <% end %>
 
 
 
-  
-  <%= render 'shared/aboutUs' %>
-  <%= render 'shared/twitterconnect' %>
 
-  <% if current_user %>
-  <!-- <div class="dragContainer container-fluid" id="dragContainer"> -->
-    <%= render 'shared/todo' %>
-  <!-- </div> -->
+    <%= render 'shared/aboutUs' %>
+    <%= render 'shared/twitterconnect' %>
+
+    <% if current_user %>
+    <!-- <div class="dragContainer container-fluid" id="dragContainer"> -->
+    <!-- </div> -->
     
     <div class="stats">
       <%= render 'shared/weather' %>
@@ -35,21 +35,21 @@
     <%= render 'shared/options' %>
 
 
-    <%= render 'shared/twitterFeed' %>
+    <%= render 'shared/rightPanel' %>
 
-  
-  <%= render 'shared/clock' %>
 
-  <%= yield %>
+    <%= render 'shared/clock' %>
 
-  <%= render 'shared/goaloftheDay' %>
-  <%= render 'shared/greeting' %>
-  <%= render 'shared/quote' %>
+    <%= yield %>
 
-<% end %>
+    <%= render 'shared/goaloftheDay' %>
+    <%= render 'shared/greeting' %>
+    <%= render 'shared/quote' %>
 
-<!-- <script src="assets/javascripts/skycons.js"></script> -->
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <% end %>
 
+    <!-- <script src="assets/javascripts/skycons.js"></script> -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </div>
 </body>
 </html>

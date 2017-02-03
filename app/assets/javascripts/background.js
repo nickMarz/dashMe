@@ -36,14 +36,17 @@ function showpics(){
 
   $.getJSON(getR, function(data){
   }).done(function(data) {
-    console.log(data);
+    // console.log(data);
 
     
     $('#images').hide().html(data).fadeIn('fast');
+    var mathR = Math.round (Math.random() * (20 - 0) + 0);
+    var imgObj = data.items[mathR];
     
-    var newURL = data.items[Math.round (Math.random() * (20 - 0) + 0)].media.m;
+    var newURL = imgObj.media.m;
     newURL = newURL.replace('_m', '_h');
-    $('body').css('background-image', 'URL(' +newURL+ ')')
+    $('.background-overlay').css('background', 'url(' +newURL+ ')');
+    $('.background-overlay').addClass('fadein');
     var testing = data;
       // $.each(data.items, function(i,item) {
       //   $("<img/>").attr("src", item.media.m).appendTo("#images");
@@ -52,6 +55,7 @@ function showpics(){
       console.log(error);
       console.log('^^^^^^ error');
     });
-  };
+  };// showpics();
+
   showpics();
   setInterval (showpics, 18000000000);

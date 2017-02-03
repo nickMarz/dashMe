@@ -1,43 +1,4 @@
 // Twiiter Feed //
-.twitter-reveal {
-  background-color: #000;
-  border-radius: 20% 0 0  20% ;
-  cursor: pointer;
-  font-size: 20px;
-
-  padding: 10px 10px;
-  position: absolute;
-  left: -40px;
-  top: 60px;
-  width: 40px;
-  transition: 1s background-color;
-
-  &:hover {
-    background-color: gray;
-  }
-
-  &.active {
-
-  }
-}
-.twitter-container {
-  // background-color: red;
-    // width: 100vw;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 600px;
-    transition: 1s transform;
-    transform: translateX(600px);
-    z-index: -2;
-
-  &.active {
-    transform: translateX(0);
-  }
-}
-
-
 
 .inputCounter {
   display: inline;
@@ -47,8 +8,6 @@
 
 .tweetBox {
   padding: 10px;
-  // background-color: rgba(113, 113, 113, 0.70);
-  // background-color: red;
   width: 600px;
   display: inline-block;
 
@@ -79,13 +38,13 @@
 
 
 .timeline {
-    display: inline-block;
+    display: block;
     width: 100%;
     max-width: 600px;
     min-height: 300px;
     overflow-y: scroll;
     height: 50%;
-    margin-top: 50px;
+    // margin-top: 50px;
 }
 
 .tweet {
@@ -97,18 +56,15 @@
 
 .twitt {
   display: inline-block;
-  // margin-left: -45px;
   padding: 20px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 10px;
 }
 
 .twiTitle {
-  /* text-align: center; */
   font-size: 26px;
-  // margin: -15px auto 20px -50px;
-      margin: 15px;
-    display: none;
+  margin: 15px;
+  display: none;
 }
 .twitPic {
   margin-right: 20px;
@@ -136,7 +92,6 @@
 
 .tweetSignIn {
   background-color: rgba(113, 113, 113, 0.70);
-  // background-color: blue;
   position: absolute;
   left: calc(50% - 150px);
   top: calc(50% - 150px);
@@ -149,17 +104,28 @@
   height: 100%;
   max-height: 300px;
 
+  overflow: hidden;
+
+  z-index: 10;
+
+  & h1 {
+    color: #fff;
+  }
+
   &.signout {
-    // background-color: red;
     height: 48px;
     top: 0;
     color: #fff;
     transition: 1s all;
-    // font-size: 20px;
+
+    & p {
+      // width: 80%;
+      // color: red;
+      font-size: 18px;
+    }
 
     &:hover {
-      height: 500px;
-      // top: 40px;
+      height: 99px;
     }
 
     & input[type="submit"] {
@@ -180,16 +146,10 @@
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 2px;
+
+    &:hover {
+      background-color: gray;
+    }
   }
 
-}
-
-.tweetSignIn 
-
-.tweetSignIn input[type="submit"]:hover {
-  background-color: gray;
-}
-
-.tweetSignIn h1 {
-  color: #fff;
 }

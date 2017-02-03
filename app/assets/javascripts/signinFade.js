@@ -5,6 +5,6 @@ $(document).ready(function() {
     // Animation complete.
   });}
 
-  $(fadeOut);
+  // $(fadeOut);
 });
 

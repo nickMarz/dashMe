@@ -15,6 +15,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
     $('.forecast').empty();
     $(dailyForecast).each(function(i) {
+      console.log(dailyForecast[i])
       var tempForecast = dailyForecast[i];
       var tempHtml = '';
       var icon = dailyForecast[i].icon;

@@ -5,27 +5,27 @@ $(document).ready(function(){
         this.name     = name;
         this.hidden  = "false";
 // }
-// Visibility_tracking
-this.save = function () {
-    var storageName = this.name+"Data";
-    var storageId = this.id;
-    var storageHidden = this.hidden;
-    var obj = JSON.stringify(this);
-    console.log(storageName+" / "+storageId.selector+" / "+storageHidden);
-    localStorage.setItem( storageName, obj );
-    localStorage.getItem( storageName );
-};
+    // Visibility_tracking
+    this.save = function () {
+        var storageName = this.name+"Data";
+        var storageId = this.id;
+        var storageHidden = this.hidden;
+        var obj = JSON.stringify(this);
+        console.log(storageName+" / "+storageId.selector+" / "+storageHidden);
+        localStorage.setItem( storageName, obj );
+        localStorage.getItem( storageName );
+    };
 
-this.display = function () {
-    if (this.hidden === 'true') {
-        console.log('Hidden TRUE!');
-    }
+    this.display = function () {
+        if (this.hidden === 'true') {
+            console.log('Hidden TRUE!');
+        }
 
-    if (this.hidden === 'false') {
-        console.log('Not hidden false!');
+        if (this.hidden === 'false') {
+            console.log('Not hidden false!');
 
-    }
-};
+        }
+    };
 };
 
 clock = new Visibility_tracking( $("#clock"), 'clock' );
@@ -37,42 +37,39 @@ todoList.save();
 forecast.save();
 
 
+// Twitter Panel Reveal //
+    $('.right-panel-reveal').click(function() {
+        $('.right-panel').toggleClass('active');
+    });
+// Twitter Panel Reveal //
 
-// Twitter Panel REveal 
-
-$('.twitter-reveal').click(function() {
-    // $(this).toggleClass('active');
-    $('.twitter-container').toggleClass('active');
-})
-
-
-// About dev's show hide function
-$('.about_us_reveal').click(function(e){
-    e.preventDefault();
-    console.log('.show_hide click')
-    $(".about_us").toggleClass('active');
-});
+// About dev's Reveal //
+    $('.about_us_reveal').click(function(e){
+        e.preventDefault();
+        console.log('.show_hide click')
+        $(".about_us").toggleClass('active');
+    });
+// About dev's Reveal //
 
 
+// Weather Panel //
 
 // Weather Panel
-// $('.forecast_daily').hide();
-// Weather Panel
-$('#hide_forecast').click(function(e){
-    console.log('FOrcast')
-    $(".forecast_daily").toggleClass('active');
-// AnimateRotate(degArrow,'.fa-arrow-circle-down');
-});
-
+    $('#hide_forecast').click(function(e){
+        console.log('FOrcast')
+        $(".forecast_daily").toggleClass('active');
+    // AnimateRotate(degArrow,'.fa-arrow-circle-down');
+    });
+// Weather Panel //
 
 
 // Options Panel
-$('.options_menu').click(function(e){
-    e.preventDefault();
-    $(".options_menu_container").toggleClass('active');
-    $(".about_us").removeClass('active');
-    $(this).toggleClass('active');
-});
+    $('.options_menu').click(function(e){
+        e.preventDefault();
+        $(".options_menu_container").toggleClass('active');
+        $(".about_us").removeClass('active'); // closes about us if it's open //
+        $(this).toggleClass('active');
+    });
 // Options Panel
 
 

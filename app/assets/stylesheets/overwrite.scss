@@ -12,6 +12,36 @@ body {
   overflow: hidden;
 }
 
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    // background: url(../img/overlay-vignette.png);
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+.fadein {
+    -webkit-animation: fadein 1s ease 0.7s forwards;
+    animation: fadein 1s ease 0.7s forwards;
+}
+
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -121,13 +151,13 @@ a {
 }
 
 #todo_list {
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    height: 40%;
     text-align: center;
-    position: absolute;
-    top: 70px;
+    /* position: absolute; */
     left: 5px;
     text-align: left;
+    background: #181b1b;
     // background-color: rgba(113, 113, 113, 0.70);
 }
 .todo-controls {
@@ -248,16 +278,19 @@ a {
   transition: 0.4s all;
   z-index: 999999;
 
-  .fa {
-    // color: red !important;
-    font-size: 18px;
+  &:hover {
+    .fa  {
 
+      animation: fa-spin 1s infinite steps(3);
+      }
+    }
+
+  .fa {
+    font-size: 18px;
     &:nth-child(1) {
-      // color: blue !important;      
       float: left;
     }
     &:nth-child(2) {
-      // color: green !important;
       font-size: 26px;
       float: left;
       margin-top: -22px;
@@ -265,21 +298,17 @@ a {
       margin-right: -10px;
     }
     &:nth-child(3) {
-      // color: green !important;
       font-size: 30px;
     }
   }
-     &.active {
-        left: 120px;
-
-        .fa {
-          color: #fff;
-        }
+  &.active {
+    left: 120px;
+    .fa {
+      color: #fff;
+    }
   }
 }
-.fa-pulse-3 {
-    animation: fa-spin 1s infinite steps(3);
-}
+
 .options_menu_container {
     color: #ffffff;
     background-color: rgba(113, 113, 113, 0.9);

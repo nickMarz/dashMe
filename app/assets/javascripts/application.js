@@ -13,15 +13,17 @@
 //= require jquery
 //= require jquery-ui
 //= require turbolinks
-//= require weather
-//= require twitterFeed
-//= require todo
-//= require skycons
 //= require signinFade
-//= require showHide
-//= require quote
-//= require jquery.linkify.min
+
 //= require clock
-//= require dragNdrop
+//= require todo
+//= require showHide
 
 //= require background
+
+//= require weather
+//= require skycons
+//= require quote
+
+//= require twitterFeed
+//= require jquery.linkify.min

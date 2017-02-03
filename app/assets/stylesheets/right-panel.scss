@@ -1,0 +1,38 @@
+.right-panel-reveal {
+  background-color: #000;
+  border-radius: 20% 0 0  20% ;
+  cursor: pointer;
+  font-size: 20px;
+
+  padding: 10px 10px;
+  position: absolute;
+  left: -40px;
+  top: 10px;
+  width: 40px;
+  transition: 1s background-color;
+
+  &:hover {
+    background-color: gray;
+  }
+
+  &.active {
+
+  }
+}
+
+
+.right-panel {
+    height: calc(100vh - 50px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 600px;
+    transition: 1s transform;
+    transform: translateX(600px);
+    z-index: 0;
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
