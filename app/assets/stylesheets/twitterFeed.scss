@@ -117,11 +117,12 @@
     top: 0;
     color: #fff;
     transition: 1s all;
+    right: 0;
+    margin-right: 0;
+    width: 160px;
 
     & p {
-      // width: 80%;
-      // color: red;
-      font-size: 18px;
+      font-size: 12px;
     }
 
     &:hover {

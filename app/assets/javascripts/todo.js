@@ -121,14 +121,25 @@ $(document).ready(function() {
     var newTodoVal = $('#todoEnter').val();
     if (newTodoVal === '') { return false; }
     var todo_item = new Create_todo_item(newTodoVal);
-console.log(newTodoVal);
-console.log(todo_item);
+
+    console.log(newTodoVal);
+    console.log(todo_item);
+
     $(todoList).children().remove();
     addItem(todo_item);
     saveItems(todo_item);
     $('#todoEnter').val("");
     refreshClicks();
     uiUpdates();
+  });
+
+  $('#todoEnter').keyup(function(e) {
+    console.log(e);
+    if (e.keyCode === 13 && !e.shiftKey) {$('#add-btn').click()}
+    if (e.keyCode === 13 && e.shiftKey) { 
+      console.log('Shift Enter')
+      $('#todoEnter').val( $('#todoEnter').val()+"\n" );
+    }
   });
 
   function loadItems() {
