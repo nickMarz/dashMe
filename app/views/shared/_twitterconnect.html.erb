@@ -1,10 +1,9 @@
 <% if current_user %>
 
 	<div class="tweetSignIn signout">
-	<p> Signed in as <%= current_user.name %> </p>
-		<div class="signin">
-			<%= button_to "Sign out", signout_path, method: "Delete"%>
-		</div>
+	<img src="<%= current_user.image %>" alt="<%= current_user.name %> Profile Picture">
+		<p> <%= current_user.name %> </p>
+		<div class="signin"><%= button_to "Sign out", signout_path, method: "Delete"%></div>
 	</div>
 
 <% else %>

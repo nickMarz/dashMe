@@ -1,4 +1,6 @@
 $(document).ready(function() {
+devTweets = {};
+
 
   function getTweets() {
     $.getJSON("/tweets/show",function (data) {})
@@ -16,12 +18,12 @@ $(document).ready(function() {
       var userName      = data[i].user.name;
       var screenName    = data[i].user.screen_name;
       var userTweet     = data[i].text;
-      var finishedTweet = '<div class="twitt light_text_color"><div class="profile_img_wrap"><img src="' +
-                            profilePic + '" class="profile_pic"></div><p>' +
+      var finishedTweet = '<div class="tweet light_text_color"><div class="profile_img_wrap"><img src="' +
+                            profilePic + '" class="profile_pic"></div><div class="tweet_content"><p>' +
                             userTweet +'</p> <p class="tweet_author">BY: <a href="https://twitter.com/' +
                             userName+'" target="_blank">' + '@' +
                             userName + '</a></p> <p class="tweet_at">tweet @' +
-                            screenName+'</p> </div>';
+                            screenName+'</p> </div> </div>';
       allTweets    += finishedTweet;
       $(".tweets").eq(0).append(finishedTweet);
     }
@@ -29,7 +31,7 @@ $(document).ready(function() {
 
     $('.tweets').linkify();
 
-      //adds the ability to click on the screen name and
+      // adds the ability to click on the screen name and
       // fill in the new tweet input with their @screen_name
       $('.tweet_at').click(function(){
         var message = $('#message');
@@ -43,11 +45,10 @@ $(document).ready(function() {
       // need to switch to to keyup maybe? Also delete does not update the count
       $('#message').keypress(function(e) {
         var key = e.keyCode;
-        var charCount = $('#message');
+        var charCount = $(this);
 
         if (key === 13 && charCount.val().length > 0 ) {
           $('input+.fa-twitter ').prev().click();
-
         }
 
         $('.inputCounter').html(140 - charCount.val().length);
@@ -57,6 +58,8 @@ $(document).ready(function() {
           $(charCount).val(newStr);
         }
       });
+
+
       $('input+.fa-twitter ').prev().hide();
 
       $('input+.fa-twitter ').click(function() {
@@ -67,13 +70,13 @@ $(document).ready(function() {
 
     })
     .fail(function() {
-      var load_error = '<div class="load_error">Connection Error</div>';
+      var load_error = '<div class="twitter_load_error"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> Connection Error </div>';
       $(".tweets").eq(0).append(load_error);
       console.log( "Error/Fail" );
     });
 
   } // getTweets();
-  
+
   getTweets();
   // setInterval (getTweets, 180000);
 

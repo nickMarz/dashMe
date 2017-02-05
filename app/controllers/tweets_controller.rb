@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
       render :text => "Error!"
       return
     end
-
+    
     current_user.feed
     @user_timeline = current_user.feed
     render :json => @user_timeline

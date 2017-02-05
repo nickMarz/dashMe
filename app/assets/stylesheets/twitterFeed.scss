@@ -8,7 +8,7 @@
 
 .tweetBox {
   padding: 10px;
-  width: 600px;
+  width: 100%;
   display: inline-block;
 
 
@@ -47,53 +47,80 @@
     // margin-top: 50px;
 }
 
-.tweet {
-  background-color: rgba(113, 113, 113, 0.30);
-  padding: 7px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
+// .tweet {
+//   background-color: rgba(113, 113, 113, 0.30);
+//   padding: 7px;
+//   margin-top: 4px;
+//   margin-bottom: 4px;
+// }
 
-.twitt {
+.tweet {
   display: block;
   padding: 15px;
   border-bottom: 1px solid #eeeeee;
   margin-bottom: 10px;
   margin-bottom: auto;
   transition: box-shadow .25s;
+  position: relative;
+  height: 130px;
   &:hover {
       transition: box-shadow .55s;
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 }
 .profile_img_wrap {
+    // background: aqua;
+    /* display: inline-block; */
+    float: left;
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-}
-
-.twiTitle {
-  font-size: 26px;
-  margin: 15px;
-  display: none;
-}
-.profile_pic {
-    /* margin-right: 20px; */
-    height: 50%;
-    width: auto;
-    /* float: left; */
+    & .profile_pic {
+    height: auto;
+    width: 100%;
     display: inline-block;
+    margin-top: 20px;
+    }
 }
 
-.tweet_author {
-  // float: left;
-  display: inline-block;
-}
+.tweet_content {
+    width: 86%;
+    margin-left: 15%;
+    // background: aqua;
+    /* position: absolute; */
+    top: 0;
+    height: 100%;
 
-.tweet_at {
+    & .tweet_author {
+    // float: left;
+    display: inline-block;
+    }
+
+    & .tweet_at {
     float: right;
     /* text-align: right; */
     display: inline-block;
+    }
+
+
 }
 
+
+.twitter_load_error {
+    background: #333333;
+    font-size: 20px;
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+
+    & .fa {
+      font-size: 30px;
+      vertical-align: middle;
+    }
+}
 // Twiiter Feed //
 
 
@@ -132,9 +159,19 @@
     right: 0;
     margin-right: 0;
     width: 160px;
+    background: #000;
+
+    & img {
+      float: left;
+      border-radius: 50%;
+      height: 36px;
+      margin-left: 1px;
+      margin-bottom: 5px;
+    }
 
     & p {
       font-size: 12px;
+      margin-top: 7px;
     }
 
     &:hover {
@@ -148,17 +185,19 @@
 
   & input[type="submit"] {
     border: none;
-    padding: 10px 30px;
+    padding: 5px 10px;
     position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: -15px;
     margin: auto;
     left: 0;
     width: 100%;
     color: #ffffff;
     transition: 0.4s all;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 2px;
+
 
     &:hover {
       background-color: gray;
