@@ -1,5 +1,17 @@
-<div id="twitter-panel" class="right-panel primary_back_color">
-    <%= render 'shared/twitterFeed' %>
+<div class="right-panel primary_back_color">
+	<ul class="right-panel-reveal">
+		<li data-panel="#twitter-panel"><i class="fa fa-twitter fa-3 light_text_color"></i></li>
+		<li data-panel="#stock-panel"><i class="fa fa-area-chart fa-3 light_text_color"></i></li>
+	</ul>
+
+	<div id="twitter-panel" class="right-inner-panel">
+	    <%= render 'shared/twitterFeed' %>		
+	    <%= render 'shared/todo' %>
+	</div>
+
+	<div id="stock-panel" class="right-inner-panel">
+	    <%= render 'shared/stock' %>
+	</div>
 	
-    <%= render 'shared/todo' %>
+
 </div>

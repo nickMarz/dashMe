@@ -4,6 +4,7 @@ $(document).ready(function() {
     $.getJSON(stockUrl, function (data) {
         // console.log('getJSON Data', data);
         renderStockChart(data, 'stock-container');
+        renderStockChart(data, 'stock-container-1');
     });
 }
 

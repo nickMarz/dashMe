@@ -1,8 +1,9 @@
 $(document).ready(function() {
+
   function getTweets() {
     $.getJSON("/tweets/show",function (data) {})
     .done(function(data) {
-      console.log( "Done/Success" );
+      console.log( "getTweets() Done/Success" );
       var list = $(".tweets").empty();
       var allTweets = "";
 
@@ -71,8 +72,10 @@ $(document).ready(function() {
       console.log( "Error/Fail" );
     });
 
-  }
+  } // getTweets();
+  
   getTweets();
-  setInterval (getTweets, 180000);
+  // setInterval (getTweets, 180000);
 
+  console.log('Twitter Feed JS');
 });

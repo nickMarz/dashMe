@@ -1,19 +1,25 @@
 .right-panel-reveal {
-  background-color: #000;
-  border-radius: 20% 0 0  20% ;
-  cursor: pointer;
-  font-size: 20px;
-
-  padding: 10px 10px;
-  position: absolute;
-  left: -40px;
-  top: 10px;
-  width: 40px;
-  transition: 1s background-color;
-
-  &:hover {
-    background-color: gray;
-  }
+    float: left;
+    left: -40px;
+    position: absolute;
+    top: 10px;
+    -webkit-padding-start: 0;
+    li {
+        background-color: #000;
+        border-radius: 20% 0 0 20%;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 10px;
+        width: 40px;
+        transition: 1s background-color;
+        height: 50px;
+        list-style: none;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        &:hover {
+            background-color: gray;
+        }
+    }
 
   &.active {
 
@@ -22,14 +28,33 @@
 
 
 .right-panel {
+    float: right;
     height: calc(100vh - 50px);
+
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 600px;
+    // width: 600px;
+    width: 40vw;
     transition: 1s transform;
-    transform: translateX(600px);
+    transform: translateX(40vw);
     z-index: 0;
+
+    & .right-inner-panel {
+        // background: red;
+        // width: 50%;
+        width: 40vw;
+        display: inline-block;
+        float: left;
+        transform: translateX(40vw);
+        position: absolute;
+        transition: 0.5s all;
+        height: 100vh;
+        overflow: scroll;
+        &.active {
+            transform: translateX(0);
+        }
+    }
 
   &.active {
     transform: translateX(0);

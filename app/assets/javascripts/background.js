@@ -32,9 +32,9 @@ function showpics(){
   checkTime(hour);
 
   var pic = $('#box').val();
-  var getR = 'https://api.flickr.com/services/feeds/photos_public.gne?tags='+pic+'&tagmode=any&format=json&jsoncallback=?';
+  // var getR = ;
 
-  $.getJSON(getR, function(data){
+  $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?tags='+pic+'&tagmode=any&format=json&jsoncallback=?', function(data){
   }).done(function(data) {
     // console.log(data);
 
@@ -54,6 +54,7 @@ function showpics(){
       }).fail(function(error) {
       console.log(error);
       console.log('^^^^^^ error');
+      $('.background-overlay').addClass('fadein');      
     });
   };// showpics();
 
