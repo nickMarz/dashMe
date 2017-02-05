@@ -15,7 +15,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
     $('.forecast').empty();
     $(dailyForecast).each(function(i) {
-      console.log(dailyForecast[i])
+      // console.log(dailyForecast[i]);
       var tempForecast = dailyForecast[i];
       var tempHtml = '';
       var icon = dailyForecast[i].icon;
@@ -51,13 +51,13 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
         // reapply click handlers to the newly created extended forecast div's
         $(".temp").not('p').click(function() {
-          console.log('Temp Clicked')
+          // console.log('Temp Clicked');
           uiTempClassChange();
         });
 
         if (localStorage.tempPreference === "c") {
           uiTempClassChange();
-          console.log("Change temps to user preference")
+          // console.log("Change temps to user preference");
         }
 
       } // success end
@@ -65,7 +65,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
   } // End getWeather
 
   $("p.temp").click(function() {
-    console.log('Temp Clicked')
+    // console.log('Temp Clicked');
     uiTempClassChange();
   });
 

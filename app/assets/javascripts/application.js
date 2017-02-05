@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery-ui
 //= require turbolinks
+
 //= require signinFade
 
 //= require clock
@@ -27,3 +28,9 @@
 
 //= require twitterFeed
 //= require jquery.linkify.min
+
+//= require highstock
+//= require highstock/modules/exporting
+//= require highstock/themes/dark-unica
+
+//= require stock

@@ -39,7 +39,15 @@ forecast.save();
 
 // Twitter Panel Reveal //
     $('.right-panel-reveal').click(function() {
-        $('.right-panel').toggleClass('active');
+        
+        if ( !$(this).parent().hasClass('active') ) {
+            $('.right-panel').removeClass('active');
+
+            $(this).parent().addClass('active');
+        } else {
+            $('.right-panel').removeClass('active');
+        }
+
     });
 // Twitter Panel Reveal //
 
