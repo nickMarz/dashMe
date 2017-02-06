@@ -4,13 +4,16 @@ class User < ActiveRecord::Base
   # end
   def self.from_omniauth(auth)
    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
+      
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = auth.info.name
-      user.image = auth.info.image
+
+      user.image = auth.extra.raw_info.profile_image_url_https
+      user.image = user.image.sub '_normal', ''
       user.oauth_token = auth.credentials.token
       user.oauth_secret = auth.credentials.secret
-      binding.pry
+      
       user.save!
     end
   end
