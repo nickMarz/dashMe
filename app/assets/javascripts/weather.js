@@ -2,7 +2,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
  lat = (position.coords.latitude);
  long = (position.coords.longitude);
 
- function getWeather() {
+ getWeather = function() {
   $.ajax({
     method: "GET",
     url: "/getweather.json",
