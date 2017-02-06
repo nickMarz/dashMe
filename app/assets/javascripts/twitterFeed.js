@@ -13,8 +13,8 @@ devTweets = {};
     // need to update to another number beside 15, also need to
     // figure out a storage option for older tweets and how to
     for (var i = 0; i < 15; i++) {
-      var profilePic    = data[i].user.profile_image_url;
-      profilePic    = profilePic.replace('http', 'https');
+      var profilePic    = data[i].user.profile_image_url_https;
+          profilePic    = profilePic.replace('_normal', '');
       var userName      = data[i].user.name;
       var screenName    = data[i].user.screen_name;
       var userTweet     = data[i].text;
