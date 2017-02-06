@@ -73,23 +73,25 @@
     /* display: inline-block; */
     float: left;
     height: 100%;
-    width: 15%;
+    width: 20%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2%;
 
     & .profile_pic {
     height: auto;
     width: 100%;
-    display: inline-block;
+    display: block;
     margin-top: 20px;
+    max-width: 50px;
+    margin-left: auto;
+    margin-right: auto;
     }
 }
 
 .tweet_content {
-    width: 86%;
-    margin-left: 15%;
-    // background: aqua;
+    width: 78%;
+    margin-left: 22%;
     /* position: absolute; */
     top: 0;
     height: 100%;

@@ -51,6 +51,7 @@
         transition: 0.5s all;
         height: 100vh;
         overflow: scroll;
+        padding-bottom: 50px;
         &.active {
             transform: translateX(0);
         }
