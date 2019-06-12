@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'pry-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '>= 6.0.0'
 
 # include highchatrs and highstock library
 gem "highstocks-rails" 
