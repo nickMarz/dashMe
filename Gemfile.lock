@@ -180,7 +180,7 @@ GEM
       pry (>= 0.9.10)
     quoth (0.0.1)
       nokogiri
-    rack (1.6.0)
+    rack (1.6.12)
     rack-livereload (0.3.16)
       rack
     rack-test (0.6.3)
